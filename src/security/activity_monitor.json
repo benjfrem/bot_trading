@@ -1,0 +1,16 @@
+{
+  "thresholds": {
+    "max_trades_per_hour": 10,
+    "max_orders_per_hour": 20,
+    "max_api_calls_per_minute": 60,
+    "max_errors_per_hour": 5,
+    "unusual_trade_size_multiplier": 3.0,
+    "unusual_price_deviation_percent": 5.0
+  },
+  "monitoring": {
+    "enabled": true,
+    "log_all_activities": true,
+    "alert_on_threshold_breach": true
+  },
+  "last_updated": "2025-03-21T14:26:11.181703"
+}

@@ -1,0 +1,296 @@
+2025-01-28 18:45:05,335 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-28 18:45:05,336 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-28 19:53:38,176 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-28 19:53:38,178 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-28 21:10:08,549 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-28 21:10:08,551 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-28 21:38:38,241 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-28 21:38:38,242 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-28 21:53:50,691 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-28 21:53:50,693 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-28 22:08:04,397 - error - ERROR - Erreur pour NEAR/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=NEARUSDC
+2025-01-28 22:08:04,398 - error - ERROR - ❌ Prix actuel invalide pour NEAR/USDC
+2025-01-28 22:36:40,729 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-28 22:36:40,729 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-28 23:25:59,837 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-28 23:25:59,840 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-29 03:17:44,315 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 03:17:44,316 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 03:51:54,737 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 03:51:54,741 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 04:35:48,623 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 04:35:48,625 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 05:34:50,144 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 05:34:50,146 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 11:27:40,925 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 11:27:40,926 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 12:44:06,399 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 12:44:06,401 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 14:30:05,067 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 14:30:05,069 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 16:09:01,548 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 16:09:01,549 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 16:19:30,762 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 16:19:30,763 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 16:47:50,888 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 16:47:50,889 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 17:11:53,086 - error - ERROR - Erreur pour NEAR/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=NEARUSDC
+2025-01-29 17:11:53,101 - error - ERROR - ❌ Prix actuel invalide pour NEAR/USDC
+2025-01-29 18:45:47,787 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 18:45:47,788 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 19:20:04,858 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 19:20:04,859 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 19:40:30,334 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-29 19:40:30,335 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-29 19:57:40,374 - error - ERROR - Erreur pour NEAR/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=NEARUSDC
+2025-01-29 19:57:40,376 - error - ERROR - ❌ Prix actuel invalide pour NEAR/USDC
+2025-01-29 21:06:40,740 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 21:06:40,741 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 21:30:30,703 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 21:30:30,704 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 21:49:00,170 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-29 21:49:00,171 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-29 21:49:01,356 - error - ERROR - Erreur pour XRP/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=XRPUSDC
+2025-01-29 22:01:55,707 - error - ERROR - Erreur pour BTC/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-29 22:02:00,706 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 22:02:00,707 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-29 22:02:05,755 - error - ERROR - Erreur pour ETH/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=ETHUSDC
+2025-01-29 22:02:05,755 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-29 22:02:05,756 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-29 22:02:16,250 - error - ERROR - Erreur pour BNB/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BNBUSDC
+2025-01-29 22:02:16,261 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-29 22:02:16,262 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 00:15:43,472 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 00:15:43,473 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 01:16:37,541 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 01:16:37,543 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 02:35:24,707 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 02:35:24,708 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 03:53:23,983 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 03:53:23,985 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 05:20:37,081 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 05:20:37,082 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 07:38:56,387 - error - ERROR - Erreur pour BTC/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-30 09:24:39,468 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-30 09:24:40,374 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 12:06:21,545 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 12:06:21,547 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 13:28:39,355 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 13:28:39,356 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 14:29:38,616 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-30 14:29:38,617 - error - ERROR - ❌ Prix actuel invalide pour AVAX/USDC
+2025-01-30 15:30:50,723 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-30 15:30:50,724 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-30 17:32:49,322 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-30 17:32:50,728 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-30 17:32:50,729 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-30 18:48:57,800 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-30 18:48:57,801 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-30 20:35:42,053 - error - ERROR - Erreur pour LINK/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=LINKUSDC
+2025-01-30 21:36:41,480 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-30 21:36:41,481 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-31 00:39:41,000 - error - ERROR - Erreur pour ADA/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=ADAUSDC
+2025-01-31 02:41:41,194 - error - ERROR - Erreur pour BTC/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-31 04:43:41,881 - error - ERROR - Erreur pour BTC/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-31 05:44:43,416 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-31 05:44:43,417 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-31 07:19:01,817 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-31 07:19:01,817 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-31 08:20:25,291 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-31 08:20:25,293 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-31 08:20:27,526 - error - ERROR - Erreur pour TRX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=TRXUSDC
+2025-01-31 08:47:45,601 - error - ERROR - Erreur pour AVAX/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=AVAXUSDC
+2025-01-31 11:17:31,718 - error - ERROR - Erreur pour DOGE/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=DOGEUSDC
+2025-01-31 11:17:31,720 - error - ERROR - ❌ Prix actuel invalide pour DOGE/USDC
+2025-01-31 11:17:40,755 - error - ERROR - Erreur pour BTC/USDC: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-31 12:40:53,419 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:53,770 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:54,122 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:54,476 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:54,728 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:54,995 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:55,245 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:55,508 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:55,768 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:56,037 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:56,305 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:56,594 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:56,902 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:57,209 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:57,488 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:57,755 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:40:58,137 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:21,165 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:21,437 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:21,752 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:22,011 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:22,285 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:22,543 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:22,803 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:23,071 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:23,333 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:23,586 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:23,844 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:24,117 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:24,392 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:24,668 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:24,926 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:25,191 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:42:25,459 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:06,154 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:06,408 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:06,669 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:06,922 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:07,173 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:07,458 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:07,710 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:07,970 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:08,384 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:08,678 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:08,987 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:09,405 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:09,683 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:09,969 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:10,246 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:10,527 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:10,844 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:51,195 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:51,468 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:51,801 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:52,071 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:52,330 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:52,616 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:52,882 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:53,233 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:53,642 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:53,964 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:54,224 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:54,523 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:54,793 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:55,043 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:55,325 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:55,586 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:43:55,843 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:36,244 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:36,502 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:37,042 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:37,325 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:37,676 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:38,002 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:38,280 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:38,585 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:38,870 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:39,209 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:39,481 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:39,761 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:40,041 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:40,323 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:40,644 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:44:40,925 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:21,177 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:21,449 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:21,716 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:21,978 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:22,250 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:22,524 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:22,790 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:23,051 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:23,323 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:23,626 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:23,880 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:24,158 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:24,927 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:25,288 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:25,595 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:45:26,181 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:06,143 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:06,396 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:06,646 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:06,967 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:07,363 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:07,745 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:07,995 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:08,248 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:08,524 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:08,928 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:09,319 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:09,610 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:09,990 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:10,268 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:10,533 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:10,856 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:11,120 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:51,221 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:51,488 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:51,746 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:52,015 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:52,328 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:52,636 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:52,907 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:53,250 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:53,659 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:54,070 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:54,369 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:54,785 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:55,062 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:55,320 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:55,604 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:55,914 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:46:56,183 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:36,261 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:36,585 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:36,870 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:37,139 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:37,423 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:37,795 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:38,199 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:38,479 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:38,921 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:39,206 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:39,494 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:39,843 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:40,124 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:40,431 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:40,707 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:41,073 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:47:41,377 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:21,211 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:21,491 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:21,800 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:22,058 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:22,849 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:23,099 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:23,439 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:23,767 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:24,036 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:24,299 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:24,571 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:24,839 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:25,107 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:25,368 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:25,641 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:48:25,910 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:06,163 - error - ERROR - Erreur de calcul RSI pour BTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:06,427 - error - ERROR - Erreur de calcul RSI pour ETH/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:06,680 - error - ERROR - Erreur de calcul RSI pour BNB/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:06,985 - error - ERROR - Erreur de calcul RSI pour SOL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:07,393 - error - ERROR - Erreur de calcul RSI pour XRP/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:07,662 - error - ERROR - Erreur de calcul RSI pour ADA/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:08,008 - error - ERROR - Erreur de calcul RSI pour LTC/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:08,280 - error - ERROR - Erreur de calcul RSI pour ATOM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:08,583 - error - ERROR - Erreur de calcul RSI pour LINK/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:08,925 - error - ERROR - Erreur de calcul RSI pour XLM/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:09,201 - error - ERROR - Erreur de calcul RSI pour TRX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:09,504 - error - ERROR - Erreur de calcul RSI pour DOGE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:09,800 - error - ERROR - Erreur de calcul RSI pour AVAX/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:10,082 - error - ERROR - Erreur de calcul RSI pour POL/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:10,355 - error - ERROR - Erreur de calcul RSI pour NEAR/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:10,625 - error - ERROR - Erreur de calcul RSI pour ALGO/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 12:49:10,978 - error - ERROR - Erreur de calcul RSI pour PEPE/USDC: MarketAnalyzer._retry_api_call() got an unexpected keyword argument 'limit'
+2025-01-31 13:36:40,488 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-31 13:40:34,134 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=LINKUSDC
+2025-01-31 14:38:43,578 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-01-31 15:19:03,499 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDC
+2025-01-31 15:44:14,169 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDC
+2025-01-31 15:53:43,575 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDC
+2025-01-31 16:12:53,479 - error - ERROR - Erreur réseau, nouvelle tentative dans 2s: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDC

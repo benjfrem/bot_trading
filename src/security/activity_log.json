@@ -1,0 +1,408 @@
+{
+  "daily_summary": {
+    "2025-04-30": {
+      "trades": 14,
+      "volume": 0.0,
+      "profit": 0.0
+    },
+    "2025-05-02": {
+      "trades": 60,
+      "volume": 0.0,
+      "profit": 0.0
+    }
+  },
+  "hourly_counts": {
+    "2025-04-30 14:00": {
+      "api_calls": 0,
+      "trades": 14,
+      "orders": 0,
+      "errors": 5,
+      "minutes": {}
+    },
+    "2025-05-02 11:00": {
+      "api_calls": 0,
+      "trades": 5,
+      "orders": 0,
+      "errors": 0,
+      "minutes": {}
+    },
+    "2025-05-02 12:00": {
+      "api_calls": 0,
+      "trades": 5,
+      "orders": 0,
+      "errors": 0,
+      "minutes": {}
+    },
+    "2025-05-02 13:00": {
+      "api_calls": 0,
+      "trades": 7,
+      "orders": 0,
+      "errors": 0,
+      "minutes": {}
+    },
+    "2025-05-02 14:00": {
+      "api_calls": 0,
+      "trades": 9,
+      "orders": 0,
+      "errors": 0,
+      "minutes": {}
+    },
+    "2025-05-02 15:00": {
+      "api_calls": 0,
+      "trades": 34,
+      "orders": 0,
+      "errors": 64,
+      "minutes": {}
+    }
+  },
+  "recent_trades": [],
+  "recent_orders": [],
+  "recent_errors": [
+    {
+      "timestamp": "2025-04-30T14:35:39.077020",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 11 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-04-30T14:36:39.061549",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 11 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-04-30T14:37:39.050066",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 13 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-04-30T14:38:39.058992",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 14 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-04-30T14:39:39.049113",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 14 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:25:07.358698",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 11 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:26:07.361779",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 11 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:27:07.368412",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 12 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:28:07.373022",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 12 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:29:07.378550",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 12 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:30:07.382738",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 12 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:31:07.376721",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 13 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:31:07.385865",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 6 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:32:07.384368",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 13 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:32:07.394233",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 8 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:33:07.386672",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 14 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:33:07.395651",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 10 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:34:07.389339",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 14 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:34:07.398254",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 12 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:35:07.393912",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 14 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:35:07.402595",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 14 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:36:07.386386",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 15 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:36:07.395050",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 16 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:37:07.384223",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 17 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:37:07.393663",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 18 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:38:07.404410",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 20 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:38:07.413680",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 20 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:39:07.421471",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 21 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:39:07.431011",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 22 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:40:07.393148",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 22 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:40:07.406162",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 24 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:41:07.394224",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 22 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:41:07.405035",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 26 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:42:07.392292",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 23 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:42:07.403345",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 28 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:43:07.413924",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 24 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:43:07.426719",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 30 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:44:07.399029",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 25 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:44:07.411113",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 32 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:45:07.390585",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 25 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:45:07.402374",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 34 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:46:07.406348",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 25 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:46:07.421545",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 36 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:47:07.405183",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 26 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:47:07.418799",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 38 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:48:07.407325",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 27 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:48:07.427106",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 40 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:49:07.385657",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 29 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:49:07.399413",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 42 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:50:07.392839",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 30 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:50:07.406853",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 44 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:51:07.406576",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 31 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:51:07.421793",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 46 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:52:07.411662",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 32 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:52:07.435117",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 48 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:53:07.406594",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 33 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:53:07.422408",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 50 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:54:07.415830",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 33 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:54:07.432519",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 52 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:55:07.415482",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 33 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:55:07.433035",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 54 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:56:07.405197",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 33 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:56:07.424339",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 56 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:57:07.414039",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 33 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:57:07.432237",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 58 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:58:07.419941",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 34 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:58:07.437358",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 60 erreurs dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:59:07.440348",
+      "type": "anomaly_high_trade_volume",
+      "message": "Anomalie d\u00e9tect\u00e9e: Volume de trades \u00e9lev\u00e9: 34 trades dans la derni\u00e8re heure"
+    },
+    {
+      "timestamp": "2025-05-02T15:59:07.459344",
+      "type": "anomaly_high_error_rate",
+      "message": "Anomalie d\u00e9tect\u00e9e: Taux d'erreurs \u00e9lev\u00e9: 62 erreurs dans la derni\u00e8re heure"
+    }
+  ],
+  "last_updated": "2025-05-02T15:59:07.459349"
+}
