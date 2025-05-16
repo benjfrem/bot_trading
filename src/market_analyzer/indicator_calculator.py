@@ -90,5 +90,6 @@ class IndicatorCalculator:
             if price is None and market_d:
                 price = market_d.last_price
             rsi = await taapi_client.get_rsi(symbol, Config.RSI_PERIOD)
-            results[symbol] = (price, rsi, None, 0.0)
+            dmi_minus = await taapi_client.get_dmi_negative(symbol)
+        results[symbol] = (price, rsi, dmi_minus, 0.0)
         return results

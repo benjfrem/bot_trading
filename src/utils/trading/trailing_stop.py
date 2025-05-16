@@ -138,6 +138,10 @@ Aucun niveau de trailing stop applicable:
     
     def update(self, current_price: float) -> Optional[float]:
         """Met à jour le trailing stop et retourne le prix de vente si le stop est déclenché"""
+        # Initialisation des ticks de confirmation de vente
+        if not hasattr(self, 'exit_confirm_counter'):
+            self.exit_confirm_counter = 0
+            self.exit_first_tick_price = None
         if current_price <= 0:
             trading_logger.info(f"Prix actuel invalide: {current_price}")
             return None
@@ -241,30 +245,36 @@ Calcul du prix de stop:
    Prix de stop final: {stop_price:.8f}
 """)
         
-        # Vérifier si le prix est descendu en dessous du niveau de stop
-        # Cela ne se produira que si le prix a d'abord monté puis redescendu
+        # Confirmation à deux ticks avant liquidation
         if current_price <= stop_price:
-            # Calculer le pourcentage de baisse depuis le plus haut
-            drop_percentage = ((self.highest_price - current_price) / self.highest_price) * 100
-            
-            # Déclencher le trailing stop immédiatement sans seuil minimum de baisse
-            trading_logger.info(f"""
-🔴 TRAILING STOP DÉCLENCHÉ:
-   Prix d'entrée: {self.entry_price:.8f}
-   Prix le plus haut atteint: {self.highest_price:.8f}
-   Prix actuel: {current_price:.8f} (sous le seuil de {stop_price:.8f})
-   Baisse depuis le plus haut: {drop_percentage:.2f}%
-   Profit actuel: +{price_change:.2f}%
-   Profit maximum atteint: +{self.highest_profit_percentage:.2f}%
-   Niveau de stop: +{applicable_level.stop_level:.2f}%
-""")
-            
-            # Retourner le prix de vente approprié
-            if applicable_level.is_immediate:
-                return stop_price  # Vente au prix de stop
-            else:
-                return current_price  # Vente au prix du marché
-        else:
-            trading_logger.info(f"Prix actuel ({current_price:.8f}) au-dessus du seuil de stop ({stop_price:.8f})")
-        
+            # premier tick : prix sous seuil
+            if self.exit_confirm_counter == 0:
+                self.exit_confirm_counter = 1
+                self.exit_first_tick_price = current_price
+                trading_logger.info(
+                    f"Tick 1/2 sortie pour {current_price:.8f} (seuil stop = {stop_price:.8f})"
+                )
+                return None
+            # deuxième tick : vérifier variation de prix
+            if current_price != self.exit_first_tick_price:
+                self.exit_confirm_counter = 2
+                trading_logger.info(
+                    f"Tick 2/2 sortie validée pour {current_price:.8f} (différent de {self.exit_first_tick_price:.8f})"
+                )
+                # Réinitialisation des ticks
+                self.exit_confirm_counter = 0
+                self.exit_first_tick_price = None
+                # Exécution de la vente
+                return stop_price if applicable_level.is_immediate else current_price
+            trading_logger.info(
+                f"Tick non comptabilisé: prix identique {current_price:.8f}; attente confirmation"
+            )
+            return None
+        # reset si le prix repasse au-dessus du stop
+        if self.exit_confirm_counter > 0 and current_price > stop_price:
+            trading_logger.info(
+                f"Réinitialisation ticks de sortie: prix repassé au-dessus du stop ({current_price:.8f} > {stop_price:.8f})"
+            )
+            self.exit_confirm_counter = 0
+            self.exit_first_tick_price = None
         return None

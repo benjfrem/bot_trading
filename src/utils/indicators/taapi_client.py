@@ -138,6 +138,63 @@ class TaapiClient:
         await asyncio.gather(*(worker(sym) for sym in symbols))
         return results
 
+    async def get_dmi_negative(self, symbol: str, period: Optional[int] = None, smoothing: Optional[int] = None) -> Optional[float]:
+        """Récupère la composante DMI− pour un symbole depuis l'API taapi.io"""
+        period = period if period is not None else Config.DMI_NEGATIVE_LENGTH
+        smoothing = smoothing if smoothing is not None else Config.DMI_NEGATIVE_SMOOTHING
+        exch = self.exchange.lower()
+        # Mapping du symbole selon l'exchange
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/dmi"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": self.interval,
+                "period": period,
+                "smoothing": smoothing
+            }
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    error_text = await response.text()
+                    self._log(f"Erreur API taapi.io DMI− ({response.status}): {error_text}", "error")
+                    return None
+                data = await response.json()
+                self._log(f"Réponse brute taapi.io DMI− pour {symbol}: {data}", "info")
+                # Extraction de la valeur négative/adx
+                if "adx" in data:
+                    dmi_value = float(data["adx"])
+                    return dmi_value
+                # Extraction de la valeur négative
+                if "valueMinusDi" in data:
+                    dmi_value = float(data["valueMinusDi"])
+                elif "minus_dm" in data:
+                    dmi_value = float(data["minus_dm"])
+                elif "mdi" in data:
+                    dmi_value = float(data["mdi"])
+                elif "value" in data:
+                    dmi_value = float(data["value"])
+                else:
+                    self._log(f"Format de réponse DMI− inattendu: {data}", "error")
+                    return None
+                return dmi_value
+        except asyncio.TimeoutError:
+            self._log(f"Timeout de la requête DMI− pour {symbol}", "error")
+            return None
+        except aiohttp.ClientError as e:
+            self._log(f"Erreur réseau DMI−: {e}", "error")
+            return None
+        except Exception as e:
+            self._log(f"Erreur récupération DMI− pour {symbol}: {e}", "error")
+            return None
+
 
 # Instance singleton pour une utilisation facile
 taapi_client = TaapiClient()

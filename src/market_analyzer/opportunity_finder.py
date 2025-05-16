@@ -97,7 +97,7 @@ class OpportunityFinder:
                     continue
                 
                 # Récupérer les données des indicateurs (tendance toujours neutre)
-                current_price, rsi, _, variation = indicators_results.get(symbol, (None, None, None, None))
+                current_price, rsi, adx, variation = indicators_results.get(symbol, (None, None, None, None))
                 if not current_price or not rsi:
                     self._log(f"Données insuffisantes pour {symbol}: prix={current_price}, RSI={rsi}")
                     continue
@@ -130,8 +130,8 @@ class OpportunityFinder:
 === INDICATEURS {symbol} ===
    Prix actuel: {current_price:.8f}
    RSI: {rsi_14_str}
-   Tendance: neutre (simplifiée)
    ATR: {atr_str}
+   ADX: {adx if adx is not None else 'N/A'}
 """)
                 
                 # Initialiser le trailing buy RSI si ce n'est pas déjà fait
@@ -139,26 +139,88 @@ class OpportunityFinder:
                     symbol_market_data.trailing_buy_rsi = TrailingBuyRsi()
                     self._log(f"Trailing Buy RSI initialisé pour {symbol}")
                 
-                # Deux sources possibles de signal d'achat:
-                # 1. Signal direct depuis trailing_buy.update
-                # 2. Signal stocké précédemment via rsi_buy_signal_pending
-                buy_signal = None
-                
-                # Vérifier d'abord si un signal est en attente (priorité)
-                if hasattr(symbol_market_data, 'rsi_buy_signal_pending') and symbol_market_data.rsi_buy_signal_pending:
-                    # Utiliser le signal stocké
-                    buy_signal = symbol_market_data.rsi_buy_signal_price
-                    
-                    # Réinitialiser le flag pour éviter de traiter le même signal plusieurs fois
-                    symbol_market_data.rsi_buy_signal_pending = False
-                    self._log(f"Signal RSI en attente traité pour {symbol}")
-                else:
-                    # Sinon vérifier si le trailing buy RSI est déclenché maintenant
-                    buy_signal = symbol_market_data.trailing_buy_rsi.update(rsi, current_price, log_enabled=True)
-                
-                # Si pas de signal d'achat, passer au symbole suivant
-                if not buy_signal:
+                # Double confirmation RSI: mise à jour du trailing buy RSI (état et logs)
+                symbol_market_data.trailing_buy_rsi.update(rsi, current_price, log_enabled=True)
+                # Initialisation du compteur si nécessaire
+                if not hasattr(symbol_market_data, 'rsi_confirm_counter'):
+                    symbol_market_data.rsi_confirm_counter = 0
+                # Récupérer le niveau applicable
+                level = symbol_market_data.trailing_buy_rsi.current_level
+                if not level:
                     continue
+                threshold = level.buy_level
+                self._log(f"Double Confirmation RSI: seuil d'achat = {threshold:.2f} pour {symbol}", "info")
+                # Mise à jour du compteur de ticks avec vérification du changement de RSI
+                if rsi >= threshold:
+                    # Premier tick
+                    if not hasattr(symbol_market_data, 'rsi_confirm_counter') or symbol_market_data.rsi_confirm_counter == 0:
+                        symbol_market_data.rsi_confirm_counter = 1
+                        symbol_market_data.rsi_last_confirm_value = rsi
+                        self._log(
+                            f"Tick 1/{Config.DOUBLE_CONFIRMATION_TICKS} de confirmation RSI pour {symbol} (RSI initial = {rsi:.2f})",
+                            "info"
+                        )
+                    else:
+                        # Tick suivant : incrémenter si le RSI a changé
+                        if rsi != symbol_market_data.rsi_last_confirm_value:
+                            symbol_market_data.rsi_confirm_counter += 1
+                            symbol_market_data.rsi_last_confirm_value = rsi
+                            self._log(
+                                f"Tick {symbol_market_data.rsi_confirm_counter}/{Config.DOUBLE_CONFIRMATION_TICKS} "
+                                f"de confirmation RSI pour {symbol} (RSI = {rsi:.2f}, différent de précédent)",
+                                "info"
+                            )
+                        else:
+                            self._log(
+                                f"Mise à jour RSI identique pour {symbol} (RSI = {rsi:.2f}); tick non comptabilisé",
+                                "info"
+                            )
+                else:
+                    # RSI repassé sous le seuil : réinitialisation complète
+                    if symbol_market_data.rsi_confirm_counter > 0:
+                        self._log(
+                            f"Réinitialisation du compteur RSI pour {symbol} (RSI = {rsi:.2f} < {threshold:.2f})",
+                            "info"
+                        )
+                    symbol_market_data.rsi_confirm_counter = 0
+                    if hasattr(symbol_market_data, 'rsi_last_confirm_value'):
+                        del symbol_market_data.rsi_last_confirm_value
+                # Vérifier si le nombre de ticks requis est atteint
+                if symbol_market_data.rsi_confirm_counter < Config.DOUBLE_CONFIRMATION_TICKS:
+                    continue
+                # Confirmation obtenue, générer le signal d'achat
+                self._log(
+                    f"Double confirmation RSI validée "
+                    f"({Config.DOUBLE_CONFIRMATION_TICKS}/{Config.DOUBLE_CONFIRMATION_TICKS}) pour {symbol}",
+                    "info"
+                )
+                buy_signal = current_price
+                # Verrouiller l'état du trailing buy RSI jusqu'au traitement de l'ordre
+                tb = symbol_market_data.trailing_buy_rsi
+                tb._lock_state_for_buy = True
+                tb._signal_emitted = True
+                # Réinitialiser le compteur
+                symbol_market_data.rsi_confirm_counter = 0
+
+                # VERIFICATION ADX
+                mode = ("Rejeté" if adx is not None and adx > Config.DMI_NEGATIVE_THRESHOLD_WARNING else
+                        "Vigilance Stop" if adx is not None and adx >= Config.DMI_NEGATIVE_THRESHOLD_SAFE else
+                        "Normal")
+                self._log("--------------------------", "info")
+                self._log(f">>> VERIFICATION ADX pour {symbol} :", "info")
+                self._log(f"    ADX mesuré       : {adx:.2f}", "info")
+                self._log(f"    Seuil Normal     : < {Config.DMI_NEGATIVE_THRESHOLD_SAFE:.2f}", "info")
+                self._log(f"    Seuil Vigilance  : [{Config.DMI_NEGATIVE_THRESHOLD_SAFE:.2f} - {Config.DMI_NEGATIVE_THRESHOLD_WARNING:.2f}]", "info")
+                self._log(f"    Seuil Rejeté     : > {Config.DMI_NEGATIVE_THRESHOLD_WARNING:.2f}", "info")
+                self._log(f"    Décision         : {mode}", "info")
+                self._log("--------------------------", "info")
+                # Vérification ADX
+                if adx is not None and adx > Config.DMI_NEGATIVE_THRESHOLD_WARNING:
+                    self._log(f"ADX trop élevé ({adx:.2f}), opportunité rejetée", "info")
+                    continue
+                dmi_zone = 'warning' if adx is not None and adx >= Config.DMI_NEGATIVE_THRESHOLD_SAFE else 'safe'
+ 
+                # Récupérer les infos du marché
                 
                 # Récupérer les infos du marché
                 market_info = market_infos.get(symbol)
@@ -173,6 +235,7 @@ class OpportunityFinder:
                     'reference_price': symbol_market_data.reference_price,
                     'price_change': price_change,
                     'rsi': rsi,
+                    'adx': adx,
                     'market_info': market_info,
                     'timestamp': datetime.now(),
                     'score': 100,  # Score fixe de 100 (plus besoin de scoring)
@@ -180,7 +243,8 @@ class OpportunityFinder:
                     'trailing_buy_triggered': True,  # Signal trailing buy confirmé
                     'market_trend': "neutral",  # Toujours tendance neutre
                     'trend_variation': variation,
-                    'lowest_rsi': symbol_market_data.trailing_buy_rsi.lowest_rsi  # Ajout du RSI minimum pour référence
+                    'lowest_rsi': symbol_market_data.trailing_buy_rsi.lowest_rsi,  # Ajout du RSI minimum pour référence
+                    'dmi_zone': dmi_zone
                 }
                 
                 # Validation finale de l'opportunité
@@ -205,19 +269,20 @@ class OpportunityFinder:
         
         # Filtrer les résultats valides
         opportunities = [r for r in results if r is not None]
-        
         # Afficher les détails des opportunités retenues (avec moins de détails)
         if opportunities:
             self._log("\n=== OPPORTUNITÉS DÉTECTÉES ===")
             for opp in opportunities:
                 symbol = opp['symbol']
-                
+                # Recalcul de l'ATR pour chaque opportunité affichée
+                atr_price_loop = get_atr(symbol)
+                atr_str_loop = f"{atr_price_loop:.8f}"
                 self._log(f"""
-✅ Opportunité d'achat pour {symbol}:
-Prix actuel: {opp['current_price']:.8f} USDC
-RSI actuel: {opp['rsi']:.2f}
-RSI minimum atteint: {opp['lowest_rsi']:.2f}
-Taille de position: 100% ({Config.TRANSACTION_AMOUNT:.2f} USDC)
+=== INDICATEURS {symbol} ===
+   Prix actuel: {opp['current_price']:.8f}
+   RSI: {opp['rsi']:.2f}
+   ATR: {atr_str_loop}
+   ADX: {opp['adx'] if opp.get('adx') is not None else 'N/A'}
 """)
-        
+
         return opportunities

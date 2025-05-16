@@ -22,7 +22,7 @@ class TradingConfig:
     
     # Configuration du Trailing Buy basé sur RSI
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
-        {'trigger': 25, 'stop': 30, 'immediate': True},
+        {'trigger': 25, 'stop': 30, 'immediate': True}, 
         {'trigger': 20, 'stop': 25, 'immediate': True},  
         {'trigger': 10, 'stop': 20, 'immediate': True},   
     ]
@@ -32,13 +32,13 @@ class TradingConfig:
     # Configuration du Trailing Stop Loss mecx
 		#niveau 1 du tralling loss ( distance entre les niveau )
 
-
+    
     TRAILING_STOP_LEVELS = [
 		#niveau 1 du tralling loss ( distance entre les niveau )
         {'trigger': 0.12, 'stop': 0.07, 'immediate': True},
 	    {'trigger': 0.20, 'stop': 0.12, 'immediate': True}, 
 	    {'trigger': 0.25, 'stop': 0.20, 'immediate': True},    
-        {'trigger': 0.40, 'stop': 0.30, 'immediate': True},    
+        {'trigger': 0.40, 'stop': 0.25, 'immediate': True},    
         {'trigger': 0.50, 'stop': 0.40, 'immediate': True},    
         {'trigger': 0.60, 'stop': 0.50, 'immediate': True},
 	    {'trigger': 0.80, 'stop': 0.60, 'immediate': True},    
@@ -67,6 +67,28 @@ class TradingConfig:
     ATR_INTERVAL = "15m"        # Intervalle pour ATR (5 minutes)
     ATR_MULTIPLIER = 1.8       # Multiplicateur pour la distance du stop loss
     STOP_TIMEOUT_SEC = 5       # Délai anti-mèche en secondes
+    # Paramètres DMI négatif
+    DMI_NEGATIVE_LENGTH = 5    # Période DMI−
+    DMI_NEGATIVE_SMOOTHING = 5 # Lissage DMI−
+    DMI_NEGATIVE_THRESHOLD_SAFE = 50    # Seuil DMI− non dangereux
+    DMI_NEGATIVE_THRESHOLD_WARNING = 66 # Seuil DMI− zone vigilance
+    # Trailing stop renforcé pour zone de vigilance DMI (paliers serrés)
+    DMI_VIGILANCE_TRAILING_STOP_LEVELS = [
+        {'trigger': 0.06, 'stop': 0.03, 'immediate': True},
+        {'trigger': 0.09, 'stop': 0.06, 'immediate': True},
+        {'trigger': 0.12, 'stop': 0.09, 'immediate': True},
+        {'trigger': 0.20, 'stop': 0.12, 'immediate': True},
+        {'trigger': 0.40, 'stop': 0.30, 'immediate': True},
+        {'trigger': 0.60, 'stop': 0.40, 'immediate': True},
+        {'trigger': 0.80, 'stop': 0.60, 'immediate': True},
+        {'trigger': 1.00, 'stop': 0.80, 'immediate': True},
+        {'trigger': 1.20, 'stop': 1.00, 'immediate': True},
+        {'trigger': 1.40, 'stop': 1.20, 'immediate': True},
+        {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
+    ]
+
+    # Paramètre de double confirmation RSI
+    DOUBLE_CONFIRMATION_TICKS = 3
  
 class MarketConfig:
     """Configuration des marchés"""
@@ -78,7 +100,7 @@ class MarketConfig:
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
     # Paramètres RSI
-    RSI_PERIOD = 8             # Période pour le RSI
+    RSI_PERIOD = 4             # Période pour le RSI
     
     # Autres paramètres supprimés (Bollinger Bands et Volume)
 
@@ -121,7 +143,7 @@ class TaapiConfig:
     # Configuration des requêtes
     ENDPOINT = "https://api.taapi.io"
     EXCHANGE = "binance"       # Utiliser binance qui est l'exchange par défaut de taapi.io
-    INTERVAL = "5m"            # Intervalle par minute pour des mises à jour rapides des données
+    INTERVAL = "15m"            # Intervalle par minute pour des mises à jour rapides des données
     
     # Configuration du cache
     CACHE_TTL = 0.1            # Durée de vie du cache très courte pour forcer les appels API fréquents
@@ -180,6 +202,15 @@ class Config:
     ATR_INTERVAL = TradingConfig.ATR_INTERVAL
     ATR_MULTIPLIER = TradingConfig.ATR_MULTIPLIER
     STOP_TIMEOUT_SEC = TradingConfig.STOP_TIMEOUT_SEC
+
+    # Paramètres DMI négatif exportés globalement
+    DMI_NEGATIVE_LENGTH = TradingConfig.DMI_NEGATIVE_LENGTH
+    DMI_NEGATIVE_SMOOTHING = TradingConfig.DMI_NEGATIVE_SMOOTHING
+    DMI_NEGATIVE_THRESHOLD_SAFE = TradingConfig.DMI_NEGATIVE_THRESHOLD_SAFE
+    DMI_NEGATIVE_THRESHOLD_WARNING = TradingConfig.DMI_NEGATIVE_THRESHOLD_WARNING
+    DMI_VIGILANCE_TRAILING_STOP_LEVELS = TradingConfig.DMI_VIGILANCE_TRAILING_STOP_LEVELS
+    # Paramètre de double confirmation RSI exporté globalement
+    DOUBLE_CONFIRMATION_TICKS = TradingConfig.DOUBLE_CONFIRMATION_TICKS
     # Telegram Bot credentials
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
