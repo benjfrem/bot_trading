@@ -137,19 +137,18 @@ class OpportunityFinder:
                 # Initialiser le trailing buy RSI si ce n'est pas déjà fait
                 if not hasattr(symbol_market_data, 'trailing_buy_rsi') or symbol_market_data.trailing_buy_rsi is None:
                     symbol_market_data.trailing_buy_rsi = TrailingBuyRsi()
+                    symbol_market_data.rsi_confirm_counter = 0
+                    symbol_market_data.rsi_last_confirm_value = None
                     self._log(f"Trailing Buy RSI initialisé pour {symbol}")
                 
                 # Double confirmation RSI: mise à jour du trailing buy RSI (état et logs)
                 symbol_market_data.trailing_buy_rsi.update(rsi, current_price, log_enabled=True)
-                # Initialisation du compteur si nécessaire
-                if not hasattr(symbol_market_data, 'rsi_confirm_counter'):
-                    symbol_market_data.rsi_confirm_counter = 0
                 # Récupérer le niveau applicable
                 level = symbol_market_data.trailing_buy_rsi.current_level
                 if not level:
                     continue
                 threshold = level.buy_level
-                self._log(f"Double Confirmation RSI: seuil d'achat = {threshold:.2f} pour {symbol}", "info")
+                self._log(f"Confirmation RSI: seuil d'achat = {threshold:.2f} pour {symbol}", "info")
                 # Mise à jour du compteur de ticks avec vérification du changement de RSI
                 if rsi >= threshold:
                     # Premier tick
@@ -190,7 +189,7 @@ class OpportunityFinder:
                     continue
                 # Confirmation obtenue, générer le signal d'achat
                 self._log(
-                    f"Double confirmation RSI validée "
+                    f"Confirmation RSI validée "
                     f"({Config.DOUBLE_CONFIRMATION_TICKS}/{Config.DOUBLE_CONFIRMATION_TICKS}) pour {symbol}",
                     "info"
                 )

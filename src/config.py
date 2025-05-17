@@ -35,7 +35,6 @@ class TradingConfig:
     
     TRAILING_STOP_LEVELS = [
 		#niveau 1 du tralling loss ( distance entre les niveau )
-        {'trigger': 0.12, 'stop': 0.07, 'immediate': True},
 	    {'trigger': 0.20, 'stop': 0.12, 'immediate': True}, 
 	    {'trigger': 0.25, 'stop': 0.20, 'immediate': True},    
         {'trigger': 0.40, 'stop': 0.25, 'immediate': True},    
@@ -65,7 +64,7 @@ class TradingConfig:
     # Paramètres ATR pour Stop Loss adaptatif
     ATR_LENGTH = 4             # Nombre de bougies pour calcul ATR
     ATR_INTERVAL = "15m"        # Intervalle pour ATR (5 minutes)
-    ATR_MULTIPLIER = 1.8       # Multiplicateur pour la distance du stop loss
+    ATR_MULTIPLIER = 2       # Multiplicateur pour la distance du stop loss
     STOP_TIMEOUT_SEC = 5       # Délai anti-mèche en secondes
     # Paramètres DMI négatif
     DMI_NEGATIVE_LENGTH = 5    # Période DMI−
