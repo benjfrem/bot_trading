@@ -20,6 +20,13 @@ class TradingConfig:
     # Limites de positions
     MAX_POSITIONS = 1        # Nombre maximum de positions simultanées
     
+    # Configuration du filtre Stochastique
+    STOCH_TIMEFRAME = "5m"   # Timeframe pour l'indicateur stochastique
+    STOCH_K_LENGTH = 8       # Période pour %K
+    STOCH_K_SMOOTH = 5       # Lissage pour %K
+    STOCH_D_SMOOTH = 3       # Lissage pour %D
+    STOCH_OVERSOLD_THRESHOLD = 20  # Seuil de survente (%K < 20)
+    
     # Configuration du Trailing Buy basé sur RSI
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
         {'trigger': 25, 'stop': 30, 'immediate': True}, 
@@ -87,8 +94,8 @@ class TradingConfig:
     ]
 
     # Paramètre de double confirmation RSI
-    DOUBLE_CONFIRMATION_TICKS = 3
- 
+    DOUBLE_CONFIRMATION_TICKS = 2
+
 class MarketConfig:
     """Configuration des marchés"""
     # Liste des paires de trading supportées
@@ -118,8 +125,8 @@ class ScoringConfig:
 class TimeConfig:
     """Configuration des intervalles de temps"""
     # Intervalles en secondes
-    ANALYSIS_INTERVAL = 1       # Analyse du marché
-    CHECK_INTERVAL = 1          # Vérification des positions (vérifier les positions chaque seconde)
+    ANALYSIS_INTERVAL = 60       # Analyse du marché tous les 60 secondes
+    CHECK_INTERVAL = 15          # Vérification des positions (vérifier les positions chaque seconde)
 
 class LogConfig:
     """Configuration des logs"""
@@ -201,6 +208,13 @@ class Config:
     ATR_INTERVAL = TradingConfig.ATR_INTERVAL
     ATR_MULTIPLIER = TradingConfig.ATR_MULTIPLIER
     STOP_TIMEOUT_SEC = TradingConfig.STOP_TIMEOUT_SEC
+    
+    # Paramètres Stochastique
+    STOCH_TIMEFRAME = TradingConfig.STOCH_TIMEFRAME
+    STOCH_K_LENGTH = TradingConfig.STOCH_K_LENGTH
+    STOCH_K_SMOOTH = TradingConfig.STOCH_K_SMOOTH
+    STOCH_D_SMOOTH = TradingConfig.STOCH_D_SMOOTH
+    STOCH_OVERSOLD_THRESHOLD = TradingConfig.STOCH_OVERSOLD_THRESHOLD
 
     # Paramètres DMI négatif exportés globalement
     DMI_NEGATIVE_LENGTH = TradingConfig.DMI_NEGATIVE_LENGTH

@@ -56,7 +56,7 @@ class TaapiClient:
         """Met à jour le cache avec une nouvelle valeur (non utilisé)"""
         self._cache[symbol] = {"value": value, "timestamp": time.time()}
 
-    async def get_rsi(self, symbol: str, period: int = 14) -> Optional[float]:
+    async def get_rsi(self, symbol: str, period: int = 8) -> Optional[float]:
         """
         Récupère la valeur RSI pour un symbole depuis l'API taapi.io ou le cache
 
@@ -92,7 +92,8 @@ class TaapiClient:
                 "exchange": exch,
                 "symbol": formatted_symbol,
                 "interval": self.interval,
-                "period": period
+                "period": period,
+                "backtrack": 1
             }
             # suppression du log de requête TAAPI pour épurer la sortie  
             # self._log(f"URL: {url} - Params: {params}", "info")
@@ -138,6 +139,86 @@ class TaapiClient:
         await asyncio.gather(*(worker(sym) for sym in symbols))
         return results
 
+    async def get_stochastic(self, symbol: str, interval: Optional[str] = None, 
+                             k_length: Optional[int] = None, k_smooth: Optional[int] = None,
+                             d_smooth: Optional[int] = None) -> Optional[dict]:
+        """
+        Récupère les valeurs de l'oscillateur stochastique pour un symbole depuis l'API taapi.io
+
+        Args:
+            symbol: Paire de trading (ex: "BTC/USDT")
+            interval: Intervalle de temps pour l'indicateur (ex: "5m")
+            k_length: Période pour le calcul de %K (défaut: Config.STOCH_K_LENGTH)
+            k_smooth: Lissage pour %K (défaut: Config.STOCH_K_SMOOTH)
+            d_smooth: Lissage pour %D (défaut: Config.STOCH_D_SMOOTH)
+
+        Returns:
+            Un dictionnaire contenant les valeurs de %K et %D, ou None en cas d'erreur
+        """
+        # Utilisation des valeurs par défaut de la configuration si non spécifiées
+        interval = interval if interval is not None else Config.STOCH_TIMEFRAME
+        k_length = k_length if k_length is not None else Config.STOCH_K_LENGTH
+        k_smooth = k_smooth if k_smooth is not None else Config.STOCH_K_SMOOTH
+        d_smooth = d_smooth if d_smooth is not None else Config.STOCH_D_SMOOTH
+        
+        exch = self.exchange.lower()
+        # Mapping du symbole selon l'exchange
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+            
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/stoch"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": interval,
+                "kPeriod": k_length,
+                "dPeriod": d_smooth,
+                "kSmooth": k_smooth,
+                "backtrack": 1
+            }
+            
+            self._log(f"Récupération stochastique pour {symbol} avec intervalle {interval}", "info")
+            
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    error_text = await response.text()
+                    self._log(f"Erreur API taapi.io stochastique ({response.status}): {error_text}", "error")
+                    return None
+
+                data = await response.json()
+                self._log(f"Réponse brute taapi.io stochastique pour {symbol}: {data}", "info")
+                
+                # Vérification des clés attendues
+                if "valueK" not in data or "valueD" not in data:
+                    self._log(f"Format de réponse stochastique inattendu: {data}", "error")
+                    return None
+
+                # Extraction des valeurs K et D
+                stoch_values = {
+                    "valueK": float(data["valueK"]),
+                    "valueD": float(data["valueD"])
+                }
+                
+                self._log(f"Stochastique pour {symbol}: %K={stoch_values['valueK']:.2f}, %D={stoch_values['valueD']:.2f}", "info")
+                return stoch_values
+
+        except asyncio.TimeoutError:
+            self._log(f"Timeout de la requête stochastique pour {symbol}", "error")
+            return None
+        except aiohttp.ClientError as e:
+            self._log(f"Erreur réseau stochastique: {e}", "error")
+            return None
+        except Exception as e:
+            self._log(f"Erreur récupération stochastique pour {symbol}: {e}", "error")
+            return None
+            
     async def get_dmi_negative(self, symbol: str, period: Optional[int] = None, smoothing: Optional[int] = None) -> Optional[float]:
         """Récupère la composante DMI− pour un symbole depuis l'API taapi.io"""
         period = period if period is not None else Config.DMI_NEGATIVE_LENGTH
@@ -157,9 +238,10 @@ class TaapiClient:
                 "secret": self.api_key,
                 "exchange": exch,
                 "symbol": formatted_symbol,
-                "interval": self.interval,
+                "interval": "5m",
                 "period": period,
-                "smoothing": smoothing
+                "smoothing": smoothing,
+                "backtrack": 1
             }
             async with session.get(url, params=params, timeout=0.8) as response:
                 if response.status != 200:

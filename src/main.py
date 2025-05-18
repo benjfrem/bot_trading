@@ -61,8 +61,8 @@ class TradingBot:
             async def no_active_positions():
                 return not (self.portfolio_manager and self.portfolio_manager.positions)
             
-            self.scheduler.add_task('rsi_update', self._rsi_update_cycle, 1)
-            self.scheduler.add_task('short_term_trend_analysis', self._short_term_trend_cycle, 5, condition=no_active_positions)
+            self.scheduler.add_task('rsi_update', self._rsi_update_cycle, Config.ANALYSIS_INTERVAL)
+            self.scheduler.add_task('short_term_trend_analysis', self._short_term_trend_cycle, Config.ANALYSIS_INTERVAL, condition=no_active_positions)
             self.scheduler.add_task('market_analysis', self._market_analysis_cycle, Config.ANALYSIS_INTERVAL, condition=no_active_positions)
 
             
@@ -155,7 +155,7 @@ class TradingBot:
                     trailing_buy = market_data.trailing_buy_rsi
                     
                     rsi_value = getattr(market_data, 'rsi_value', None)
-                    if rsi_value is not None and rsi_value <= 30 and not trailing_buy.analyze_started:
+                    if rsi_value is not None and rsi_value <= 25 and not trailing_buy.analyze_started:
                         trailing_buy.start_trend_analysis()
                         
                     if trailing_buy.analyze_started:
@@ -190,7 +190,7 @@ class TradingBot:
                 
                 trading_logger.info(f"RSI actualisé: {symbol} = {rsi}")
                 
-                if rsi is not None and rsi <= 30:
+                if rsi is not None and rsi <= 25:
                     trading_logger.info(f"⚠️ {symbol} en zone de survente (RSI: {rsi:.2f})")
                 
                 market_data = self.market_analyzer.market_data.get(symbol)
@@ -200,7 +200,7 @@ class TradingBot:
                     
                     trailing_buy = market_data.trailing_buy_rsi
                     
-                    if rsi <= 28 and not trailing_buy.analyze_started:
+                    if rsi <= 25 and not trailing_buy.analyze_started:
                         trading_logger.info(f"Démarrage analyse RSI Trailing Buy: {symbol}, RSI: {rsi:.2f}")
                         trailing_buy.start_trend_analysis()
                         

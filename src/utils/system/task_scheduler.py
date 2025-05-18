@@ -77,7 +77,7 @@ class TaskScheduler:
             start_time = time.time()
             time_since_last = start_time - self.last_execution[name]
             
-            if self.last_execution[name] > 0:
+            if self.last_execution[name] > 0 and name != 'short_term_trend_analysis':
                 trading_logger.info(f"Exécution de {name} (dernier: il y a {time_since_last:.1f}s)")
             
             try:

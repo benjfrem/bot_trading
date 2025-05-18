@@ -201,9 +201,15 @@ class TrailingBuyRsi:
         
     # Méthode get_short_term_trend supprimée
         
-    # Méthode start_trend_analysis supprimée
+    def start_trend_analysis(self):
+        """Démarre l'analyse de tendance"""
+        self.analyze_started = True
+        trading_logger.info("Analyse de tendance RSI démarrée")
         
-    # Méthode update_short_term_trend supprimée
+    def update_short_term_trend(self, current_price: float, current_time: datetime):
+        """Mise à jour de la tendance à court terme (stub pour compatibilité)"""
+        # Cette méthode est maintenue pour la compatibilité mais n'a plus de fonctionnalité active
+        pass
     
     def update(self, current_rsi: float, current_price: float, log_enabled: bool = True) -> Optional[float]:
         """Met à jour le trailing buy RSI et retourne le prix d'achat si les conditions sont remplies"""

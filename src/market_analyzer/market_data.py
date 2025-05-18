@@ -45,3 +45,7 @@ class MarketData:
     
     # Prix du signal d'achat RSI en attente
     rsi_buy_signal_price: Optional[float] = None
+    
+    # Compteurs pour la confirmation RSI
+    rsi_confirm_counter: int = 0
+    rsi_last_confirm_value: Optional[float] = None

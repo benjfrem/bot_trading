@@ -21,7 +21,7 @@ class DataFetcher:
         """Initialise le récupérateur de données"""
         self.exchange = None
         self._price_cache = {}
-        self._cache_ttl = 1
+        self._cache_ttl = 60
         self._price_cache_ttl = 1  # Cache de prix live 1 seconde
         self._market_info_cache = {}
         self._market_info_cache_ttl = 300  # 5 minutes en secondes

@@ -126,12 +126,19 @@ class OpportunityFinder:
                 # Récupérer l'ATR brut pour logs
                 atr_price = get_atr(symbol)
                 atr_str = f"{atr_price:.8f}"
+                # Récupérer préalablement les valeurs stochastiques pour l'affichage initial
+                from market_analyzer.indicator_calculator import get_stochastic_values
+                # Appel asynchrone sans bloquer le flux principal
+                stoch_values_initial = await get_stochastic_values(symbol)
+                stoch_value_k_initial = stoch_values_initial.get('valueK', 0)
+                
                 self._log(f"""
 === INDICATEURS {symbol} ===
    Prix actuel: {current_price:.8f}
    RSI: {rsi_14_str}
    ATR: {atr_str}
    ADX: {adx if adx is not None else 'N/A'}
+   SOCH : {stoch_value_k_initial:.2f}
 """)
                 
                 # Initialiser le trailing buy RSI si ce n'est pas déjà fait
@@ -187,10 +194,38 @@ class OpportunityFinder:
                 # Vérifier si le nombre de ticks requis est atteint
                 if symbol_market_data.rsi_confirm_counter < Config.DOUBLE_CONFIRMATION_TICKS:
                     continue
-                # Confirmation obtenue, générer le signal d'achat
+                # Confirmation RSI obtenue, vérifier maintenant le filtre stochastique
                 self._log(
                     f"Confirmation RSI validée "
                     f"({Config.DOUBLE_CONFIRMATION_TICKS}/{Config.DOUBLE_CONFIRMATION_TICKS}) pour {symbol}",
+                    "info"
+                )
+                
+                # Vérification du filtre stochastique (survente extrême)
+                from market_analyzer.indicator_calculator import is_stochastic_condition_met
+                stoch_condition_met = await is_stochastic_condition_met(symbol)
+                
+                # Si la condition stochastique n'est pas remplie, annuler l'opportunité
+                if not stoch_condition_met:
+                    self._log(
+                        f"❌ Opportunité annulée pour {symbol}: filtre stochastique non validé (pas en survente)",
+                        "info"
+                    )
+                    # Réinitialiser le compteur RSI pour relancer l'analyse
+                    symbol_market_data.rsi_confirm_counter = 0
+                    # Réinitialiser le trailing buy RSI
+                    symbol_market_data.trailing_buy_rsi = TrailingBuyRsi()
+                    continue
+                    
+                # Récupérer les valeurs stochastiques pour les ajouter à l'opportunité
+                from market_analyzer.indicator_calculator import get_stochastic_values
+                stoch_values = await get_stochastic_values(symbol)
+                stoch_value_k = stoch_values.get('valueK', 0)
+                stoch_value_d = stoch_values.get('valueD', 0)
+                
+                # Les deux filtres (RSI et Stochastique) sont validés, générer le signal d'achat
+                self._log(
+                    f"✅ Double validation (RSI + Stochastique) pour {symbol} - %K: {stoch_value_k:.2f}, %D: {stoch_value_d:.2f}",
                     "info"
                 )
                 buy_signal = current_price
@@ -235,6 +270,8 @@ class OpportunityFinder:
                     'price_change': price_change,
                     'rsi': rsi,
                     'adx': adx,
+                    'stoch_k': stoch_value_k,  # Ajout de la valeur %K
+                    'stoch_d': stoch_value_d,  # Ajout de la valeur %D
                     'market_info': market_info,
                     'timestamp': datetime.now(),
                     'score': 100,  # Score fixe de 100 (plus besoin de scoring)
@@ -252,10 +289,12 @@ class OpportunityFinder:
                 
                 # Journaliser les informations de l'opportunité
                 self._log(f"""
-=== SIGNAL D'ACHAT RSI DÉTECTÉ ===
+=== SIGNAL D'ACHAT DÉTECTÉ (RSI + STOCHASTIQUE) ===
    Symbole: {symbol}
    RSI actuel: {rsi_14_str}
    RSI minimum atteint: {symbol_market_data.trailing_buy_rsi.lowest_rsi:.2f}
+   Stochastique %K: {stoch_value_k:.2f} (< {Config.STOCH_OVERSOLD_THRESHOLD})
+   Stochastique %D: {stoch_value_d:.2f}
    Prix actuel: {current_price:.8f}
    Prix signal: {buy_signal:.8f}
 """)
@@ -282,6 +321,7 @@ class OpportunityFinder:
    RSI: {opp['rsi']:.2f}
    ATR: {atr_str_loop}
    ADX: {opp['adx'] if opp.get('adx') is not None else 'N/A'}
+   SOCH : {opp['stoch_k']:.2f}
 """)
 
         return opportunities
