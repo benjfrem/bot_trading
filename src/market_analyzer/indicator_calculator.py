@@ -104,7 +104,6 @@ def get_atr(symbol: str) -> float:
         "symbol": symbol,
         "interval": interval,
         "period": period_value,
-        "backtrack": 1
     }
     
     from requests.exceptions import RequestException

@@ -228,7 +228,7 @@ class TrailingBuyRsi:
         # Le paramètre trend est ignoré, on utilise toujours la tendance neutre
         
         # Le RSI atteint 27 ou descend en dessous, démarrer le suivi
-        if current_rsi <= 25:
+        if current_rsi <= 27:
             trading_logger.info(f"""
 === DÉMARRAGE SUIVI TRAILING BUY RSI ===
    RSI actuel: {current_rsi:.2f}

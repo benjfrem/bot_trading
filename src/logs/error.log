@@ -1723,3 +1723,67 @@
 2025-05-18 02:01:09,099 - error - ERROR - Timeout de la requête API pour BTC/USDC
 2025-05-18 02:01:09,475 - error - ERROR - Timeout de la requête API pour BTC/USDC
 2025-05-18 02:01:10,277 - error - ERROR - Timeout de la requête DMI− pour BTC/USDC
+2025-05-18 04:11:56,064 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:15:56,064 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:15:56,446 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:20:56,063 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:20:56,441 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:22:56,130 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:22:56,661 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 04:23:56,525 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 06:04:56,063 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 06:08:56,528 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 06:11:57,080 - error - ERROR - Timeout de la requête stochastique pour BTC/USDC
+2025-05-18 07:45:56,063 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 07:45:56,444 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 07:51:56,063 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 07:51:56,443 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 07:56:56,885 - error - ERROR - Timeout de la requête DMI− pour BTC/USDC
+2025-05-18 07:59:57,207 - error - ERROR - Timeout de la requête DMI− pour BTC/USDC
+2025-05-18 08:33:55,942 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 08:34:55,897 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 08:35:55,869 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 11:37:56,063 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 11:42:56,064 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 11:49:57,028 - error - ERROR - Timeout de la requête stochastique pour BTC/USDC
+2025-05-18 12:29:26,129 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-05-18 12:29:26,130 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-05-18 13:03:06,275 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-05-18 13:03:06,276 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-05-18 15:26:56,066 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 15:28:56,066 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 15:28:56,500 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 15:31:56,435 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 18:17:20,989 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 18:24:21,579 - error - ERROR - Timeout de la requête DMI− pour BTC/USDC
+2025-05-18 19:29:20,861 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 19:55:21,524 - error - ERROR - ❌ Balance insuffisante (99.52119302 USDC, requis 105.172765)
+2025-05-18 20:00:21,627 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:01:21,002 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:02:20,908 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:03:21,431 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 20:04:21,150 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:05:21,594 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:06:22,501 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:09:20,867 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:10:20,887 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:11:20,846 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:12:20,936 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:13:20,855 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:14:20,885 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:18:20,926 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 20:19:20,896 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 21:40:38,377 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 21:41:38,728 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 21:42:38,349 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 21:42:38,746 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-18 21:43:38,455 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 21:44:38,222 - error - ERROR - Erreur d'analyse pour BTC/USDC: 'MarketData' object has no attribute 'rsi_last_confirm_value'
+2025-05-18 23:39:23,306 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-19 06:35:54,161 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-19 08:33:55,260 - error - ERROR - Timeout de la requête DMI− pour BTC/USDC
+2025-05-19 10:06:54,156 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-19 10:09:54,157 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-19 10:09:54,590 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-05-19 15:08:25,098 - error - ERROR - Timeout de la requête DMI− pour BTC/USDC
+2025-05-19 15:26:40,564 - error - ERROR - Timeout de la requête API pour BTC/USDC

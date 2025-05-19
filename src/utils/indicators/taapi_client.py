@@ -93,7 +93,6 @@ class TaapiClient:
                 "symbol": formatted_symbol,
                 "interval": self.interval,
                 "period": period,
-                "backtrack": 1
             }
             # suppression du log de requête TAAPI pour épurer la sortie  
             # self._log(f"URL: {url} - Params: {params}", "info")
@@ -180,8 +179,8 @@ class TaapiClient:
                 "interval": interval,
                 "kPeriod": k_length,
                 "dPeriod": d_smooth,
-                "kSmooth": k_smooth,
-                "backtrack": 1
+                "kSmooth": k_smooth
+
             }
             
             self._log(f"Récupération stochastique pour {symbol} avec intervalle {interval}", "info")
@@ -238,10 +237,9 @@ class TaapiClient:
                 "secret": self.api_key,
                 "exchange": exch,
                 "symbol": formatted_symbol,
-                "interval": "5m",
+                "interval": "15m",
                 "period": period,
-                "smoothing": smoothing,
-                "backtrack": 1
+                "smoothing": smoothing
             }
             async with session.get(url, params=params, timeout=0.8) as response:
                 if response.status != 200:

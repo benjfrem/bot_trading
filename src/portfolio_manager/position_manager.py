@@ -203,6 +203,21 @@ class PositionManager:
             log_event("❌ Données ordre invalides", "error")
             return False
         total_cost = price_avg * qty_filled
+        
+        # Vérifier si une opportunité avec données ATR existe pour ce symbole
+        atr_zone = 'normal'  # Par défaut
+        opportunity = None
+        
+        # Chercher l'opportunité correspondant au symbole actuel
+        if hasattr(self.portfolio_manager, 'market_analyzer') and hasattr(self.portfolio_manager.market_analyzer, 'latest_opportunities'):
+            latest_opportunities = self.portfolio_manager.market_analyzer.latest_opportunities
+            if latest_opportunities:
+                for opp in latest_opportunities:
+                    if opp.get('symbol') == symbol:
+                        opportunity = opp
+                        atr_zone = opp.get('atr_zone', 'normal')
+                        break
+        
         pos = Position(
             symbol=symbol,
             entry_price=price_avg,
@@ -212,9 +227,22 @@ class PositionManager:
             total_cost=total_cost
         )
         self.portfolio_manager.positions[symbol] = pos
+        
+        # Création du stop loss adaptatif
         self.portfolio_manager.trailing_stops[symbol] = StopLossManager(entry_price=price_avg, symbol=symbol)
-        self.portfolio_manager.trailing_stop_paliers[symbol] = TrailingStopLoss(entry_price=price_avg)
-        log_event(f"✅ Position ouverte: {symbol} à {price_avg:.8f}, qt={qty_filled:.8f}")
+        
+        # Configuration du trailing stop basée sur la zone ATR
+        if atr_zone == 'medium':
+            log_event(f"⚠️ Utilisation du trailing stop renforcé pour {symbol} (ATR en zone moyenne)")
+            self.portfolio_manager.trailing_stop_paliers[symbol] = TrailingStopLoss(
+                entry_price=price_avg, 
+                levels=Config.DMI_VIGILANCE_TRAILING_STOP_LEVELS
+            )
+        else:
+            log_event(f"Utilisation du trailing stop standard pour {symbol} (ATR en zone normale)")
+            self.portfolio_manager.trailing_stop_paliers[symbol] = TrailingStopLoss(entry_price=price_avg)
+        
+        log_event(f"✅ Position ouverte: {symbol} à {price_avg:.8f}, qt={qty_filled:.8f}, Zone ATR: {atr_zone}")
         # Nettoyage du verrou et de l'état
         self.pending_orders.pop(symbol, None)
         return True

@@ -189,8 +189,8 @@ class OpportunityFinder:
                             "info"
                         )
                     symbol_market_data.rsi_confirm_counter = 0
-                    if hasattr(symbol_market_data, 'rsi_last_confirm_value'):
-                        del symbol_market_data.rsi_last_confirm_value
+                    # Réinitialiser (sans supprimer) l'attribut rsi_last_confirm_value
+                    symbol_market_data.rsi_last_confirm_value = None
                 # Vérifier si le nombre de ticks requis est atteint
                 if symbol_market_data.rsi_confirm_counter < Config.DOUBLE_CONFIRMATION_TICKS:
                     continue
@@ -235,6 +235,29 @@ class OpportunityFinder:
                 tb._signal_emitted = True
                 # Réinitialiser le compteur
                 symbol_market_data.rsi_confirm_counter = 0
+                
+                # VÉRIFICATION ATR (Filtrage volatilité)
+                atr_value = get_atr(symbol)
+                self._log("--------------------------", "info")
+                self._log(f">>> VERIFICATION ATR pour {symbol} :", "info")
+                self._log(f"    ATR mesuré       : {atr_value:.2f}", "info")
+                self._log(f"    Seuil Normal     : < {Config.ATR_MEDIUM_VOLATILITY_THRESHOLD:.2f}", "info")
+                self._log(f"    Seuil Moyen      : [{Config.ATR_MEDIUM_VOLATILITY_THRESHOLD:.2f} - {Config.ATR_HIGH_VOLATILITY_THRESHOLD:.2f}]", "info")
+                self._log(f"    Seuil Critique   : > {Config.ATR_HIGH_VOLATILITY_THRESHOLD:.2f}", "info")
+                
+                # Décision basée sur l'ATR
+                if atr_value > Config.ATR_HIGH_VOLATILITY_THRESHOLD:
+                    self._log(f"❌ Opportunité rejetée pour {symbol}: ATR trop élevé ({atr_value:.2f} > {Config.ATR_HIGH_VOLATILITY_THRESHOLD:.2f})", "info")
+                    self._log("--------------------------", "info")
+                    continue
+                
+                atr_zone = 'medium' if atr_value >= Config.ATR_MEDIUM_VOLATILITY_THRESHOLD else 'normal'
+                
+                if atr_zone == 'medium':
+                    self._log(f"⚠️ Volatilité moyenne détectée ({atr_value:.2f}): Utilisation du trailing stop renforcé", "info")
+                else:
+                    self._log(f"✅ Volatilité normale ({atr_value:.2f}): Poursuite de l'opportunité standard", "info")
+                self._log("--------------------------", "info")
 
                 # VERIFICATION ADX
                 mode = ("Rejeté" if adx is not None and adx > Config.DMI_NEGATIVE_THRESHOLD_WARNING else
@@ -280,7 +303,9 @@ class OpportunityFinder:
                     'market_trend': "neutral",  # Toujours tendance neutre
                     'trend_variation': variation,
                     'lowest_rsi': symbol_market_data.trailing_buy_rsi.lowest_rsi,  # Ajout du RSI minimum pour référence
-                    'dmi_zone': dmi_zone
+                    'dmi_zone': dmi_zone,
+                    'atr_zone': atr_zone,  # Ajout de la zone ATR pour la gestion du trailing stop
+                    'atr_value': atr_value  # Ajout de la valeur ATR pour référence
                 }
                 
                 # Validation finale de l'opportunité

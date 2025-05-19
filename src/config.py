@@ -20,18 +20,23 @@ class TradingConfig:
     # Limites de positions
     MAX_POSITIONS = 1        # Nombre maximum de positions simultanées
     
+    # Seuils ATR pour filtrage de la volatilité
+    ATR_HIGH_VOLATILITY_THRESHOLD = 450  # Seuil au-dessus duquel aucune position n'est prise
+    ATR_MEDIUM_VOLATILITY_THRESHOLD = 300  # Seuil entre volatilité normale et moyenne
+    
     # Configuration du filtre Stochastique
     STOCH_TIMEFRAME = "5m"   # Timeframe pour l'indicateur stochastique
-    STOCH_K_LENGTH = 8       # Période pour %K
+    STOCH_K_LENGTH = 14       # Période pour %K
     STOCH_K_SMOOTH = 5       # Lissage pour %K
     STOCH_D_SMOOTH = 3       # Lissage pour %D
-    STOCH_OVERSOLD_THRESHOLD = 20  # Seuil de survente (%K < 20)
+    STOCH_OVERSOLD_THRESHOLD = 30  # Seuil de survente (%K < 20)
     
     # Configuration du Trailing Buy basé sur RSI
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
         {'trigger': 25, 'stop': 30, 'immediate': True}, 
         {'trigger': 20, 'stop': 25, 'immediate': True},  
         {'trigger': 10, 'stop': 20, 'immediate': True},   
+        {'trigger': 0, 'stop': 10, 'immediate': True}
     ]
     # Configuration par défaut (utilisée si aucune tendance n'est détectée)
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
@@ -70,8 +75,8 @@ class TradingConfig:
 
     # Paramètres ATR pour Stop Loss adaptatif
     ATR_LENGTH = 4             # Nombre de bougies pour calcul ATR
-    ATR_INTERVAL = "15m"        # Intervalle pour ATR (5 minutes)
-    ATR_MULTIPLIER = 2       # Multiplicateur pour la distance du stop loss
+    ATR_INTERVAL = "15m"       # Intervalle pour ATR (15 minutes)
+    ATR_MULTIPLIER = 2         # Multiplicateur pour la distance du stop loss
     STOP_TIMEOUT_SEC = 5       # Délai anti-mèche en secondes
     # Paramètres DMI négatif
     DMI_NEGATIVE_LENGTH = 5    # Période DMI−
@@ -106,7 +111,7 @@ class MarketConfig:
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
     # Paramètres RSI
-    RSI_PERIOD = 4             # Période pour le RSI
+    RSI_PERIOD = 4          # Période pour le RSI
     
     # Autres paramètres supprimés (Bollinger Bands et Volume)
 
@@ -222,6 +227,10 @@ class Config:
     DMI_NEGATIVE_THRESHOLD_SAFE = TradingConfig.DMI_NEGATIVE_THRESHOLD_SAFE
     DMI_NEGATIVE_THRESHOLD_WARNING = TradingConfig.DMI_NEGATIVE_THRESHOLD_WARNING
     DMI_VIGILANCE_TRAILING_STOP_LEVELS = TradingConfig.DMI_VIGILANCE_TRAILING_STOP_LEVELS
+    
+    # Seuils ATR pour filtrage volatilité exportés globalement
+    ATR_HIGH_VOLATILITY_THRESHOLD = TradingConfig.ATR_HIGH_VOLATILITY_THRESHOLD
+    ATR_MEDIUM_VOLATILITY_THRESHOLD = TradingConfig.ATR_MEDIUM_VOLATILITY_THRESHOLD
     # Paramètre de double confirmation RSI exporté globalement
     DOUBLE_CONFIRMATION_TICKS = TradingConfig.DOUBLE_CONFIRMATION_TICKS
     # Telegram Bot credentials
