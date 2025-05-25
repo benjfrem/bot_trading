@@ -21,22 +21,30 @@ class TradingConfig:
     MAX_POSITIONS = 1        # Nombre maximum de positions simultanées
     
     # Seuils ATR pour filtrage de la volatilité
-    ATR_HIGH_VOLATILITY_THRESHOLD = 450  # Seuil au-dessus duquel aucune position n'est prise
-    ATR_MEDIUM_VOLATILITY_THRESHOLD = 300  # Seuil entre volatilité normale et moyenne
+    ATR_HIGH_VOLATILITY_THRESHOLD = 350  # Seuil au-dessus duquel aucune position n'est prise
+
+    # Paliers pour trailing stop adapté (score == 2)
+    ADAPTIVE_TRAILING_STOP_LEVELS = [
+        {'trigger': 0.08, 'stop': 0.04, 'immediate': True},
+        {'trigger': 0.12, 'stop': 0.08, 'immediate': True},
+        {'trigger': 0.17, 'stop': 0.12, 'immediate': True},
+        {'trigger': 0.25, 'stop': 0.17, 'immediate': True},
+        {'trigger': 0.35, 'stop': 0.25, 'immediate': True},
+        {'trigger': 0.50, 'stop': 0.35, 'immediate': True},
+        {'trigger': 0.60, 'stop': 0.50, 'immediate': True},
+        {'trigger': 0.85, 'stop': 0.60, 'immediate': True},
+        {'trigger': 1.00, 'stop': 0.85, 'immediate': True},
+        {'trigger': 1.20, 'stop': 1.00, 'immediate': True},
+        {'trigger': 1.40, 'stop': 1.20, 'immediate': True},
+        {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
+    ]
     
-    # Configuration du filtre Stochastique
-    STOCH_TIMEFRAME = "5m"   # Timeframe pour l'indicateur stochastique
-    STOCH_K_LENGTH = 14       # Période pour %K
-    STOCH_K_SMOOTH = 5       # Lissage pour %K
-    STOCH_D_SMOOTH = 3       # Lissage pour %D
-    STOCH_OVERSOLD_THRESHOLD = 30  # Seuil de survente (%K < 20)
     
     # Configuration du Trailing Buy basé sur RSI
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
-        {'trigger': 25, 'stop': 30, 'immediate': True}, 
-        {'trigger': 20, 'stop': 25, 'immediate': True},  
-        {'trigger': 10, 'stop': 20, 'immediate': True},   
-        {'trigger': 0, 'stop': 10, 'immediate': True}
+        {'trigger': 15, 'stop': 30, 'immediate': True}, 
+        {'trigger': 5, 'stop': 15, 'immediate': True}, 
+        {'trigger': 0, 'stop': 5, 'immediate': True}
     ]
     # Configuration par défaut (utilisée si aucune tendance n'est détectée)
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
@@ -76,27 +84,8 @@ class TradingConfig:
     # Paramètres ATR pour Stop Loss adaptatif
     ATR_LENGTH = 4             # Nombre de bougies pour calcul ATR
     ATR_INTERVAL = "15m"       # Intervalle pour ATR (15 minutes)
-    ATR_MULTIPLIER = 2         # Multiplicateur pour la distance du stop loss
+    ATR_MULTIPLIER = 1.5         # Multiplicateur pour la distance du stop loss
     STOP_TIMEOUT_SEC = 5       # Délai anti-mèche en secondes
-    # Paramètres DMI négatif
-    DMI_NEGATIVE_LENGTH = 5    # Période DMI−
-    DMI_NEGATIVE_SMOOTHING = 5 # Lissage DMI−
-    DMI_NEGATIVE_THRESHOLD_SAFE = 50    # Seuil DMI− non dangereux
-    DMI_NEGATIVE_THRESHOLD_WARNING = 66 # Seuil DMI− zone vigilance
-    # Trailing stop renforcé pour zone de vigilance DMI (paliers serrés)
-    DMI_VIGILANCE_TRAILING_STOP_LEVELS = [
-        {'trigger': 0.06, 'stop': 0.03, 'immediate': True},
-        {'trigger': 0.09, 'stop': 0.06, 'immediate': True},
-        {'trigger': 0.12, 'stop': 0.09, 'immediate': True},
-        {'trigger': 0.20, 'stop': 0.12, 'immediate': True},
-        {'trigger': 0.40, 'stop': 0.30, 'immediate': True},
-        {'trigger': 0.60, 'stop': 0.40, 'immediate': True},
-        {'trigger': 0.80, 'stop': 0.60, 'immediate': True},
-        {'trigger': 1.00, 'stop': 0.80, 'immediate': True},
-        {'trigger': 1.20, 'stop': 1.00, 'immediate': True},
-        {'trigger': 1.40, 'stop': 1.20, 'immediate': True},
-        {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
-    ]
 
     # Paramètre de double confirmation RSI
     DOUBLE_CONFIRMATION_TICKS = 2
@@ -111,7 +100,18 @@ class MarketConfig:
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
     # Paramètres RSI
-    RSI_PERIOD = 4          # Période pour le RSI
+    RSI_PERIOD = 14          # Période pour le RSI
+
+    # Paramètres Fisher Transform
+    FISHER_PERIOD = 9       # Période pour le Fisher Transform (9 bougies 1m)
+    FISHER_INTERVAL = "1m"  # Intervalle pour le Fisher Transform
+    FISHER_THRESHOLD = 1.5  # Seuil de rejet pour le Fisher Transform
+    
+    # Paramètres Williams %R
+    WILLIAMS_R_PERIOD = 12         # Période pour Williams %R (12 bougies 5m)
+    WILLIAMS_R_INTERVAL = "5m"     # Intervalle pour Williams %R
+    WILLIAMS_R_OVERSOLD_THRESHOLD = -80  # Seuil survente (valeur <= -80)
+    WILLIAMS_R_OVERBOUGHT_THRESHOLD = -20  # Seuil surachat (valeur >= -20)
     
     # Autres paramètres supprimés (Bollinger Bands et Volume)
 
@@ -130,7 +130,7 @@ class ScoringConfig:
 class TimeConfig:
     """Configuration des intervalles de temps"""
     # Intervalles en secondes
-    ANALYSIS_INTERVAL = 60       # Analyse du marché tous les 60 secondes
+    ANALYSIS_INTERVAL = 90      # Analyse du marché tous les 60 secondes
     CHECK_INTERVAL = 15          # Vérification des positions (vérifier les positions chaque seconde)
 
 class LogConfig:
@@ -154,7 +154,7 @@ class TaapiConfig:
     # Configuration des requêtes
     ENDPOINT = "https://api.taapi.io"
     EXCHANGE = "binance"       # Utiliser binance qui est l'exchange par défaut de taapi.io
-    INTERVAL = "15m"            # Intervalle par minute pour des mises à jour rapides des données
+    INTERVAL = "5m"            # Intervalle par minute pour des mises à jour rapides des données
     
     # Configuration du cache
     CACHE_TTL = 0.1            # Durée de vie du cache très courte pour forcer les appels API fréquents
@@ -208,31 +208,30 @@ class Config:
     TAAPI_CACHE_TTL = TaapiConfig.CACHE_TTL
     TAAPI_VERIFY_SSL = TaapiConfig.VERIFY_SSL
 
+    # Paramètres Fisher Transform
+    FISHER_PERIOD = TechnicalConfig.FISHER_PERIOD
+    FISHER_INTERVAL = TechnicalConfig.FISHER_INTERVAL
+    FISHER_THRESHOLD = TechnicalConfig.FISHER_THRESHOLD
+
+    # Paramètres Williams %R
+    WILLIAMS_R_PERIOD = TechnicalConfig.WILLIAMS_R_PERIOD
+    WILLIAMS_R_INTERVAL = TechnicalConfig.WILLIAMS_R_INTERVAL
+    WILLIAMS_R_OVERSOLD_THRESHOLD = TechnicalConfig.WILLIAMS_R_OVERSOLD_THRESHOLD
+    WILLIAMS_R_OVERBOUGHT_THRESHOLD = TechnicalConfig.WILLIAMS_R_OVERBOUGHT_THRESHOLD
+
     # Paramètres ATR pour Stop Loss adaptatif
     ATR_LENGTH = TradingConfig.ATR_LENGTH
     ATR_INTERVAL = TradingConfig.ATR_INTERVAL
     ATR_MULTIPLIER = TradingConfig.ATR_MULTIPLIER
     STOP_TIMEOUT_SEC = TradingConfig.STOP_TIMEOUT_SEC
     
-    # Paramètres Stochastique
-    STOCH_TIMEFRAME = TradingConfig.STOCH_TIMEFRAME
-    STOCH_K_LENGTH = TradingConfig.STOCH_K_LENGTH
-    STOCH_K_SMOOTH = TradingConfig.STOCH_K_SMOOTH
-    STOCH_D_SMOOTH = TradingConfig.STOCH_D_SMOOTH
-    STOCH_OVERSOLD_THRESHOLD = TradingConfig.STOCH_OVERSOLD_THRESHOLD
 
-    # Paramètres DMI négatif exportés globalement
-    DMI_NEGATIVE_LENGTH = TradingConfig.DMI_NEGATIVE_LENGTH
-    DMI_NEGATIVE_SMOOTHING = TradingConfig.DMI_NEGATIVE_SMOOTHING
-    DMI_NEGATIVE_THRESHOLD_SAFE = TradingConfig.DMI_NEGATIVE_THRESHOLD_SAFE
-    DMI_NEGATIVE_THRESHOLD_WARNING = TradingConfig.DMI_NEGATIVE_THRESHOLD_WARNING
-    DMI_VIGILANCE_TRAILING_STOP_LEVELS = TradingConfig.DMI_VIGILANCE_TRAILING_STOP_LEVELS
     
     # Seuils ATR pour filtrage volatilité exportés globalement
     ATR_HIGH_VOLATILITY_THRESHOLD = TradingConfig.ATR_HIGH_VOLATILITY_THRESHOLD
-    ATR_MEDIUM_VOLATILITY_THRESHOLD = TradingConfig.ATR_MEDIUM_VOLATILITY_THRESHOLD
     # Paramètre de double confirmation RSI exporté globalement
     DOUBLE_CONFIRMATION_TICKS = TradingConfig.DOUBLE_CONFIRMATION_TICKS
+    ADAPTIVE_TRAILING_STOP_LEVELS = TradingConfig.ADAPTIVE_TRAILING_STOP_LEVELS
     # Telegram Bot credentials
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")

@@ -311,15 +311,6 @@ Opportunité détectée:
                             if success:
                                 trading_logger.info(f"Position ouverte avec succès pour {symbol}")
                                 
-                                # Appliquer configuration DMI− pour le trailing stop si nécessaire
-                                if opportunity.get('dmi_zone') == 'warning':
-                                    tsl = self.portfolio_manager.trailing_stop_paliers.get(symbol)
-                                    if tsl:
-                                        tsl.levels = [
-                                            TrailingStopLevel(cfg['trigger'], cfg['stop'], cfg['immediate'])
-                                            for cfg in Config.DMI_VIGILANCE_TRAILING_STOP_LEVELS
-                                        ]
-                                        trading_logger.info(f"Trailing stop renforcé appliqué pour {symbol} (zone vigilance DMI)")
                                 
                                 # Réinitialiser le trailing buy après un achat réussi
                                 market_data = self.market_analyzer.market_data.get(symbol)

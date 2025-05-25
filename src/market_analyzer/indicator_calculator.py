@@ -16,66 +16,6 @@ def calculate_rsi(prices, period=14):
     # Implémentation du calcul du RSI (placeholder)
     return 50  # Valeur par défaut pour simulation
 
-async def is_stochastic_condition_met(symbol: str) -> bool:
-    """
-    Vérifie si la condition stochastique est satisfaite (survente extrême) pour un symbole donné.
-    La condition est satisfaite lorsque la valeur %K est inférieure au seuil configuré (STOCH_OVERSOLD_THRESHOLD).
-    
-    Args:
-        symbol: Paire de trading (ex: "BTC/USDT")
-    
-    Returns:
-        True si le marché est en survente extrême (%K < seuil), False sinon ou en cas d'erreur
-    """
-    from logger import trading_logger, error_logger
-    
-    try:
-        # Récupération des valeurs stochastiques
-        stoch_values = await taapi_client.get_stochastic(symbol)
-        
-        if not stoch_values:
-            trading_logger.error(f"Impossible de récupérer les valeurs stochastiques pour {symbol}")
-            return False
-        
-        # Extraction de la valeur %K
-        k_value = stoch_values["valueK"]
-        
-        # Vérification du seuil de survente
-        is_oversold = k_value < Config.STOCH_OVERSOLD_THRESHOLD
-        
-        # Log détaillé du résultat
-        if is_oversold:
-            trading_logger.info(f"🔄 Filtre stochastique pour {symbol}: ✅ Survente validée (%K = {k_value:.2f} < {Config.STOCH_OVERSOLD_THRESHOLD})")
-            print(f"🔄 Filtre stochastique pour {symbol}: ✅ Survente validée (%K = {k_value:.2f} < {Config.STOCH_OVERSOLD_THRESHOLD})")
-        else:
-            trading_logger.info(f"🔄 Filtre stochastique pour {symbol}: ❌ Survente non atteinte (%K = {k_value:.2f} ≥ {Config.STOCH_OVERSOLD_THRESHOLD})")
-            print(f"🔄 Filtre stochastique pour {symbol}: ❌ Survente non atteinte (%K = {k_value:.2f} ≥ {Config.STOCH_OVERSOLD_THRESHOLD})")
-            
-        return is_oversold
-        
-    except Exception as e:
-        error_logger.error(f"Erreur lors de la vérification du filtre stochastique pour {symbol}: {e}")
-        print(f"Erreur lors de la vérification du filtre stochastique pour {symbol}: {e}")
-        return False
-
-async def get_stochastic_values(symbol: str) -> dict:
-    """
-    Récupère les valeurs de l'oscillateur stochastique pour un symbole donné.
-    
-    Args:
-        symbol: Paire de trading (ex: "BTC/USDT")
-    
-    Returns:
-        Un dictionnaire contenant les valeurs %K et %D, ou un dictionnaire vide en cas d'erreur
-    """
-    from logger import trading_logger, error_logger
-    
-    try:
-        stoch_values = await taapi_client.get_stochastic(symbol)
-        return stoch_values or {}
-    except Exception as e:
-        error_logger.error(f"Erreur lors de la récupération des valeurs stochastiques pour {symbol}: {e}")
-        return {}
 
 def get_atr(symbol: str) -> float:
     """
@@ -150,6 +90,5 @@ class IndicatorCalculator:
             if price is None and market_d:
                 price = market_d.last_price
             rsi = await taapi_client.get_rsi(symbol, Config.RSI_PERIOD)
-            dmi_minus = await taapi_client.get_dmi_negative(symbol)
-        results[symbol] = (price, rsi, dmi_minus, 0.0)
+        results[symbol] = (price, rsi, 0.0)
         return results

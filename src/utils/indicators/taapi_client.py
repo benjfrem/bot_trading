@@ -79,7 +79,7 @@ class TaapiClient:
             # Autres exchanges, on garde le symbol
             formatted_symbol = symbol
 
-        # Vérifier le cache (désactivé)
+        # Vérifier le cache
         cached = self._get_from_cache(formatted_symbol)
         if cached is not None:
             return cached
@@ -94,8 +94,6 @@ class TaapiClient:
                 "interval": self.interval,
                 "period": period,
             }
-            # suppression du log de requête TAAPI pour épurer la sortie  
-            # self._log(f"URL: {url} - Params: {params}", "info")
 
             async with session.get(url, params=params, timeout=0.8) as response:
                 if response.status != 200:
@@ -138,143 +136,126 @@ class TaapiClient:
         await asyncio.gather(*(worker(sym) for sym in symbols))
         return results
 
-    async def get_stochastic(self, symbol: str, interval: Optional[str] = None, 
-                             k_length: Optional[int] = None, k_smooth: Optional[int] = None,
-                             d_smooth: Optional[int] = None) -> Optional[dict]:
+    async def get_fisher(self, symbol: str, period: int = None, interval: str = None) -> Optional[float]:
         """
-        Récupère les valeurs de l'oscillateur stochastique pour un symbole depuis l'API taapi.io
+        Récupère la valeur du Fisher Transform pour un symbole depuis l'API taapi.io.
 
         Args:
-            symbol: Paire de trading (ex: "BTC/USDT")
-            interval: Intervalle de temps pour l'indicateur (ex: "5m")
-            k_length: Période pour le calcul de %K (défaut: Config.STOCH_K_LENGTH)
-            k_smooth: Lissage pour %K (défaut: Config.STOCH_K_SMOOTH)
-            d_smooth: Lissage pour %D (défaut: Config.STOCH_D_SMOOTH)
+            symbol: Paire de trading
+            period: Période de calcul (par défaut Config.FISHER_PERIOD)
+            interval: Intervalle de temps (par défaut Config.FISHER_INTERVAL)
 
         Returns:
-            Un dictionnaire contenant les valeurs de %K et %D, ou None en cas d'erreur
+            La valeur du Fisher Transform (float) ou None en cas d'erreur.
         """
-        # Utilisation des valeurs par défaut de la configuration si non spécifiées
-        interval = interval if interval is not None else Config.STOCH_TIMEFRAME
-        k_length = k_length if k_length is not None else Config.STOCH_K_LENGTH
-        k_smooth = k_smooth if k_smooth is not None else Config.STOCH_K_SMOOTH
-        d_smooth = d_smooth if d_smooth is not None else Config.STOCH_D_SMOOTH
-        
+        period = period if period is not None else Config.FISHER_PERIOD
+        interval = interval if interval is not None else Config.FISHER_INTERVAL
+
         exch = self.exchange.lower()
-        # Mapping du symbole selon l'exchange
         if exch == "coinbase":
             formatted_symbol = symbol.replace("/USDT", "/USD")
         elif exch == "kraken":
             formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
         else:
             formatted_symbol = symbol
-            
+
         try:
             session = await self._ensure_session()
-            url = f"{self.endpoint}/stoch"
+            url = f"{self.endpoint}/fisher"
             params = {
                 "secret": self.api_key,
                 "exchange": exch,
                 "symbol": formatted_symbol,
                 "interval": interval,
-                "kPeriod": k_length,
-                "dPeriod": d_smooth,
-                "kSmooth": k_smooth
-
+                "period": period
             }
-            
-            self._log(f"Récupération stochastique pour {symbol} avec intervalle {interval}", "info")
-            
+            self._log(f"Récupération Fisher Transform pour {symbol} (période {period}, intervalle {interval})", "info")
             async with session.get(url, params=params, timeout=0.8) as response:
                 if response.status != 200:
                     error_text = await response.text()
-                    self._log(f"Erreur API taapi.io stochastique ({response.status}): {error_text}", "error")
+                    self._log(f"Erreur API taapi.io fisher ({response.status}): {error_text}", "error")
                     return None
-
                 data = await response.json()
-                self._log(f"Réponse brute taapi.io stochastique pour {symbol}: {data}", "info")
-                
-                # Vérification des clés attendues
-                if "valueK" not in data or "valueD" not in data:
-                    self._log(f"Format de réponse stochastique inattendu: {data}", "error")
+                self._log(f"Réponse brute taapi.io Fisher pour {symbol}: {data}", "info")
+                if "value" in data:
+                    fisher_value = float(data["value"])
+                elif "fisher" in data:
+                    fisher_value = float(data["fisher"])
+                else:
+                    self._log(f"Format de réponse inattendu Fisher: {data}", "error")
                     return None
-
-                # Extraction des valeurs K et D
-                stoch_values = {
-                    "valueK": float(data["valueK"]),
-                    "valueD": float(data["valueD"])
-                }
-                
-                self._log(f"Stochastique pour {symbol}: %K={stoch_values['valueK']:.2f}, %D={stoch_values['valueD']:.2f}", "info")
-                return stoch_values
-
+                self._log(f"Fisher Transform pour {symbol}: {fisher_value}", "info")
+                return fisher_value
         except asyncio.TimeoutError:
-            self._log(f"Timeout de la requête stochastique pour {symbol}", "error")
+            self._log(f"Timeout de la requête Fisher pour {symbol}", "error")
             return None
         except aiohttp.ClientError as e:
-            self._log(f"Erreur réseau stochastique: {e}", "error")
+            self._log(f"Erreur réseau Fisher: {e}", "error")
             return None
         except Exception as e:
-            self._log(f"Erreur récupération stochastique pour {symbol}: {e}", "error")
+            self._log(f"Erreur récupération Fisher pour {symbol}: {e}", "error")
             return None
-            
-    async def get_dmi_negative(self, symbol: str, period: Optional[int] = None, smoothing: Optional[int] = None) -> Optional[float]:
-        """Récupère la composante DMI− pour un symbole depuis l'API taapi.io"""
-        period = period if period is not None else Config.DMI_NEGATIVE_LENGTH
-        smoothing = smoothing if smoothing is not None else Config.DMI_NEGATIVE_SMOOTHING
+
+
+    async def get_williams_r(self, symbol: str, period: int = None, interval: str = None) -> Optional[float]:
+        """
+        Récupère la valeur de Williams %R pour un symbole depuis l'API taapi.io.
+
+        Args:
+            symbol: Paire de trading (ex: "BTC/USDT")
+            period: Période de calcul (défaut Config.WILLIAMS_R_PERIOD)
+            interval: Intervalle de temps (défaut Config.WILLIAMS_R_INTERVAL)
+
+        Returns:
+            La valeur de Williams %R (float) ou None en cas d'erreur.
+        """
+        period = period if period is not None else Config.WILLIAMS_R_PERIOD
+        interval = interval if interval is not None else Config.WILLIAMS_R_INTERVAL
+
         exch = self.exchange.lower()
-        # Mapping du symbole selon l'exchange
         if exch == "coinbase":
             formatted_symbol = symbol.replace("/USDT", "/USD")
         elif exch == "kraken":
             formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
         else:
             formatted_symbol = symbol
+
         try:
             session = await self._ensure_session()
-            url = f"{self.endpoint}/dmi"
+            url = f"{self.endpoint}/willr"
             params = {
                 "secret": self.api_key,
                 "exchange": exch,
                 "symbol": formatted_symbol,
-                "interval": "15m",
-                "period": period,
-                "smoothing": smoothing
+                "interval": interval,
+                "period": period
             }
+            self._log(f"Récupération Williams %R pour {symbol} (période {period}, intervalle {interval})", "info")
             async with session.get(url, params=params, timeout=0.8) as response:
                 if response.status != 200:
                     error_text = await response.text()
-                    self._log(f"Erreur API taapi.io DMI− ({response.status}): {error_text}", "error")
+                    self._log(f"Erreur API taapi.io Williams %R ({response.status}): {error_text}", "error")
                     return None
                 data = await response.json()
-                self._log(f"Réponse brute taapi.io DMI− pour {symbol}: {data}", "info")
-                # Extraction de la valeur négative/adx
-                if "adx" in data:
-                    dmi_value = float(data["adx"])
-                    return dmi_value
-                # Extraction de la valeur négative
-                if "valueMinusDi" in data:
-                    dmi_value = float(data["valueMinusDi"])
-                elif "minus_dm" in data:
-                    dmi_value = float(data["minus_dm"])
-                elif "mdi" in data:
-                    dmi_value = float(data["mdi"])
-                elif "value" in data:
-                    dmi_value = float(data["value"])
+                self._log(f"Réponse brute Williams %R pour {symbol}: {data}", "info")
+                if "value" in data:
+                    value = float(data["value"])
+                elif "willr" in data:
+                    value = float(data["willr"])
                 else:
-                    self._log(f"Format de réponse DMI− inattendu: {data}", "error")
+                    self._log(f"Format de réponse inattendu Williams %R: {data}", "error")
                     return None
-                return dmi_value
+                self._log(f"Williams %R pour {symbol}: {value}", "info")
+                return value
         except asyncio.TimeoutError:
-            self._log(f"Timeout de la requête DMI− pour {symbol}", "error")
+            self._log(f"Timeout de la requête Williams %R pour {symbol}", "error")
             return None
         except aiohttp.ClientError as e:
-            self._log(f"Erreur réseau DMI−: {e}", "error")
+            self._log(f"Erreur réseau Williams %R: {e}", "error")
             return None
         except Exception as e:
-            self._log(f"Erreur récupération DMI− pour {symbol}: {e}", "error")
+            self._log(f"Erreur récupération Williams %R pour {symbol}: {e}", "error")
             return None
-
 
 # Instance singleton pour une utilisation facile
 taapi_client = TaapiClient()

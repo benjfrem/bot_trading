@@ -8,6 +8,7 @@ from .market_data import MarketData
 from .indicator_calculator import get_atr
 from utils.trading.trailing_buy import TrailingBuyRsi
 from logger import trading_logger, error_logger
+from utils.indicators.taapi_client import taapi_client
 
 class OpportunityFinder:
     """Classe pour la détection des opportunités de trading (basée uniquement sur RSI)"""
@@ -97,7 +98,8 @@ class OpportunityFinder:
                     continue
                 
                 # Récupérer les données des indicateurs (tendance toujours neutre)
-                current_price, rsi, adx, variation = indicators_results.get(symbol, (None, None, None, None))
+                current_price, rsi, variation = indicators_results.get(symbol, (None, None, 0.0))
+                adx = None
                 if not current_price or not rsi:
                     self._log(f"Données insuffisantes pour {symbol}: prix={current_price}, RSI={rsi}")
                     continue
@@ -126,19 +128,21 @@ class OpportunityFinder:
                 # Récupérer l'ATR brut pour logs
                 atr_price = get_atr(symbol)
                 atr_str = f"{atr_price:.8f}"
-                # Récupérer préalablement les valeurs stochastiques pour l'affichage initial
-                from market_analyzer.indicator_calculator import get_stochastic_values
-                # Appel asynchrone sans bloquer le flux principal
-                stoch_values_initial = await get_stochastic_values(symbol)
-                stoch_value_k_initial = stoch_values_initial.get('valueK', 0)
+                
+                # Récupération des indicateurs Fisher et Williams pour logs (symbole USDT)
+                ta_symbol = symbol.replace('/USDC', '/USDT')
+                fisher_val = await taapi_client.get_fisher(ta_symbol)
+                williams_val = await taapi_client.get_williams_r(ta_symbol)
+                fisher_str = f"{fisher_val:.2f}" if fisher_val is not None else "N/A"
+                williams_str = f"{williams_val:.2f}" if williams_val is not None else "N/A"
                 
                 self._log(f"""
 === INDICATEURS {symbol} ===
    Prix actuel: {current_price:.8f}
    RSI: {rsi_14_str}
    ATR: {atr_str}
-   ADX: {adx if adx is not None else 'N/A'}
-   SOCH : {stoch_value_k_initial:.2f}
+   WILLIAM : {williams_str}
+   F/T : {fisher_str}
 """)
                 
                 # Initialiser le trailing buy RSI si ce n'est pas déjà fait
@@ -201,33 +205,8 @@ class OpportunityFinder:
                     "info"
                 )
                 
-                # Vérification du filtre stochastique (survente extrême)
-                from market_analyzer.indicator_calculator import is_stochastic_condition_met
-                stoch_condition_met = await is_stochastic_condition_met(symbol)
-                
-                # Si la condition stochastique n'est pas remplie, annuler l'opportunité
-                if not stoch_condition_met:
-                    self._log(
-                        f"❌ Opportunité annulée pour {symbol}: filtre stochastique non validé (pas en survente)",
-                        "info"
-                    )
-                    # Réinitialiser le compteur RSI pour relancer l'analyse
-                    symbol_market_data.rsi_confirm_counter = 0
-                    # Réinitialiser le trailing buy RSI
-                    symbol_market_data.trailing_buy_rsi = TrailingBuyRsi()
-                    continue
                     
                 # Récupérer les valeurs stochastiques pour les ajouter à l'opportunité
-                from market_analyzer.indicator_calculator import get_stochastic_values
-                stoch_values = await get_stochastic_values(symbol)
-                stoch_value_k = stoch_values.get('valueK', 0)
-                stoch_value_d = stoch_values.get('valueD', 0)
-                
-                # Les deux filtres (RSI et Stochastique) sont validés, générer le signal d'achat
-                self._log(
-                    f"✅ Double validation (RSI + Stochastique) pour {symbol} - %K: {stoch_value_k:.2f}, %D: {stoch_value_d:.2f}",
-                    "info"
-                )
                 buy_signal = current_price
                 # Verrouiller l'état du trailing buy RSI jusqu'au traitement de l'ordre
                 tb = symbol_market_data.trailing_buy_rsi
@@ -235,48 +214,23 @@ class OpportunityFinder:
                 tb._signal_emitted = True
                 # Réinitialiser le compteur
                 symbol_market_data.rsi_confirm_counter = 0
-                
-                # VÉRIFICATION ATR (Filtrage volatilité)
-                atr_value = get_atr(symbol)
-                self._log("--------------------------", "info")
-                self._log(f">>> VERIFICATION ATR pour {symbol} :", "info")
-                self._log(f"    ATR mesuré       : {atr_value:.2f}", "info")
-                self._log(f"    Seuil Normal     : < {Config.ATR_MEDIUM_VOLATILITY_THRESHOLD:.2f}", "info")
-                self._log(f"    Seuil Moyen      : [{Config.ATR_MEDIUM_VOLATILITY_THRESHOLD:.2f} - {Config.ATR_HIGH_VOLATILITY_THRESHOLD:.2f}]", "info")
-                self._log(f"    Seuil Critique   : > {Config.ATR_HIGH_VOLATILITY_THRESHOLD:.2f}", "info")
-                
-                # Décision basée sur l'ATR
-                if atr_value > Config.ATR_HIGH_VOLATILITY_THRESHOLD:
-                    self._log(f"❌ Opportunité rejetée pour {symbol}: ATR trop élevé ({atr_value:.2f} > {Config.ATR_HIGH_VOLATILITY_THRESHOLD:.2f})", "info")
-                    self._log("--------------------------", "info")
-                    continue
-                
-                atr_zone = 'medium' if atr_value >= Config.ATR_MEDIUM_VOLATILITY_THRESHOLD else 'normal'
-                
-                if atr_zone == 'medium':
-                    self._log(f"⚠️ Volatilité moyenne détectée ({atr_value:.2f}): Utilisation du trailing stop renforcé", "info")
-                else:
-                    self._log(f"✅ Volatilité normale ({atr_value:.2f}): Poursuite de l'opportunité standard", "info")
-                self._log("--------------------------", "info")
 
-                # VERIFICATION ADX
-                mode = ("Rejeté" if adx is not None and adx > Config.DMI_NEGATIVE_THRESHOLD_WARNING else
-                        "Vigilance Stop" if adx is not None and adx >= Config.DMI_NEGATIVE_THRESHOLD_SAFE else
-                        "Normal")
-                self._log("--------------------------", "info")
-                self._log(f">>> VERIFICATION ADX pour {symbol} :", "info")
-                self._log(f"    ADX mesuré       : {adx:.2f}", "info")
-                self._log(f"    Seuil Normal     : < {Config.DMI_NEGATIVE_THRESHOLD_SAFE:.2f}", "info")
-                self._log(f"    Seuil Vigilance  : [{Config.DMI_NEGATIVE_THRESHOLD_SAFE:.2f} - {Config.DMI_NEGATIVE_THRESHOLD_WARNING:.2f}]", "info")
-                self._log(f"    Seuil Rejeté     : > {Config.DMI_NEGATIVE_THRESHOLD_WARNING:.2f}", "info")
-                self._log(f"    Décision         : {mode}", "info")
-                self._log("--------------------------", "info")
-                # Vérification ADX
-                if adx is not None and adx > Config.DMI_NEGATIVE_THRESHOLD_WARNING:
-                    self._log(f"ADX trop élevé ({adx:.2f}), opportunité rejetée", "info")
+                # Scoring des validateurs (ATR, Fisher, Williams)
+                score = 0
+                atr = get_atr(symbol)
+                atr_ok = atr <= Config.ATR_HIGH_VOLATILITY_THRESHOLD
+                ta_symbol = symbol.replace('/USDC', '/USDT')
+                fisher = await taapi_client.get_fisher(ta_symbol)
+                fisher_ok = (fisher is not None and -Config.FISHER_THRESHOLD <= fisher <= Config.FISHER_THRESHOLD)
+                williams = await taapi_client.get_williams_r(ta_symbol)
+                williams_ok = (williams is not None and Config.WILLIAMS_R_OVERSOLD_THRESHOLD < williams < Config.WILLIAMS_R_OVERBOUGHT_THRESHOLD)
+                score += atr_ok + fisher_ok + williams_ok
+                self._log(f"Score {score}/3 pour {symbol}: ATR OK={atr_ok}, Fisher OK={fisher_ok}, Williams OK={williams_ok}", "info")
+                if score < 2:
+                    self._log(f"Score insuffisant pour {symbol}, opportunité ignorée", "info")
                     continue
-                dmi_zone = 'warning' if adx is not None and adx >= Config.DMI_NEGATIVE_THRESHOLD_SAFE else 'safe'
- 
+
+
                 # Récupérer les infos du marché
                 
                 # Récupérer les infos du marché
@@ -292,21 +246,16 @@ class OpportunityFinder:
                     'reference_price': symbol_market_data.reference_price,
                     'price_change': price_change,
                     'rsi': rsi,
-                    'adx': adx,
-                    'stoch_k': stoch_value_k,  # Ajout de la valeur %K
-                    'stoch_d': stoch_value_d,  # Ajout de la valeur %D
                     'market_info': market_info,
                     'timestamp': datetime.now(),
-                    'score': 100,  # Score fixe de 100 (plus besoin de scoring)
+                    'score': score,  # Score calculé
+'trailing_stop_levels': Config.TRAILING_STOP_LEVELS if score == 3 else Config.ADAPTIVE_TRAILING_STOP_LEVELS,
                     'position_size': 1.0,  # Toujours position complète
                     'trailing_buy_triggered': True,  # Signal trailing buy confirmé
                     'market_trend': "neutral",  # Toujours tendance neutre
                     'trend_variation': variation,
                     'lowest_rsi': symbol_market_data.trailing_buy_rsi.lowest_rsi,  # Ajout du RSI minimum pour référence
-                    'dmi_zone': dmi_zone,
-                    'atr_zone': atr_zone,  # Ajout de la zone ATR pour la gestion du trailing stop
-                    'atr_value': atr_value  # Ajout de la valeur ATR pour référence
-                }
+                                                        }
                 
                 # Validation finale de l'opportunité
                 if not self._validate_opportunity(opportunity):
@@ -314,12 +263,9 @@ class OpportunityFinder:
                 
                 # Journaliser les informations de l'opportunité
                 self._log(f"""
-=== SIGNAL D'ACHAT DÉTECTÉ (RSI + STOCHASTIQUE) ===
+=== SIGNAL D'ACHAT DÉTECTÉ ===
    Symbole: {symbol}
    RSI actuel: {rsi_14_str}
-   RSI minimum atteint: {symbol_market_data.trailing_buy_rsi.lowest_rsi:.2f}
-   Stochastique %K: {stoch_value_k:.2f} (< {Config.STOCH_OVERSOLD_THRESHOLD})
-   Stochastique %D: {stoch_value_d:.2f}
    Prix actuel: {current_price:.8f}
    Prix signal: {buy_signal:.8f}
 """)
@@ -340,13 +286,19 @@ class OpportunityFinder:
                 # Recalcul de l'ATR pour chaque opportunité affichée
                 atr_price_loop = get_atr(symbol)
                 atr_str_loop = f"{atr_price_loop:.8f}"
+                # Récupération des indicateurs Fisher et Williams pour résumé (symbole USDT)
+                ta_symbol = symbol.replace('/USDC', '/USDT')
+                fisher_loop = await taapi_client.get_fisher(ta_symbol)
+                williams_loop = await taapi_client.get_williams_r(ta_symbol)
+                fisher_str_loop = f"{fisher_loop:.2f}" if fisher_loop is not None else "N/A"
+                williams_str_loop = f"{williams_loop:.2f}" if williams_loop is not None else "N/A"
                 self._log(f"""
 === INDICATEURS {symbol} ===
    Prix actuel: {opp['current_price']:.8f}
    RSI: {opp['rsi']:.2f}
    ATR: {atr_str_loop}
-   ADX: {opp['adx'] if opp.get('adx') is not None else 'N/A'}
-   SOCH : {opp['stoch_k']:.2f}
+   WILLIAM : {williams_str_loop}
+   F/T     : {fisher_str_loop}
 """)
 
         return opportunities
