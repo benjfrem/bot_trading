@@ -12,7 +12,7 @@ load_dotenv()
 class TradingConfig:
     """Configuration des paramètres de trading"""
     # Montant de transaction en USDC
-    TRANSACTION_AMOUNT = 50  # Augmenté pour BTC dont la valeur unitaire est plus élevée
+
 
     # Quantité fixe de transaction en BTC
     TRANSACTION_QUANTITY = 0.001  # Quantité de BTC à acheter/vendre par ordre (ajusté pour ~50 USDC si BTC vaut 50k)
@@ -39,13 +39,15 @@ class TradingConfig:
         {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
     ]
     
-    
+
     # Configuration du Trailing Buy basé sur RSI
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
         {'trigger': 15, 'stop': 30, 'immediate': True}, 
         {'trigger': 5, 'stop': 15, 'immediate': True}, 
         {'trigger': 0, 'stop': 5, 'immediate': True}
     ]
+
+
     # Configuration par défaut (utilisée si aucune tendance n'est détectée)
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
     
@@ -100,7 +102,7 @@ class MarketConfig:
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
     # Paramètres RSI
-    RSI_PERIOD = 14          # Période pour le RSI
+    RSI_PERIOD = 3          # Période pour le RSI
 
     # Paramètres Fisher Transform
     FISHER_PERIOD = 9       # Période pour le Fisher Transform (9 bougies 1m)
@@ -108,7 +110,7 @@ class TechnicalConfig:
     FISHER_THRESHOLD = 1.5  # Seuil de rejet pour le Fisher Transform
     
     # Paramètres Williams %R
-    WILLIAMS_R_PERIOD = 12         # Période pour Williams %R (12 bougies 5m)
+    WILLIAMS_R_PERIOD = 16         # Période pour Williams %R (12 bougies 5m)
     WILLIAMS_R_INTERVAL = "5m"     # Intervalle pour Williams %R
     WILLIAMS_R_OVERSOLD_THRESHOLD = -80  # Seuil survente (valeur <= -80)
     WILLIAMS_R_OVERBOUGHT_THRESHOLD = -20  # Seuil surachat (valeur >= -20)
@@ -118,19 +120,13 @@ class TechnicalConfig:
 class ScoringConfig:
     """Configuration du système de scoring"""
     # Scores RSI (25-40 points selon le niveau déclenché)
-    RSI_SCORES = {
-        'level_1': 25,  # Niveau 1
-        'level_2': 30,  # Niveau 2
-        'level_3': 35,  # Niveau 3
-        'level_4': 40   # Niveau 4
-    }
     
     # Les configurations BB_SCORES et VOLUME_SCORES ont été supprimées
 
 class TimeConfig:
     """Configuration des intervalles de temps"""
     # Intervalles en secondes
-    ANALYSIS_INTERVAL = 90      # Analyse du marché tous les 60 secondes
+    ANALYSIS_INTERVAL = 90     # Analyse du marché tous les 60 secondes
     CHECK_INTERVAL = 15          # Vérification des positions (vérifier les positions chaque seconde)
 
 class LogConfig:
@@ -154,7 +150,7 @@ class TaapiConfig:
     # Configuration des requêtes
     ENDPOINT = "https://api.taapi.io"
     EXCHANGE = "binance"       # Utiliser binance qui est l'exchange par défaut de taapi.io
-    INTERVAL = "5m"            # Intervalle par minute pour des mises à jour rapides des données
+    INTERVAL = "15m"            # Intervalle par minute pour des mises à jour rapides des données
     
     # Configuration du cache
     CACHE_TTL = 0.1            # Durée de vie du cache très courte pour forcer les appels API fréquents
@@ -175,7 +171,6 @@ class Config:
     MIN_TRANSACTION_QUOTE_AMOUNT = TradingConfig.MIN_TRANSACTION_QUOTE_AMOUNT
     
     # Paramètres de trading
-    TRANSACTION_AMOUNT = TradingConfig.TRANSACTION_AMOUNT
     TRANSACTION_QUANTITY = TradingConfig.TRANSACTION_QUANTITY
     MAX_POSITIONS = TradingConfig.MAX_POSITIONS
     TRAILING_BUY_RSI_LEVELS = TradingConfig.TRAILING_BUY_RSI_LEVELS
@@ -190,7 +185,6 @@ class Config:
     RSI_PERIOD = TechnicalConfig.RSI_PERIOD
     
     # Paramètres de scoring - seulement RSI_SCORES
-    RSI_SCORES = ScoringConfig.RSI_SCORES
     
     # Intervalles
     ANALYSIS_INTERVAL = TimeConfig.ANALYSIS_INTERVAL

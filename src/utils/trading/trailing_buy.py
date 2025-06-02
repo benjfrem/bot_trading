@@ -87,7 +87,7 @@ class TrailingBuyRsi:
         applicable_level = None
         
         # VÉRIFICATION CRITIQUE: Ne pas sélectionner de niveau si le RSI n'est jamais descendu en zone de survente
-        if self.lowest_rsi > 25:
+        if self.lowest_rsi > 27:
             trading_logger.info(f"""
 === AUCUN NIVEAU RSI APPLICABLE ===
    RSI minimum: {self.lowest_rsi:.2f}

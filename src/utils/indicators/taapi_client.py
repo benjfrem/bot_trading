@@ -257,5 +257,60 @@ class TaapiClient:
             self._log(f"Erreur récupération Williams %R pour {symbol}: {e}", "error")
             return None
 
+    async def get_obv(self, symbol: str, interval: str = None) -> Optional[float]:
+        """
+        Récupère la valeur on-balance volume (OBV) pour un symbole depuis l'API taapi.io.
+
+        Args:
+            symbol: Paire de trading (ex: "BTC/USDT")
+            interval: Intervalle de temps (défaut "5m")
+        Returns:
+            La valeur du OBV (float) ou None en cas d'erreur.
+        """
+        interval = interval if interval is not None else "5m"
+        exch = self.exchange.lower()
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/obv"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": interval
+            }
+            self._log(f"Récupération OBV pour {symbol} (intervalle {interval})", "info")
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    error_text = await response.text()
+                    self._log(f"Erreur API taapi.io OBV ({response.status}): {error_text}", "error")
+                    return None
+                data = await response.json()
+                self._log(f"Réponse brute OBV pour {symbol}: {data}", "info")
+                if "value" in data:
+                    obv_value = float(data["value"])
+                elif "obv" in data:
+                    obv_value = float(data["obv"])
+                else:
+                    self._log(f"Format de réponse inattendu OBV: {data}", "error")
+                    return None
+                self._update_cache(formatted_symbol, obv_value)
+                self._log(f"OBV pour {symbol}: {obv_value}", "info")
+                return obv_value
+        except asyncio.TimeoutError:
+            self._log(f"Timeout de la requête OBV pour {symbol}", "error")
+            return None
+        except aiohttp.ClientError as e:
+            self._log(f"Erreur réseau OBV: {e}", "error")
+            return None
+        except Exception as e:
+            self._log(f"Erreur récupération OBV pour {symbol}: {e}", "error")
+            return None
+
 # Instance singleton pour une utilisation facile
 taapi_client = TaapiClient()

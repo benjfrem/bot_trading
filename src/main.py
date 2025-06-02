@@ -178,7 +178,6 @@ class TradingBot:
         
         # Ne pas analyser le RSI si une position est active
         if self.portfolio_manager and self.portfolio_manager.positions:
-            trading_logger.info("Position ouverte, analyse RSI suspendue")
             return
         
         self.rsi_updates_counter += 1

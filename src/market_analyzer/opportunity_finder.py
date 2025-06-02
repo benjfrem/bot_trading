@@ -9,6 +9,7 @@ from .indicator_calculator import get_atr
 from utils.trading.trailing_buy import TrailingBuyRsi
 from logger import trading_logger, error_logger
 from utils.indicators.taapi_client import taapi_client
+from collections import deque
 
 class OpportunityFinder:
     """Classe pour la détection des opportunités de trading (basée uniquement sur RSI)"""
@@ -129,20 +130,26 @@ class OpportunityFinder:
                 atr_price = get_atr(symbol)
                 atr_str = f"{atr_price:.8f}"
                 
-                # Récupération des indicateurs Fisher et Williams pour logs (symbole USDT)
+                # Récupération de l'indicateur Williams et OBV pour logs (symbole USDT)
                 ta_symbol = symbol.replace('/USDC', '/USDT')
-                fisher_val = await taapi_client.get_fisher(ta_symbol)
                 williams_val = await taapi_client.get_williams_r(ta_symbol)
-                fisher_str = f"{fisher_val:.2f}" if fisher_val is not None else "N/A"
                 williams_str = f"{williams_val:.2f}" if williams_val is not None else "N/A"
-                
+                # Initialisation et mise à jour de l'historique OBV SMA4
+                if not hasattr(symbol_market_data, 'obv_history'):
+                    symbol_market_data.obv_history = deque(maxlen=4)
+                obv_val = await taapi_client.get_obv(ta_symbol, interval="5m")
+                obv_str = f"{obv_val:.2f}" if obv_val is not None else "N/A"
+                symbol_market_data.obv_history.append(obv_val if obv_val is not None else 0.0)
+                obv_sma = sum(symbol_market_data.obv_history) / len(symbol_market_data.obv_history)
+                obv_sma_str = f"{obv_sma:.2f}"
+
                 self._log(f"""
 === INDICATEURS {symbol} ===
    Prix actuel: {current_price:.8f}
    RSI: {rsi_14_str}
    ATR: {atr_str}
    WILLIAM : {williams_str}
-   F/T : {fisher_str}
+   OBV: {obv_str} / OBV SMA4: {obv_sma_str}
 """)
                 
                 # Initialiser le trailing buy RSI si ce n'est pas déjà fait
@@ -215,20 +222,26 @@ class OpportunityFinder:
                 # Réinitialiser le compteur
                 symbol_market_data.rsi_confirm_counter = 0
 
-                # Scoring des validateurs (ATR, Fisher, Williams)
-                score = 0
-                atr = get_atr(symbol)
-                atr_ok = atr <= Config.ATR_HIGH_VOLATILITY_THRESHOLD
-                ta_symbol = symbol.replace('/USDC', '/USDT')
-                fisher = await taapi_client.get_fisher(ta_symbol)
-                fisher_ok = (fisher is not None and -Config.FISHER_THRESHOLD <= fisher <= Config.FISHER_THRESHOLD)
-                williams = await taapi_client.get_williams_r(ta_symbol)
-                williams_ok = (williams is not None and Config.WILLIAMS_R_OVERSOLD_THRESHOLD < williams < Config.WILLIAMS_R_OVERBOUGHT_THRESHOLD)
-                score += atr_ok + fisher_ok + williams_ok
-                self._log(f"Score {score}/3 pour {symbol}: ATR OK={atr_ok}, Fisher OK={fisher_ok}, Williams OK={williams_ok}", "info")
-                if score < 2:
-                    self._log(f"Score insuffisant pour {symbol}, opportunité ignorée", "info")
+                # Scoring des validateurs (Williams, OBV)
+                williams_ok = (williams_val is not None and Config.WILLIAMS_R_OVERSOLD_THRESHOLD < williams_val < Config.WILLIAMS_R_OVERBOUGHT_THRESHOLD)
+                obv_ok = obv_val is not None and obv_val > obv_sma
+                score = (1 if williams_ok else 0) + (1 if obv_ok else 0)
+                # Si aucun indicateur valide, ignorer
+                if score < 1:
                     continue
+                # Définir le niveau de trailing stop selon score
+                trailing_levels = Config.TRAILING_STOP_LEVELS if score == 2 else Config.ADAPTIVE_TRAILING_STOP_LEVELS
+                décision = "NORMAL" if score == 2 else "ADAPTIVE"
+                self._log(f"""
+================================================================================
+=== SCORING {symbol} ===
+   Symbole: {symbol}
+   W%R: {williams_str} (OK={williams_ok})
+   OBV: {obv_str} (OK={obv_ok})
+   Score: {score}/2
+=== DÉCISION: {décision} ===
+
+""")
 
 
                 # Récupérer les infos du marché
@@ -249,7 +262,7 @@ class OpportunityFinder:
                     'market_info': market_info,
                     'timestamp': datetime.now(),
                     'score': score,  # Score calculé
-'trailing_stop_levels': Config.TRAILING_STOP_LEVELS if score == 3 else Config.ADAPTIVE_TRAILING_STOP_LEVELS,
+                    'trailing_stop_levels': trailing_levels,
                     'position_size': 1.0,  # Toujours position complète
                     'trailing_buy_triggered': True,  # Signal trailing buy confirmé
                     'market_trend': "neutral",  # Toujours tendance neutre
@@ -286,11 +299,9 @@ class OpportunityFinder:
                 # Recalcul de l'ATR pour chaque opportunité affichée
                 atr_price_loop = get_atr(symbol)
                 atr_str_loop = f"{atr_price_loop:.8f}"
-                # Récupération des indicateurs Fisher et Williams pour résumé (symbole USDT)
+                # Récupération de l'indicateur Williams pour résumé (symbole USDT)
                 ta_symbol = symbol.replace('/USDC', '/USDT')
-                fisher_loop = await taapi_client.get_fisher(ta_symbol)
                 williams_loop = await taapi_client.get_williams_r(ta_symbol)
-                fisher_str_loop = f"{fisher_loop:.2f}" if fisher_loop is not None else "N/A"
                 williams_str_loop = f"{williams_loop:.2f}" if williams_loop is not None else "N/A"
                 self._log(f"""
 === INDICATEURS {symbol} ===
@@ -298,7 +309,6 @@ class OpportunityFinder:
    RSI: {opp['rsi']:.2f}
    ATR: {atr_str_loop}
    WILLIAM : {williams_str_loop}
-   F/T     : {fisher_str_loop}
 """)
 
         return opportunities

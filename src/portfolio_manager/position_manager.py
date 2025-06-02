@@ -186,7 +186,7 @@ class PositionManager:
 
             # 3. Vérifier balance disponible
             balance = await self.portfolio_manager.exchange_ops.get_balance()
-            if not balance or balance < Config.TRANSACTION_AMOUNT:
+            if not balance or balance < Config.TRANSACTION_QUANTITY:
                 log_event(f"❌ Balance insuffisante: {balance}", "error")
                 return False
 
