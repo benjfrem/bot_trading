@@ -93,6 +93,7 @@ class TaapiClient:
                 "symbol": formatted_symbol,
                 "interval": self.interval,
                 "period": period,
+                
             }
 
             async with session.get(url, params=params, timeout=0.8) as response:
@@ -229,6 +230,7 @@ class TaapiClient:
                 "symbol": formatted_symbol,
                 "interval": interval,
                 "period": period
+
             }
             self._log(f"Récupération Williams %R pour {symbol} (période {period}, intervalle {interval})", "info")
             async with session.get(url, params=params, timeout=0.8) as response:
@@ -312,5 +314,218 @@ class TaapiClient:
             self._log(f"Erreur récupération OBV pour {symbol}: {e}", "error")
             return None
 
+    async def get_adx(self, symbol: str, period: int = None, interval: str = None) -> Optional[float]:
+        """Récupère l'indicateur ADX"""
+        period = period if period is not None else Config.ADX_LENGTH
+        interval = interval if interval is not None else Config.ADX_INTERVAL
+        exch = self.exchange.lower()
+        # Mapping du symbole similaire au RSI
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/adx"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": interval,
+                "period": period
+            }
+            self._log(f"Récupération ADX pour {symbol}", "info")
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    return None
+                data = await response.json()
+                self._log(f"Réponse brute ADX pour {symbol}: {data}", "info")
+                if "value" in data:
+                    adx_value = float(data["value"])
+                else:
+                    self._log(f"Format de réponse inattendu ADX pour {symbol}: {data}", "error")
+                    return None
+                self._update_cache(formatted_symbol, adx_value)
+                self._log(f"ADX pour {symbol}: {adx_value}", "info")
+                return adx_value
+        except Exception:
+            return None
+
+    async def get_plus_di(self, symbol: str, period: int = None, interval: str = None) -> Optional[float]:
+        """Récupère l'indicateur +DI"""
+        period = period if period is not None else Config.DI_LENGTH
+        interval = interval if interval is not None else Config.ADX_INTERVAL
+        exch = self.exchange.lower()
+        # Mapping du symbole similaire au RSI
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/plusdi"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": interval,
+                "period": period
+            }
+            self._log(f"Récupération +DI pour {symbol}", "info")
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    return None
+                data = await response.json()
+                self._log(f"Réponse brute +DI pour {symbol}: {data}", "info")
+                if "value" in data:
+                    plusdi_value = float(data["value"])
+                elif "plusdi" in data:
+                    plusdi_value = float(data["plusdi"])
+                else:
+                    self._log(f"Format de réponse inattendu +DI pour {symbol}: {data}", "error")
+                    return None
+                self._update_cache(formatted_symbol, plusdi_value)
+                self._log(f"+DI pour {symbol}: {plusdi_value}", "info")
+                return plusdi_value
+        except Exception:
+            return None
+
+    async def get_minus_di(self, symbol: str, period: int = None, interval: str = None) -> Optional[float]:
+        """Récupère l'indicateur -DI"""
+        period = period if period is not None else Config.DI_LENGTH
+        interval = interval if interval is not None else Config.ADX_INTERVAL
+        exch = self.exchange.lower()
+        # Mapping du symbole similaire au RSI
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/minusdi"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": interval,
+                "period": period
+            }
+            self._log(f"Récupération -DI pour {symbol}", "info")
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    return None
+                data = await response.json()
+                self._log(f"Réponse brute -DI pour {symbol}: {data}", "info")
+                if "value" in data:
+                    minusdi_value = float(data["value"])
+                elif "minusdi" in data:
+                    minusdi_value = float(data["minusdi"])
+                else:
+                    self._log(f"Format de réponse inattendu -DI pour {symbol}: {data}", "error")
+                    return None
+                self._update_cache(formatted_symbol, minusdi_value)
+                self._log(f"-DI pour {symbol}: {minusdi_value}", "info")
+                return minusdi_value
+        except Exception:
+            return None
+
+    async def get_dmi(self, symbol: str, period: int = None, interval: str = None) -> Optional[Dict[str, float]]:
+        """
+        Récupère les indicateurs DMI (ADX, +DI, -DI) via l'endpoint /dmi de l'API taapi.io.
+        Retourne un dict {'adx': float, 'pdi': float, 'mdi': float} ou None en cas d'erreur.
+        """
+        period = period if period is not None else Config.ADX_LENGTH
+        interval = interval if interval is not None else Config.ADX_INTERVAL
+        exch = self.exchange.lower()
+        # Mapping du symbole similaire au RSI
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+        else:
+            formatted_symbol = symbol
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/dmi"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": interval,
+                "period": period
+            }
+            self._log(f"Récupération DMI pour {symbol}", "info")
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    return None
+                data = await response.json()
+                self._log(f"Réponse brute DMI pour {symbol}: {data}", "info")
+                if "adx" in data and "pdi" in data and "mdi" in data:
+                    return {
+                        "adx": float(data["adx"]),
+                        "pdi": float(data["pdi"]),
+                        "mdi": float(data["mdi"])
+                    }
+                self._log(f"Format de réponse inattendu DMI pour {symbol}: {data}", "error")
+                return None
+        except Exception as e:
+            self._log(f"Erreur récupération DMI pour {symbol}: {e}", "error")
+            return None
+
+
+    async def get_indicators_batch(self, symbols: list, indicators: list, period_map: dict = None, interval_map: dict = None) -> dict:
+        """
+        Récupère en une seule requête plusieurs indicateurs pour une liste de symboles.
+        Cette méthode appelle l'endpoint "/multi" de taapi.io pour récupérer les valeurs demandées.
+        Args:
+            symbols: Liste de symboles (ex: ["BTC/USDC"]).
+            indicators: Liste d'indicateurs à récupérer (ex: ["rsi", "willr", "obv", "dmi"]).
+            period_map: Dictionnaire facultatif précisant la période pour chaque indicateur.
+            interval_map: Dictionnaire facultatif précisant l'intervalle pour chaque indicateur.
+        Returns:
+            Un dictionnaire de la forme { symbole: { indicateur: valeur, ... }, ... } ou {} en cas d'erreur.
+        """
+        results = {}
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/multi"
+            for symbol in symbols:
+                exch = self.exchange.lower()
+                if exch == "coinbase":
+                    formatted_symbol = symbol.replace("/USDT", "/USD")
+                elif exch == "kraken":
+                    formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDT", "/USD")
+                else:
+                    formatted_symbol = symbol
+                params = {
+                    "secret": self.api_key,
+                    "exchange": exch,
+                    "symbol": formatted_symbol,
+                    "indicators": ",".join(indicators)
+                }
+                if period_map:
+                    for ind, period in period_map.items():
+                        params[f"{ind}_period"] = period
+                if interval_map:
+                    for ind, interval in interval_map.items():
+                        params[f"{ind}_interval"] = interval
+                async with session.get(url, params=params, timeout=0.8) as response:
+                    if response.status != 200:
+                        error_text = await response.text()
+                        self._log(f"Erreur API taapi.io batch ({response.status}): {error_text}", "error")
+                        continue
+                    data = await response.json()
+                    results[symbol] = data
+            return results
+        except Exception as e:
+            self._log(f"Erreur dans get_indicators_batch: {e}", "error")
+            return {}
+    
 # Instance singleton pour une utilisation facile
 taapi_client = TaapiClient()

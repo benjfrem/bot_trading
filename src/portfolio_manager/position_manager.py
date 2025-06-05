@@ -137,7 +137,7 @@ class PositionManager:
             async def on_timeout():
                 self.pending_orders.pop(symbol, None)
                 await self._handle_order_timeout(symbol, price, position_size)
-            async def on_fill(order_info):
+            def on_fill(order_info):
                 self._process_successful_buy_order(symbol, order_info)
 
             # Envoi de l'ordre limite
@@ -165,6 +165,8 @@ class PositionManager:
                 return False
 
             log_event(f"⏳ Ordre créé: {order.get('id')} en attente")
+            # Instancier le StopLossManager dès l'ouverture de la position
+            self.portfolio_manager.trailing_stops[symbol] = StopLossManager(entry_price=price, symbol=symbol)
             return True
 
     async def can_open_position(self, symbol: str = None) -> bool:
@@ -220,7 +222,21 @@ class PositionManager:
         self.portfolio_manager.positions[symbol] = pos
         
         # Création du stop loss adaptatif
-        self.portfolio_manager.trailing_stops[symbol] = StopLossManager(entry_price=price_avg, symbol=symbol)
+        # Détermination du multiplicateur SL selon ADX et DI
+        adx = opportunity.get('adx', 0) or 0
+        plus_di = opportunity.get('plus_di', 0) or 0
+        minus_di = opportunity.get('minus_di', 0) or 0
+        if adx >= 25:
+            multiplier = 2.2 if plus_di > minus_di else 1.2
+        else:
+            multiplier = 1.6
+        log_event(f"SL adaptatif choisi : ATR×{multiplier:.2f} (ADX={adx:.2f}, +DI={plus_di:.2f}, -DI={minus_di:.2f})", "info")
+        # Création du stop loss adaptatif avec multiplicateur dynamique
+        self.portfolio_manager.trailing_stops[symbol] = StopLossManager(
+            entry_price=price_avg,
+            symbol=symbol,
+            multiplier=multiplier
+        )
         # Configuration du trailing stop selon le score
         self.portfolio_manager.trailing_stop_paliers[symbol] = TrailingStopLoss(
             entry_price=price_avg,

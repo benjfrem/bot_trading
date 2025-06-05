@@ -20,12 +20,14 @@ class AdaptiveStopLoss:
     - entry_price : prix d'entrée de la position
     - symbol      : paire de trading (ex. 'BTC/USDT')
     """
-    def __init__(self, entry_price: float = 0.0, symbol: str = ""):
+    def __init__(self, entry_price: float = 0.0, symbol: str = "", multiplier: float = None):
         self.entry_price = entry_price
         self.symbol = symbol
         # Niveau initial du stop loss = prix d'entrée (0% de perte)
         self.current_stop_level = entry_price
         self.trigger_time = None
+        # Multiplicateur dynamique pour la distance de stop loss
+        self.multiplier = multiplier if multiplier is not None else Config.ATR_MULTIPLIER
 
     def update(self, last_price: float) -> bool:
         """
@@ -39,7 +41,7 @@ class AdaptiveStopLoss:
 
         # Calcul du ratio ATR et de la distance de stop
         atr_ratio = atr_price / last_price
-        stop_distance = atr_ratio * Config.ATR_MULTIPLIER
+        stop_distance = atr_ratio * self.multiplier
 
         # Calcul du nouveau niveau de stop loss
         new_stop_level = self.entry_price * (1 - stop_distance)

@@ -87,7 +87,7 @@ class TrailingBuyRsi:
         applicable_level = None
         
         # VÉRIFICATION CRITIQUE: Ne pas sélectionner de niveau si le RSI n'est jamais descendu en zone de survente
-        if self.lowest_rsi > 27:
+        if self.lowest_rsi > 30:
             trading_logger.info(f"""
 === AUCUN NIVEAU RSI APPLICABLE ===
    RSI minimum: {self.lowest_rsi:.2f}
@@ -101,10 +101,10 @@ class TrailingBuyRsi:
         
         # Cas spécial pour la zone RSI 27-29
         # Vérifier si le RSI minimum est entre 27 et 29
-        if self.lowest_rsi <= 30 and self.lowest_rsi >= 25:
+        if self.lowest_rsi <= 30 and self.lowest_rsi >= 1:
             # Créer un niveau spécial pour la zone 27-29
             applicable_level = TrailingBuyRsiLevel(
-                trigger_level=25,  # Explicitement 27
+                trigger_level=1,  # Explicitement 27
                 buy_level=30,      # Remontée à 29 pour achat
                 is_immediate=True,
                 weight=0
@@ -161,7 +161,7 @@ class TrailingBuyRsi:
         # Log supplémentaire pour débogage
         if applicable_level:
             # Cas du niveau spécial 27-29 qui n'est pas dans sorted_levels
-            if applicable_level.trigger_level == 25 and applicable_level.buy_level == 30:
+            if applicable_level.trigger_level == 1 and applicable_level.buy_level == 30:
                 trading_logger.info(f"""
 === NIVEAU RSI APPLICABLE ===
    RSI le plus bas: {self.lowest_rsi:.2f}
@@ -228,7 +228,7 @@ class TrailingBuyRsi:
         # Le paramètre trend est ignoré, on utilise toujours la tendance neutre
         
         # Le RSI atteint 27 ou descend en dessous, démarrer le suivi
-        if current_rsi <= 27:
+        if current_rsi <= 20:
             trading_logger.info(f"""
 === DÉMARRAGE SUIVI TRAILING BUY RSI ===
    RSI actuel: {current_rsi:.2f}

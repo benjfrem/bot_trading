@@ -11,9 +11,6 @@ load_dotenv()
 
 class TradingConfig:
     """Configuration des paramètres de trading"""
-    # Montant de transaction en USDC
-
-
     # Quantité fixe de transaction en BTC
     TRANSACTION_QUANTITY = 0.001  # Quantité de BTC à acheter/vendre par ordre (ajusté pour ~50 USDC si BTC vaut 50k)
     
@@ -39,33 +36,25 @@ class TradingConfig:
         {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
     ]
     
-
     # Configuration du Trailing Buy basé sur RSI
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
-        {'trigger': 15, 'stop': 30, 'immediate': True}, 
-        {'trigger': 5, 'stop': 15, 'immediate': True}, 
-        {'trigger': 0, 'stop': 5, 'immediate': True}
+        {'trigger': 1, 'stop': 30, 'immediate': True}
     ]
-
-
     # Configuration par défaut (utilisée si aucune tendance n'est détectée)
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
     
-    # Configuration du Trailing Stop Loss mecx
-		#niveau 1 du tralling loss ( distance entre les niveau )
-
-    
+    # Configuration du Trailing Stop Loss mexc
     TRAILING_STOP_LEVELS = [
-		#niveau 1 du tralling loss ( distance entre les niveau )
-	    {'trigger': 0.20, 'stop': 0.12, 'immediate': True}, 
-	    {'trigger': 0.25, 'stop': 0.20, 'immediate': True},    
+        {'trigger': 0.15, 'stop': 0.1, 'immediate': True}, 
+        {'trigger': 0.20, 'stop': 0.15, 'immediate': True},
+        {'trigger': 0.25, 'stop': 0.20, 'immediate': True},    
         {'trigger': 0.40, 'stop': 0.25, 'immediate': True},    
-        {'trigger': 0.50, 'stop': 0.40, 'immediate': True},    
-        {'trigger': 0.60, 'stop': 0.50, 'immediate': True},
-	    {'trigger': 0.80, 'stop': 0.60, 'immediate': True},    
-        {'trigger': 1, 'stop': 0.8, 'immediate': True},    
-        {'trigger': 0.85, 'stop': 0.70, 'immediate': True},    
-        {'trigger': 1.00, 'stop': 0.85, 'immediate': True},    
+        {'trigger': 0.60, 'stop': 0.40, 'immediate': True},
+        {'trigger': 0.80, 'stop': 0.60, 'immediate': True},    
+        {'trigger': 1.00, 'stop': 0.80, 'immediate': True},    
+        {'trigger': 0.60, 'stop': 0.40, 'immediate': True},
+        {'trigger': 0.80, 'stop': 0.60, 'immediate': True},    
+        {'trigger': 1.00, 'stop': 0.80, 'immediate': True},    
         {'trigger': 1.20, 'stop': 1.00, 'immediate': True},    
         {'trigger': 1.40, 'stop': 1.20, 'immediate': True},    
         {'trigger': 1.60, 'stop': 1.40, 'immediate': True}     
@@ -84,9 +73,9 @@ class TradingConfig:
     }
 
     # Paramètres ATR pour Stop Loss adaptatif
-    ATR_LENGTH = 4             # Nombre de bougies pour calcul ATR
-    ATR_INTERVAL = "15m"       # Intervalle pour ATR (15 minutes)
-    ATR_MULTIPLIER = 1.5         # Multiplicateur pour la distance du stop loss
+    ATR_LENGTH = 6             # Nombre de bougies pour calcul ATR
+    ATR_INTERVAL = "5m"       # Intervalle pour ATR (15 minutes)
+    ATR_MULTIPLIER = 1.5       # Multiplicateur pour la distance du stop loss
     STOP_TIMEOUT_SEC = 5       # Délai anti-mèche en secondes
 
     # Paramètre de double confirmation RSI
@@ -94,40 +83,57 @@ class TradingConfig:
 
 class MarketConfig:
     """Configuration des marchés"""
-    # Liste des paires de trading supportées
     CRYPTO_LIST = [
         'BTC/USDC',
     ]
 
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
-    # Paramètres RSI
-    RSI_PERIOD = 3          # Période pour le RSI
-
-    # Paramètres Fisher Transform
-    FISHER_PERIOD = 9       # Période pour le Fisher Transform (9 bougies 1m)
-    FISHER_INTERVAL = "1m"  # Intervalle pour le Fisher Transform
-    FISHER_THRESHOLD = 1.5  # Seuil de rejet pour le Fisher Transform
+    RSI_PERIOD = 3
+    FISHER_PERIOD = 9
+    FISHER_INTERVAL = "1m"
+    FISHER_THRESHOLD = 1.5
     
-    # Paramètres Williams %R
-    WILLIAMS_R_PERIOD = 16         # Période pour Williams %R (12 bougies 5m)
-    WILLIAMS_R_INTERVAL = "5m"     # Intervalle pour Williams %R
-    WILLIAMS_R_OVERSOLD_THRESHOLD = -80  # Seuil survente (valeur <= -80)
-    WILLIAMS_R_OVERBOUGHT_THRESHOLD = -20  # Seuil surachat (valeur >= -20)
-    
-    # Autres paramètres supprimés (Bollinger Bands et Volume)
+    WILLIAMS_R_PERIOD = 8
+    WILLIAMS_R_INTERVAL = "15m"
+    WILLIAMS_R_OVERSOLD_THRESHOLD = -80
+    WILLIAMS_R_OVERBOUGHT_THRESHOLD = -40
 
+    ADX_LENGTH = 10
+    DI_LENGTH = 10
+    ADX_INTERVAL = "1D"
+    "--------------------------"
+    ADX_LENGTH_VALID = 10
+    DI_LENGTH_VALID = 10
+    ADX_INTERVAL_VALID = "1m"
+    DMI_NEGATIVE_THRESHOLD = 45
 class ScoringConfig:
     """Configuration du système de scoring"""
-    # Scores RSI (25-40 points selon le niveau déclenché)
-    
-    # Les configurations BB_SCORES et VOLUME_SCORES ont été supprimées
+    pass
 
 class TimeConfig:
     """Configuration des intervalles de temps"""
-    # Intervalles en secondes
-    ANALYSIS_INTERVAL = 90     # Analyse du marché tous les 60 secondes
-    CHECK_INTERVAL = 15          # Vérification des positions (vérifier les positions chaque seconde)
+    ANALYSIS_INTERVAL = 60     # Analyse du marché tous les 60 secondes
+    CHECK_INTERVAL = 15        # Vérification des positions (vérifier les positions chaque seconde)
+
+class LogConfig:
+    """Configuration des logs"""
+    LOG_FILE = 'logs/trading.log'
+    ERROR_LOG = 'logs/error.log'
+
+class TaapiConfig:
+    """Configuration de l'API taapi.io pour les indicateurs techniques"""
+    API_KEY = os.getenv('TAAPI_API_KEY')
+    ENDPOINT = "https://api.taapi.io"
+    EXCHANGE = "binance"
+    INTERVAL = "5m"
+    CACHE_TTL = 0.1
+    VERIFY_SSL = False
+
+class Config(TradingConfig, MarketConfig, TechnicalConfig, ScoringConfig, TimeConfig, LogConfig, TaapiConfig):
+    """Configuration globale du bot"""
+    DMI_NEGATIVE_THRESHOLD = TechnicalConfig.DMI_NEGATIVE_THRESHOLD
+    pass
 
 class LogConfig:
     """Configuration des logs"""
@@ -150,7 +156,7 @@ class TaapiConfig:
     # Configuration des requêtes
     ENDPOINT = "https://api.taapi.io"
     EXCHANGE = "binance"       # Utiliser binance qui est l'exchange par défaut de taapi.io
-    INTERVAL = "15m"            # Intervalle par minute pour des mises à jour rapides des données
+    INTERVAL = "5m"            # Intervalle par minute pour des mises à jour rapides des données
     
     # Configuration du cache
     CACHE_TTL = 0.1            # Durée de vie du cache très courte pour forcer les appels API fréquents
@@ -212,6 +218,14 @@ class Config:
     WILLIAMS_R_INTERVAL = TechnicalConfig.WILLIAMS_R_INTERVAL
     WILLIAMS_R_OVERSOLD_THRESHOLD = TechnicalConfig.WILLIAMS_R_OVERSOLD_THRESHOLD
     WILLIAMS_R_OVERBOUGHT_THRESHOLD = TechnicalConfig.WILLIAMS_R_OVERBOUGHT_THRESHOLD
+
+    # Paramètres ADX et DMI exportés
+    ADX_LENGTH = TechnicalConfig.ADX_LENGTH
+    DI_LENGTH = TechnicalConfig.DI_LENGTH
+    ADX_INTERVAL = TechnicalConfig.ADX_INTERVAL
+    ADX_LENGTH_VALID = TechnicalConfig.ADX_LENGTH_VALID
+    DI_LENGTH_VALID = TechnicalConfig.DI_LENGTH_VALID
+    ADX_INTERVAL_VALID = TechnicalConfig.ADX_INTERVAL_VALID
 
     # Paramètres ATR pour Stop Loss adaptatif
     ATR_LENGTH = TradingConfig.ATR_LENGTH
