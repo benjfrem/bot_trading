@@ -21588,3 +21588,97 @@ Profit total: 0.00 USDC
    Action: Attente de remontée supplémentaire
 
 2025-06-05 12:22:16,142 - trading - INFO - Confirmation RSI: seuil d'achat = 30.00 pour BTC/USDC
+2025-06-05 12:23:15,450 - trading - INFO - Exécution de market_analysis (dernier: il y a 59.3s)
+2025-06-05 12:23:15,556 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 14.402511781298195}
+2025-06-05 12:23:15,557 - trading - INFO - RSI pour BTC/USDC: 14.402511781298195
+2025-06-05 12:23:15,557 - trading - INFO - RSI actualisé: BTC/USDC = 14.402511781298195
+2025-06-05 12:23:15,557 - trading - INFO - ⚠️ BTC/USDC en zone de survente (RSI: 14.40)
+2025-06-05 12:23:15,640 - trading - INFO - 
+=== DÉMARRAGE SUIVI TRAILING BUY RSI ===
+   RSI actuel: 14.40
+   Seuil de démarrage: 25
+   Action: Activation du suivi des niveaux RSI
+
+2025-06-05 12:23:15,641 - trading - INFO - 
+=== NOUVEAU RSI MINIMUM ===
+   Ancien minimum: 14.79
+   Nouveau minimum: 14.40
+   Prix actuel: 104813.81500000
+
+2025-06-05 12:23:15,641 - trading - INFO - 
+=== NIVEAU SPÉCIAL ZONE 25-30 ===
+   RSI minimum: 14.40
+   Niveau de déclenchement: 25
+   Niveau d'achat: 30
+   Logique: Attendre que le RSI remonte à 30 après être descendu entre 25 et 30
+
+2025-06-05 12:23:15,641 - trading - INFO - 
+=== NIVEAU RSI APPLICABLE ===
+   RSI le plus bas: 14.40
+   Niveau sélectionné: trigger=1, buy=30
+   Explication: 14.40 est entre 27.5 et 30 (cas spécial)
+
+2025-06-05 12:23:15,641 - trading - INFO - 
+=== RSI STABLE AU MINIMUM ===
+   RSI actuel: 14.40
+   RSI minimum: 14.40
+   Action: Continuer l'analyse (possible achat)
+
+2025-06-05 12:23:15,642 - trading - INFO - 
+=== RSI REMONTANT MAIS INSUFFISANT ===
+   RSI actuel: 14.40
+   RSI le plus bas: 14.40
+   Niveau d'achat requis: 30.00
+   Écart: 15.60
+   Action: Attente de remontée supplémentaire
+
+2025-06-05 12:23:15,871 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 14.402511781298195}
+2025-06-05 12:23:15,871 - trading - INFO - RSI pour BTC/USDC: 14.402511781298195
+2025-06-05 12:23:15,944 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 8, intervalle 15m)
+2025-06-05 12:23:15,991 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -47.82571231617449}
+2025-06-05 12:23:15,991 - trading - INFO - Williams %R pour BTC/USDT: -47.82571231617449
+2025-06-05 12:23:15,991 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 5m)
+2025-06-05 12:23:16,045 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': -978.9452500000476}
+2025-06-05 12:23:16,045 - trading - INFO - OBV pour BTC/USDT: -978.9452500000476
+2025-06-05 12:23:16,045 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 104813.81500000
+   RSI: 14.40
+   ATR: 59.55181591
+   Williams %R: -47.83
+   OBV: -978.95 / OBV SMA4: -970.35
+
+2025-06-05 12:23:16,045 - trading - INFO - 
+=== DÉMARRAGE SUIVI TRAILING BUY RSI ===
+   RSI actuel: 14.40
+   Seuil de démarrage: 25
+   Action: Activation du suivi des niveaux RSI
+
+2025-06-05 12:23:16,045 - trading - INFO - 
+=== NIVEAU SPÉCIAL ZONE 25-30 ===
+   RSI minimum: 14.40
+   Niveau de déclenchement: 25
+   Niveau d'achat: 30
+   Logique: Attendre que le RSI remonte à 30 après être descendu entre 25 et 30
+
+2025-06-05 12:23:16,045 - trading - INFO - 
+=== NIVEAU RSI APPLICABLE ===
+   RSI le plus bas: 14.40
+   Niveau sélectionné: trigger=1, buy=30
+   Explication: 14.40 est entre 27.5 et 30 (cas spécial)
+
+2025-06-05 12:23:16,045 - trading - INFO - 
+=== RSI STABLE AU MINIMUM ===
+   RSI actuel: 14.40
+   RSI minimum: 14.40
+   Action: Continuer l'analyse (possible achat)
+
+2025-06-05 12:23:16,045 - trading - INFO - 
+=== RSI REMONTANT MAIS INSUFFISANT ===
+   RSI actuel: 14.40
+   RSI le plus bas: 14.40
+   Niveau d'achat requis: 30.00
+   Écart: 15.60
+   Action: Attente de remontée supplémentaire
+
+2025-06-05 12:23:16,046 - trading - INFO - Confirmation RSI: seuil d'achat = 30.00 pour BTC/USDC
