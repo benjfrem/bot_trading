@@ -16,6 +16,8 @@ class PositionTracker:
             return []
         
         closed_positions = []
+        log_event(f"DEBUG [PositionTracker] positions: {list(self.portfolio_manager.positions.keys())}", "info")
+        log_event(f"DEBUG [PositionTracker] trailing_stops: {list(self.portfolio_manager.trailing_stops.keys())}", "info")
         symbols = list(self.portfolio_manager.positions.keys())
         
         # Optimisation: Récupérer les prix actuels en une seule requête si possible

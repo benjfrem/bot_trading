@@ -177,7 +177,7 @@ class OpportunityFinder:
                 
                 # Conditions supplémentaires
                 # Williams %R strict entre -80 et -40
-                if willr_val is None or not(-80 < willr_val < -40):
+                if willr_val is None or not(-80 < willr_val < -30):
                     self._log(f"Williams %R hors plage: {williams_str}", "info")
                     md.trailing_buy_rsi.lowest_rsi = rsi
                     md.rsi_confirm_counter = 0

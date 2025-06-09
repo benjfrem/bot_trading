@@ -29,18 +29,9 @@ class TradingConfig:
         {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
     ]
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
-    {'trigger': 75, 'stop': 80, 'immediate': True},
-    {'trigger': 70, 'stop': 75, 'immediate': True},
-    {'trigger': 65, 'stop': 70, 'immediate': True},
-    {'trigger': 60, 'stop': 65, 'immediate': True},
-    {'trigger': 55, 'stop': 60, 'immediate': True},
-    {'trigger': 50, 'stop': 55, 'immediate': True},
-    {'trigger': 45, 'stop': 50, 'immediate': True},
-    {'trigger': 40, 'stop': 45, 'immediate': True},
-    {'trigger': 35, 'stop': 40, 'immediate': True},
-    {'trigger': 30, 'stop': 35, 'immediate': True},
-    {'trigger': 25, 'stop': 30, 'immediate': True}
-]
+    {'trigger': 1, 'stop': 30, 'immediate': True}
+    ]
+
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
     TRAILING_STOP_LEVELS = [
         {'trigger': 0.15, 'stop': 0.1, 'immediate': True},
@@ -56,7 +47,6 @@ class TradingConfig:
     ]
     INITIAL_STOP_LOSS = 0.1
     MIN_TRANSACTION_QUOTE_AMOUNT = 1.0
-    DECISION_THRESHOLDS = {'full_position': 33, 'partial_position': 33}
     ATR_LENGTH = 6
     ATR_INTERVAL = "5m"
     ATR_MULTIPLIER = 1.5
@@ -93,7 +83,7 @@ class TechnicalConfig:
     WILLIAMS_R_PERIOD = 5
     WILLIAMS_R_INTERVAL = "5m"
     WILLIAMS_R_OVERSOLD_THRESHOLD = -80
-    WILLIAMS_R_OVERBOUGHT_THRESHOLD = -10
+    WILLIAMS_R_OVERBOUGHT_THRESHOLD = -30
 
     ADX_LENGTH = 10
     DI_LENGTH = 10
@@ -124,7 +114,6 @@ class Config:
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = TradingConfig.TRAILING_BUY_RSI_LEVELS_NEUTRAL
     TRAILING_STOP_LEVELS = TradingConfig.TRAILING_STOP_LEVELS
     INITIAL_STOP_LOSS = TradingConfig.INITIAL_STOP_LOSS
-    DECISION_THRESHOLDS = TradingConfig.DECISION_THRESHOLDS
     RSI_PERIOD = TechnicalConfig.RSI_PERIOD
     ANALYSIS_INTERVAL = TimeConfig.ANALYSIS_INTERVAL
     CHECK_INTERVAL = TimeConfig.CHECK_INTERVAL
