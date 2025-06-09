@@ -11119,3 +11119,2730 @@ Profit total: 0.00 USDC
    RSI le plus bas: 35.29
    Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
 
+2025-06-09 19:52:32,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:52:32,085 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:32,085 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:32,085 - trading - INFO - RSI actualisé: BTC/USDC = 49.48646681169157
+2025-06-09 19:52:32,438 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:32,438 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:32,524 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:52:32,560 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.26762315797575}
+2025-06-09 19:52:32,560 - trading - INFO - Williams %R pour BTC/USDT: -43.26762315797575
+2025-06-09 19:52:32,561 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:52:32,603 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1462.564890000016}
+2025-06-09 19:52:32,603 - trading - INFO - OBV pour BTC/USDT: 1462.564890000016
+2025-06-09 19:52:32,603 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108360.79000000
+   RSI: 49.49
+   ATR: 160.90597486
+   Williams %R: -43.27
+   OBV: 1462.56 / OBV SMA4: 1462.21
+
+2025-06-09 19:52:32,604 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:52:32,604 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 49.49
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:52:37,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:52:37,117 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:37,117 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:37,117 - trading - INFO - RSI actualisé: BTC/USDC = 49.48646681169157
+2025-06-09 19:52:37,421 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:37,422 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:37,497 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:52:37,530 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.27151133403032}
+2025-06-09 19:52:37,531 - trading - INFO - Williams %R pour BTC/USDT: -43.27151133403032
+2025-06-09 19:52:37,531 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:52:37,569 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1462.673180000016}
+2025-06-09 19:52:37,570 - trading - INFO - OBV pour BTC/USDT: 1462.673180000016
+2025-06-09 19:52:37,570 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108364.20500000
+   RSI: 49.49
+   ATR: 160.90597486
+   Williams %R: -43.27
+   OBV: 1462.67 / OBV SMA4: 1462.39
+
+2025-06-09 19:52:37,570 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:52:37,571 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 49.49
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:52:42,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:52:42,097 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:42,098 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:42,098 - trading - INFO - RSI actualisé: BTC/USDC = 49.48646681169157
+2025-06-09 19:52:42,493 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:42,494 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:42,574 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:52:42,612 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.27151133403032}
+2025-06-09 19:52:42,613 - trading - INFO - Williams %R pour BTC/USDT: -43.27151133403032
+2025-06-09 19:52:42,613 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:52:42,649 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1462.7096800000159}
+2025-06-09 19:52:42,649 - trading - INFO - OBV pour BTC/USDT: 1462.7096800000159
+2025-06-09 19:52:42,650 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108363.43500000
+   RSI: 49.49
+   ATR: 160.90597486
+   Williams %R: -43.27
+   OBV: 1462.71 / OBV SMA4: 1462.53
+
+2025-06-09 19:52:42,650 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:52:42,650 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 49.49
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:52:47,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:52:47,093 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:47,094 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:47,094 - trading - INFO - RSI actualisé: BTC/USDC = 49.48646681169157
+2025-06-09 19:52:47,436 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:47,437 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:47,519 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:52:47,555 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.26762315797575}
+2025-06-09 19:52:47,555 - trading - INFO - Williams %R pour BTC/USDT: -43.26762315797575
+2025-06-09 19:52:47,555 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:52:47,587 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1462.728270000016}
+2025-06-09 19:52:47,587 - trading - INFO - OBV pour BTC/USDT: 1462.728270000016
+2025-06-09 19:52:47,588 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108363.21000000
+   RSI: 49.49
+   ATR: 160.90597486
+   Williams %R: -43.27
+   OBV: 1462.73 / OBV SMA4: 1462.67
+
+2025-06-09 19:52:47,588 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:52:47,588 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 49.49
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:52:52,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:52:52,092 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:52,092 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:52,093 - trading - INFO - RSI actualisé: BTC/USDC = 49.48646681169157
+2025-06-09 19:52:52,563 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:52,564 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:52,640 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:52:52,697 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.27151133403032}
+2025-06-09 19:52:52,697 - trading - INFO - Williams %R pour BTC/USDT: -43.27151133403032
+2025-06-09 19:52:52,698 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:52:52,735 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1462.871290000016}
+2025-06-09 19:52:52,735 - trading - INFO - OBV pour BTC/USDT: 1462.871290000016
+2025-06-09 19:52:52,736 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108367.49000000
+   RSI: 49.49
+   ATR: 160.90597486
+   Williams %R: -43.27
+   OBV: 1462.87 / OBV SMA4: 1462.75
+
+2025-06-09 19:52:52,736 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:52:52,736 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 49.49
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:52:57,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:52:57,090 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:57,090 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:57,090 - trading - INFO - RSI actualisé: BTC/USDC = 49.48646681169157
+2025-06-09 19:52:57,429 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 49.48646681169157}
+2025-06-09 19:52:57,430 - trading - INFO - RSI pour BTC/USDC: 49.48646681169157
+2025-06-09 19:52:57,530 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:52:57,567 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.26762315797575}
+2025-06-09 19:52:57,567 - trading - INFO - Williams %R pour BTC/USDT: -43.26762315797575
+2025-06-09 19:52:57,567 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:52:57,606 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1462.885740000016}
+2025-06-09 19:52:57,606 - trading - INFO - OBV pour BTC/USDT: 1462.885740000016
+2025-06-09 19:52:57,606 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108366.54000000
+   RSI: 49.49
+   ATR: 160.90597486
+   Williams %R: -43.27
+   OBV: 1462.89 / OBV SMA4: 1462.80
+
+2025-06-09 19:52:57,607 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:52:57,607 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 49.49
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:02,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:53:02,079 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.45294288116653}
+2025-06-09 19:53:02,080 - trading - INFO - RSI pour BTC/USDC: 47.45294288116653
+2025-06-09 19:53:02,080 - trading - INFO - RSI actualisé: BTC/USDC = 47.45294288116653
+2025-06-09 19:53:02,496 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.45294288116653}
+2025-06-09 19:53:02,496 - trading - INFO - RSI pour BTC/USDC: 47.45294288116653
+2025-06-09 19:53:02,571 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:02,688 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -47.066371165287066}
+2025-06-09 19:53:02,689 - trading - INFO - Williams %R pour BTC/USDT: -47.066371165287066
+2025-06-09 19:53:02,689 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:02,732 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1463.5725300000163}
+2025-06-09 19:53:02,733 - trading - INFO - OBV pour BTC/USDT: 1463.5725300000163
+2025-06-09 19:53:02,733 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108355.04000000
+   RSI: 47.45
+   ATR: 160.90597486
+   Williams %R: -47.07
+   OBV: 1463.57 / OBV SMA4: 1463.01
+
+2025-06-09 19:53:02,733 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:02,733 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:07,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:53:07,325 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.45294288116653}
+2025-06-09 19:53:07,326 - trading - INFO - RSI pour BTC/USDC: 47.45294288116653
+2025-06-09 19:53:07,326 - trading - INFO - RSI actualisé: BTC/USDC = 47.45294288116653
+2025-06-09 19:53:07,465 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.45294288116653}
+2025-06-09 19:53:07,468 - trading - INFO - RSI pour BTC/USDC: 47.45294288116653
+2025-06-09 19:53:07,559 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:07,601 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -48.62164158793179}
+2025-06-09 19:53:07,601 - trading - INFO - Williams %R pour BTC/USDT: -48.62164158793179
+2025-06-09 19:53:07,602 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:07,717 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1311.5782099999774}
+2025-06-09 19:53:07,717 - trading - INFO - OBV pour BTC/USDT: 1311.5782099999774
+2025-06-09 19:53:07,717 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108353.57500000
+   RSI: 47.45
+   ATR: 160.90597486
+   Williams %R: -48.62
+   OBV: 1311.58 / OBV SMA4: 1425.23
+
+2025-06-09 19:53:07,718 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:07,718 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:12,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:53:12,077 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.88032284272833}
+2025-06-09 19:53:12,078 - trading - INFO - RSI pour BTC/USDC: 47.88032284272833
+2025-06-09 19:53:12,078 - trading - INFO - RSI actualisé: BTC/USDC = 47.88032284272833
+2025-06-09 19:53:12,455 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.88032284272833}
+2025-06-09 19:53:12,456 - trading - INFO - RSI pour BTC/USDC: 47.88032284272833
+2025-06-09 19:53:12,536 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:12,584 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -47.066371165287066}
+2025-06-09 19:53:12,585 - trading - INFO - Williams %R pour BTC/USDT: -47.066371165287066
+2025-06-09 19:53:12,585 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:12,673 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1465.3344900000166}
+2025-06-09 19:53:12,673 - trading - INFO - OBV pour BTC/USDT: 1465.3344900000166
+2025-06-09 19:53:12,674 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108358.68500000
+   RSI: 47.88
+   ATR: 160.90597486
+   Williams %R: -47.07
+   OBV: 1465.33 / OBV SMA4: 1425.84
+
+2025-06-09 19:53:12,674 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:12,674 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.88
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:17,054 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:53:17,095 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.86641626639423}
+2025-06-09 19:53:17,096 - trading - INFO - RSI pour BTC/USDC: 47.86641626639423
+2025-06-09 19:53:17,096 - trading - INFO - RSI actualisé: BTC/USDC = 47.86641626639423
+2025-06-09 19:53:17,131 - trading - INFO - Statistiques minute: RSI: 13, Tendance: 13
+2025-06-09 19:53:17,706 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.86641626639423}
+2025-06-09 19:53:17,706 - trading - INFO - RSI pour BTC/USDC: 47.86641626639423
+2025-06-09 19:53:17,788 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:17,838 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -47.07025934134164}
+2025-06-09 19:53:17,839 - trading - INFO - Williams %R pour BTC/USDT: -47.07025934134164
+2025-06-09 19:53:17,839 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:17,879 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1465.4687200000164}
+2025-06-09 19:53:17,879 - trading - INFO - OBV pour BTC/USDT: 1465.4687200000164
+2025-06-09 19:53:17,880 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108362.82000000
+   RSI: 47.87
+   ATR: 160.90597486
+   Williams %R: -47.07
+   OBV: 1465.47 / OBV SMA4: 1426.49
+
+2025-06-09 19:53:17,880 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:17,880 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.87
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:22,041 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.2s)
+2025-06-09 19:53:22,089 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.281794036912245}
+2025-06-09 19:53:22,090 - trading - INFO - RSI pour BTC/USDC: 47.281794036912245
+2025-06-09 19:53:22,091 - trading - INFO - RSI actualisé: BTC/USDC = 47.281794036912245
+2025-06-09 19:53:22,425 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.281794036912245}
+2025-06-09 19:53:22,425 - trading - INFO - RSI pour BTC/USDC: 47.281794036912245
+2025-06-09 19:53:22,491 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:22,531 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -47.07025934134164}
+2025-06-09 19:53:22,531 - trading - INFO - Williams %R pour BTC/USDT: -47.07025934134164
+2025-06-09 19:53:22,532 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:22,571 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1465.5363300000165}
+2025-06-09 19:53:22,571 - trading - INFO - OBV pour BTC/USDT: 1465.5363300000165
+2025-06-09 19:53:22,572 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108349.84000000
+   RSI: 47.28
+   ATR: 160.90597486
+   Williams %R: -47.07
+   OBV: 1465.54 / OBV SMA4: 1426.98
+
+2025-06-09 19:53:22,572 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:22,572 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.28
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:27,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:53:27,082 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 44.51929400810084}
+2025-06-09 19:53:27,082 - trading - INFO - RSI pour BTC/USDC: 44.51929400810084
+2025-06-09 19:53:27,083 - trading - INFO - RSI actualisé: BTC/USDC = 44.51929400810084
+2025-06-09 19:53:27,466 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 44.51929400810084}
+2025-06-09 19:53:27,467 - trading - INFO - RSI pour BTC/USDC: 44.51929400810084
+2025-06-09 19:53:27,557 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:27,616 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -52.61479839806805}
+2025-06-09 19:53:27,617 - trading - INFO - Williams %R pour BTC/USDT: -52.61479839806805
+2025-06-09 19:53:27,617 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:27,657 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1308.2559299999766}
+2025-06-09 19:53:27,658 - trading - INFO - OBV pour BTC/USDT: 1308.2559299999766
+2025-06-09 19:53:27,658 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108341.10500000
+   RSI: 44.52
+   ATR: 160.90597486
+   Williams %R: -52.61
+   OBV: 1308.26 / OBV SMA4: 1426.15
+
+2025-06-09 19:53:27,658 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:27,658 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 44.52
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:32,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:53:32,102 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.51180386066113}
+2025-06-09 19:53:32,103 - trading - INFO - RSI pour BTC/USDC: 43.51180386066113
+2025-06-09 19:53:32,103 - trading - INFO - RSI actualisé: BTC/USDC = 43.51180386066113
+2025-06-09 19:53:32,464 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.51180386066113}
+2025-06-09 19:53:32,464 - trading - INFO - RSI pour BTC/USDC: 43.51180386066113
+2025-06-09 19:53:32,544 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:32,597 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -57.0201018702099}
+2025-06-09 19:53:32,597 - trading - INFO - Williams %R pour BTC/USDT: -57.0201018702099
+2025-06-09 19:53:32,597 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:32,633 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1307.6327299999764}
+2025-06-09 19:53:32,633 - trading - INFO - OBV pour BTC/USDT: 1307.6327299999764
+2025-06-09 19:53:32,634 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108327.48500000
+   RSI: 43.51
+   ATR: 160.90597486
+   Williams %R: -57.02
+   OBV: 1307.63 / OBV SMA4: 1386.72
+
+2025-06-09 19:53:32,634 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:32,634 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 43.51
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:37,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:53:37,075 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.51180386066113}
+2025-06-09 19:53:37,076 - trading - INFO - RSI pour BTC/USDC: 43.51180386066113
+2025-06-09 19:53:37,076 - trading - INFO - RSI actualisé: BTC/USDC = 43.51180386066113
+2025-06-09 19:53:37,416 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.51180386066113}
+2025-06-09 19:53:37,416 - trading - INFO - RSI pour BTC/USDC: 43.51180386066113
+2025-06-09 19:53:37,512 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:37,747 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -57.0201018702099}
+2025-06-09 19:53:37,748 - trading - INFO - Williams %R pour BTC/USDT: -57.0201018702099
+2025-06-09 19:53:37,748 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:37,779 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1307.5689499999762}
+2025-06-09 19:53:37,779 - trading - INFO - OBV pour BTC/USDT: 1307.5689499999762
+2025-06-09 19:53:37,779 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108328.72500000
+   RSI: 43.51
+   ATR: 160.90597486
+   Williams %R: -57.02
+   OBV: 1307.57 / OBV SMA4: 1347.25
+
+2025-06-09 19:53:37,779 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:37,779 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 43.51
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:42,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:53:42,081 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.83919661662175}
+2025-06-09 19:53:42,081 - trading - INFO - RSI pour BTC/USDC: 43.83919661662175
+2025-06-09 19:53:42,082 - trading - INFO - RSI actualisé: BTC/USDC = 43.83919661662175
+2025-06-09 19:53:42,452 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.83919661662175}
+2025-06-09 19:53:42,453 - trading - INFO - RSI pour BTC/USDC: 43.83919661662175
+2025-06-09 19:53:42,533 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:42,582 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -57.0201018702099}
+2025-06-09 19:53:42,582 - trading - INFO - Williams %R pour BTC/USDT: -57.0201018702099
+2025-06-09 19:53:42,582 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:42,623 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1307.2701399999762}
+2025-06-09 19:53:42,624 - trading - INFO - OBV pour BTC/USDT: 1307.2701399999762
+2025-06-09 19:53:42,625 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108337.68500000
+   RSI: 43.84
+   ATR: 160.90597486
+   Williams %R: -57.02
+   OBV: 1307.27 / OBV SMA4: 1307.68
+
+2025-06-09 19:53:42,625 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:42,625 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 43.84
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:47,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:53:47,096 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.30442655244709}
+2025-06-09 19:53:47,097 - trading - INFO - RSI pour BTC/USDC: 46.30442655244709
+2025-06-09 19:53:47,103 - trading - INFO - RSI actualisé: BTC/USDC = 46.30442655244709
+2025-06-09 19:53:47,428 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.30628519832451}
+2025-06-09 19:53:47,429 - trading - INFO - RSI pour BTC/USDC: 46.30628519832451
+2025-06-09 19:53:47,511 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:47,552 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -53.21357751078943}
+2025-06-09 19:53:47,552 - trading - INFO - Williams %R pour BTC/USDT: -53.21357751078943
+2025-06-09 19:53:47,553 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:47,586 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1306.8630399999763}
+2025-06-09 19:53:47,587 - trading - INFO - OBV pour BTC/USDT: 1306.8630399999763
+2025-06-09 19:53:47,587 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108348.27500000
+   RSI: 46.31
+   ATR: 160.90597486
+   Williams %R: -53.21
+   OBV: 1306.86 / OBV SMA4: 1307.33
+
+2025-06-09 19:53:47,587 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:47,587 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.31
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:52,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:53:52,098 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.44708786405615}
+2025-06-09 19:53:52,099 - trading - INFO - RSI pour BTC/USDC: 47.44708786405615
+2025-06-09 19:53:52,099 - trading - INFO - RSI actualisé: BTC/USDC = 47.44708786405615
+2025-06-09 19:53:52,427 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.44708786405615}
+2025-06-09 19:53:52,428 - trading - INFO - RSI pour BTC/USDC: 47.44708786405615
+2025-06-09 19:53:52,513 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:52,553 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -49.31762510206281}
+2025-06-09 19:53:52,553 - trading - INFO - Williams %R pour BTC/USDT: -49.31762510206281
+2025-06-09 19:53:52,554 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:52,595 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1306.1041699999762}
+2025-06-09 19:53:52,596 - trading - INFO - OBV pour BTC/USDT: 1306.1041699999762
+2025-06-09 19:53:52,596 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108354.39500000
+   RSI: 47.45
+   ATR: 160.90597486
+   Williams %R: -49.32
+   OBV: 1306.10 / OBV SMA4: 1306.95
+
+2025-06-09 19:53:52,596 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:52,596 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:53:57,043 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:53:57,084 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.18603124190007}
+2025-06-09 19:53:57,085 - trading - INFO - RSI pour BTC/USDC: 43.18603124190007
+2025-06-09 19:53:57,086 - trading - INFO - RSI actualisé: BTC/USDC = 43.18603124190007
+2025-06-09 19:53:57,454 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.18603124190007}
+2025-06-09 19:53:57,455 - trading - INFO - RSI pour BTC/USDC: 43.18603124190007
+2025-06-09 19:53:57,539 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:53:57,580 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -57.93771141957051}
+2025-06-09 19:53:57,581 - trading - INFO - Williams %R pour BTC/USDT: -57.93771141957051
+2025-06-09 19:53:57,581 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:53:57,630 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1305.1251799999757}
+2025-06-09 19:53:57,630 - trading - INFO - OBV pour BTC/USDT: 1305.1251799999757
+2025-06-09 19:53:57,631 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108337.39500000
+   RSI: 43.19
+   ATR: 160.90597486
+   Williams %R: -57.94
+   OBV: 1305.13 / OBV SMA4: 1306.34
+
+2025-06-09 19:53:57,631 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:53:57,631 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 43.19
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:02,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:02,092 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.17865682029113}
+2025-06-09 19:54:02,092 - trading - INFO - RSI pour BTC/USDC: 42.17865682029113
+2025-06-09 19:54:02,092 - trading - INFO - RSI actualisé: BTC/USDC = 42.17865682029113
+2025-06-09 19:54:02,427 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.17865682029113}
+2025-06-09 19:54:02,427 - trading - INFO - RSI pour BTC/USDC: 42.17865682029113
+2025-06-09 19:54:02,522 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:02,557 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.18192775768516}
+2025-06-09 19:54:02,558 - trading - INFO - Williams %R pour BTC/USDT: -59.18192775768516
+2025-06-09 19:54:02,558 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:02,604 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1304.9638199999754}
+2025-06-09 19:54:02,605 - trading - INFO - OBV pour BTC/USDT: 1304.9638199999754
+2025-06-09 19:54:02,605 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108317.43000000
+   RSI: 42.18
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1304.96 / OBV SMA4: 1305.76
+
+2025-06-09 19:54:02,605 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:02,605 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 42.18
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:07,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:07,080 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.5473351886541}
+2025-06-09 19:54:07,080 - trading - INFO - RSI pour BTC/USDC: 42.5473351886541
+2025-06-09 19:54:07,081 - trading - INFO - RSI actualisé: BTC/USDC = 42.5473351886541
+2025-06-09 19:54:07,428 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.5473351886541}
+2025-06-09 19:54:07,429 - trading - INFO - RSI pour BTC/USDC: 42.5473351886541
+2025-06-09 19:54:07,530 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:07,573 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.18192775768516}
+2025-06-09 19:54:07,573 - trading - INFO - Williams %R pour BTC/USDT: -59.18192775768516
+2025-06-09 19:54:07,573 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:07,639 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1304.7513799999754}
+2025-06-09 19:54:07,639 - trading - INFO - OBV pour BTC/USDT: 1304.7513799999754
+2025-06-09 19:54:07,639 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108326.13000000
+   RSI: 42.55
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1304.75 / OBV SMA4: 1305.24
+
+2025-06-09 19:54:07,640 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:07,640 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 42.55
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:12,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:12,088 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.86191526614392}
+2025-06-09 19:54:12,088 - trading - INFO - RSI pour BTC/USDC: 42.86191526614392
+2025-06-09 19:54:12,089 - trading - INFO - RSI actualisé: BTC/USDC = 42.86191526614392
+2025-06-09 19:54:12,498 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.86191526614392}
+2025-06-09 19:54:12,498 - trading - INFO - RSI pour BTC/USDC: 42.86191526614392
+2025-06-09 19:54:12,594 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:12,633 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.178039581630586}
+2025-06-09 19:54:12,634 - trading - INFO - Williams %R pour BTC/USDT: -59.178039581630586
+2025-06-09 19:54:12,634 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:12,674 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1304.6624199999753}
+2025-06-09 19:54:12,674 - trading - INFO - OBV pour BTC/USDT: 1304.6624199999753
+2025-06-09 19:54:12,675 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108327.10000000
+   RSI: 42.86
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1304.66 / OBV SMA4: 1304.88
+
+2025-06-09 19:54:12,675 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:12,675 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 42.86
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:17,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:17,093 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.86191526614392}
+2025-06-09 19:54:17,094 - trading - INFO - RSI pour BTC/USDC: 42.86191526614392
+2025-06-09 19:54:17,094 - trading - INFO - RSI actualisé: BTC/USDC = 42.86191526614392
+2025-06-09 19:54:17,133 - trading - INFO - Statistiques minute: RSI: 12, Tendance: 12
+2025-06-09 19:54:17,435 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.86191526614392}
+2025-06-09 19:54:17,436 - trading - INFO - RSI pour BTC/USDC: 42.86191526614392
+2025-06-09 19:54:17,506 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:17,539 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.18192775768516}
+2025-06-09 19:54:17,539 - trading - INFO - Williams %R pour BTC/USDT: -59.18192775768516
+2025-06-09 19:54:17,539 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:17,577 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1304.4742799999754}
+2025-06-09 19:54:17,578 - trading - INFO - OBV pour BTC/USDT: 1304.4742799999754
+2025-06-09 19:54:17,578 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108331.32000000
+   RSI: 42.86
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1304.47 / OBV SMA4: 1304.71
+
+2025-06-09 19:54:17,579 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:17,579 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 42.86
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:22,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:54:22,080 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.23888559175711}
+2025-06-09 19:54:22,080 - trading - INFO - RSI pour BTC/USDC: 42.23888559175711
+2025-06-09 19:54:22,080 - trading - INFO - RSI actualisé: BTC/USDC = 42.23888559175711
+2025-06-09 19:54:22,449 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.23888559175711}
+2025-06-09 19:54:22,449 - trading - INFO - RSI pour BTC/USDC: 42.23888559175711
+2025-06-09 19:54:22,535 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:22,580 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.18192775768516}
+2025-06-09 19:54:22,580 - trading - INFO - Williams %R pour BTC/USDT: -59.18192775768516
+2025-06-09 19:54:22,581 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:22,617 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1303.8651199999754}
+2025-06-09 19:54:22,617 - trading - INFO - OBV pour BTC/USDT: 1303.8651199999754
+2025-06-09 19:54:22,618 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108328.11000000
+   RSI: 42.24
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1303.87 / OBV SMA4: 1304.44
+
+2025-06-09 19:54:22,618 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:22,618 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 42.24
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:27,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:27,087 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.23733911569346}
+2025-06-09 19:54:27,087 - trading - INFO - RSI pour BTC/USDC: 42.23733911569346
+2025-06-09 19:54:27,087 - trading - INFO - RSI actualisé: BTC/USDC = 42.23733911569346
+2025-06-09 19:54:27,455 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 42.23888559175711}
+2025-06-09 19:54:27,455 - trading - INFO - RSI pour BTC/USDC: 42.23888559175711
+2025-06-09 19:54:27,523 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:27,562 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.178039581630586}
+2025-06-09 19:54:27,562 - trading - INFO - Williams %R pour BTC/USDT: -59.178039581630586
+2025-06-09 19:54:27,562 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:27,607 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1303.7311999999754}
+2025-06-09 19:54:27,607 - trading - INFO - OBV pour BTC/USDT: 1303.7311999999754
+2025-06-09 19:54:27,607 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108339.82000000
+   RSI: 42.24
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1303.73 / OBV SMA4: 1304.18
+
+2025-06-09 19:54:27,607 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:27,607 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 42.24
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:32,044 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:32,096 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 43.854195206928004}
+2025-06-09 19:54:32,096 - trading - INFO - RSI pour BTC/USDC: 43.854195206928004
+2025-06-09 19:54:32,097 - trading - INFO - RSI actualisé: BTC/USDC = 43.854195206928004
+2025-06-09 19:54:32,467 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.00344858546958}
+2025-06-09 19:54:32,468 - trading - INFO - RSI pour BTC/USDC: 46.00344858546958
+2025-06-09 19:54:32,539 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:32,569 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -59.178039581630586}
+2025-06-09 19:54:32,570 - trading - INFO - Williams %R pour BTC/USDT: -59.178039581630586
+2025-06-09 19:54:32,570 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:32,611 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1303.0260799999753}
+2025-06-09 19:54:32,612 - trading - INFO - OBV pour BTC/USDT: 1303.0260799999753
+2025-06-09 19:54:32,612 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108338.81000000
+   RSI: 46.00
+   ATR: 161.23597486
+   Williams %R: -59.18
+   OBV: 1303.03 / OBV SMA4: 1303.77
+
+2025-06-09 19:54:32,612 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:32,612 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.00
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:37,042 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:37,090 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.67914893583579}
+2025-06-09 19:54:37,090 - trading - INFO - RSI pour BTC/USDC: 46.67914893583579
+2025-06-09 19:54:37,090 - trading - INFO - RSI actualisé: BTC/USDC = 46.67914893583579
+2025-06-09 19:54:37,433 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.67914893583579}
+2025-06-09 19:54:37,433 - trading - INFO - RSI pour BTC/USDC: 46.67914893583579
+2025-06-09 19:54:37,515 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:37,555 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -50.904000933161115}
+2025-06-09 19:54:37,556 - trading - INFO - Williams %R pour BTC/USDT: -50.904000933161115
+2025-06-09 19:54:37,556 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:37,593 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1302.5895799999787}
+2025-06-09 19:54:37,594 - trading - INFO - OBV pour BTC/USDT: 1302.5895799999787
+2025-06-09 19:54:37,594 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108348.99500000
+   RSI: 46.68
+   ATR: 161.23597486
+   Williams %R: -50.90
+   OBV: 1302.59 / OBV SMA4: 1303.30
+
+2025-06-09 19:54:37,594 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:37,594 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.68
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:42,044 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:42,089 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.729901632285966}
+2025-06-09 19:54:42,090 - trading - INFO - RSI pour BTC/USDC: 51.729901632285966
+2025-06-09 19:54:42,090 - trading - INFO - RSI actualisé: BTC/USDC = 51.729901632285966
+2025-06-09 19:54:42,470 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.73222135983825}
+2025-06-09 19:54:42,470 - trading - INFO - RSI pour BTC/USDC: 51.73222135983825
+2025-06-09 19:54:42,545 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:42,593 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -41.38185777051676}
+2025-06-09 19:54:42,594 - trading - INFO - Williams %R pour BTC/USDT: -41.38185777051676
+2025-06-09 19:54:42,594 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:42,633 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1474.1926400000218}
+2025-06-09 19:54:42,634 - trading - INFO - OBV pour BTC/USDT: 1474.1926400000218
+2025-06-09 19:54:42,634 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108372.32500000
+   RSI: 51.73
+   ATR: 161.23597486
+   Williams %R: -41.38
+   OBV: 1474.19 / OBV SMA4: 1345.88
+
+2025-06-09 19:54:42,634 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:42,634 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.73
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:47,041 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:47,090 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.73222135983825}
+2025-06-09 19:54:47,090 - trading - INFO - RSI pour BTC/USDC: 51.73222135983825
+2025-06-09 19:54:47,090 - trading - INFO - RSI actualisé: BTC/USDC = 51.73222135983825
+2025-06-09 19:54:47,447 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.73222135983825}
+2025-06-09 19:54:47,447 - trading - INFO - RSI pour BTC/USDC: 51.73222135983825
+2025-06-09 19:54:47,529 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:47,568 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -41.37796959446218}
+2025-06-09 19:54:47,569 - trading - INFO - Williams %R pour BTC/USDT: -41.37796959446218
+2025-06-09 19:54:47,569 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:47,608 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1474.2620500000219}
+2025-06-09 19:54:47,609 - trading - INFO - OBV pour BTC/USDT: 1474.2620500000219
+2025-06-09 19:54:47,609 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108368.99500000
+   RSI: 51.73
+   ATR: 161.23597486
+   Williams %R: -41.38
+   OBV: 1474.26 / OBV SMA4: 1388.52
+
+2025-06-09 19:54:47,609 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:47,609 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.73
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:52,042 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:54:52,089 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.73222135983825}
+2025-06-09 19:54:52,089 - trading - INFO - RSI pour BTC/USDC: 51.73222135983825
+2025-06-09 19:54:52,089 - trading - INFO - RSI actualisé: BTC/USDC = 51.73222135983825
+2025-06-09 19:54:52,576 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.73222135983825}
+2025-06-09 19:54:52,577 - trading - INFO - RSI pour BTC/USDC: 51.73222135983825
+2025-06-09 19:54:52,648 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:52,687 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -41.38185777051676}
+2025-06-09 19:54:52,687 - trading - INFO - Williams %R pour BTC/USDT: -41.38185777051676
+2025-06-09 19:54:52,687 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:52,727 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1474.3341100000218}
+2025-06-09 19:54:52,727 - trading - INFO - OBV pour BTC/USDT: 1474.3341100000218
+2025-06-09 19:54:52,727 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108372.32500000
+   RSI: 51.73
+   ATR: 161.23597486
+   Williams %R: -41.38
+   OBV: 1474.33 / OBV SMA4: 1431.34
+
+2025-06-09 19:54:52,727 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:52,727 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.73
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:54:57,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:54:57,088 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.25340678729638}
+2025-06-09 19:54:57,088 - trading - INFO - RSI pour BTC/USDC: 53.25340678729638
+2025-06-09 19:54:57,088 - trading - INFO - RSI actualisé: BTC/USDC = 53.25340678729638
+2025-06-09 19:54:57,482 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.963352895091774}
+2025-06-09 19:54:57,483 - trading - INFO - RSI pour BTC/USDC: 53.963352895091774
+2025-06-09 19:54:57,562 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:54:57,596 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -41.38185777051676}
+2025-06-09 19:54:57,596 - trading - INFO - Williams %R pour BTC/USDT: -41.38185777051676
+2025-06-09 19:54:57,596 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:54:57,632 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1476.692850000022}
+2025-06-09 19:54:57,633 - trading - INFO - OBV pour BTC/USDT: 1476.692850000022
+2025-06-09 19:54:57,633 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108371.14000000
+   RSI: 53.96
+   ATR: 161.23597486
+   Williams %R: -41.38
+   OBV: 1476.69 / OBV SMA4: 1474.87
+
+2025-06-09 19:54:57,633 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:54:57,633 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.96
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:02,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:02,092 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.71642263213764}
+2025-06-09 19:55:02,093 - trading - INFO - RSI pour BTC/USDC: 57.71642263213764
+2025-06-09 19:55:02,093 - trading - INFO - RSI actualisé: BTC/USDC = 57.71642263213764
+2025-06-09 19:55:02,541 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.71642263213764}
+2025-06-09 19:55:02,542 - trading - INFO - RSI pour BTC/USDC: 57.71642263213764
+2025-06-09 19:55:02,640 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:02,740 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -32.30685485438615}
+2025-06-09 19:55:02,741 - trading - INFO - Williams %R pour BTC/USDT: -32.30685485438615
+2025-06-09 19:55:02,741 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:02,778 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1476.921160000022}
+2025-06-09 19:55:02,779 - trading - INFO - OBV pour BTC/USDT: 1476.921160000022
+2025-06-09 19:55:02,779 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108376.33500000
+   RSI: 57.72
+   ATR: 136.80164571
+   Williams %R: -32.31
+   OBV: 1476.92 / OBV SMA4: 1475.55
+
+2025-06-09 19:55:02,779 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:02,779 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 57.72
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:07,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:55:07,098 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.604960835431925}
+2025-06-09 19:55:07,098 - trading - INFO - RSI pour BTC/USDC: 55.604960835431925
+2025-06-09 19:55:07,098 - trading - INFO - RSI actualisé: BTC/USDC = 55.604960835431925
+2025-06-09 19:55:07,504 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.604960835431925}
+2025-06-09 19:55:07,504 - trading - INFO - RSI pour BTC/USDC: 55.604960835431925
+2025-06-09 19:55:07,590 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:07,644 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -33.488860375599316}
+2025-06-09 19:55:07,644 - trading - INFO - Williams %R pour BTC/USDT: -33.488860375599316
+2025-06-09 19:55:07,644 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:07,678 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1477.031560000022}
+2025-06-09 19:55:07,678 - trading - INFO - OBV pour BTC/USDT: 1477.031560000022
+2025-06-09 19:55:07,678 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108387.15500000
+   RSI: 55.60
+   ATR: 136.80331238
+   Williams %R: -33.49
+   OBV: 1477.03 / OBV SMA4: 1476.24
+
+2025-06-09 19:55:07,679 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:07,679 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 55.60
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:12,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:12,112 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.604960835431925}
+2025-06-09 19:55:12,113 - trading - INFO - RSI pour BTC/USDC: 55.604960835431925
+2025-06-09 19:55:12,113 - trading - INFO - RSI actualisé: BTC/USDC = 55.604960835431925
+2025-06-09 19:55:12,418 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.604960835431925}
+2025-06-09 19:55:12,419 - trading - INFO - RSI pour BTC/USDC: 55.604960835431925
+2025-06-09 19:55:12,503 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:12,562 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -33.49274855165389}
+2025-06-09 19:55:12,562 - trading - INFO - Williams %R pour BTC/USDT: -33.49274855165389
+2025-06-09 19:55:12,563 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:12,603 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1479.5403200000221}
+2025-06-09 19:55:12,604 - trading - INFO - OBV pour BTC/USDT: 1479.5403200000221
+2025-06-09 19:55:12,604 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108389.77500000
+   RSI: 55.60
+   ATR: 136.80331238
+   Williams %R: -33.49
+   OBV: 1479.54 / OBV SMA4: 1477.55
+
+2025-06-09 19:55:12,604 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:12,604 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 55.60
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:17,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:17,091 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.604960835431925}
+2025-06-09 19:55:17,091 - trading - INFO - RSI pour BTC/USDC: 55.604960835431925
+2025-06-09 19:55:17,091 - trading - INFO - RSI actualisé: BTC/USDC = 55.604960835431925
+2025-06-09 19:55:17,425 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.604960835431925}
+2025-06-09 19:55:17,426 - trading - INFO - RSI pour BTC/USDC: 55.604960835431925
+2025-06-09 19:55:17,498 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:17,544 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -34.826392939069024}
+2025-06-09 19:55:17,544 - trading - INFO - Williams %R pour BTC/USDT: -34.826392939069024
+2025-06-09 19:55:17,545 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:17,585 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1480.1070500000221}
+2025-06-09 19:55:17,585 - trading - INFO - OBV pour BTC/USDT: 1480.1070500000221
+2025-06-09 19:55:17,585 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108388.71000000
+   RSI: 55.60
+   ATR: 136.80331238
+   Williams %R: -34.83
+   OBV: 1480.11 / OBV SMA4: 1478.40
+
+2025-06-09 19:55:17,586 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:17,586 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 55.60
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:22,044 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:55:22,090 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.17269754766628}
+2025-06-09 19:55:22,090 - trading - INFO - RSI pour BTC/USDC: 57.17269754766628
+2025-06-09 19:55:22,090 - trading - INFO - RSI actualisé: BTC/USDC = 57.17269754766628
+2025-06-09 19:55:22,135 - trading - INFO - Statistiques minute: RSI: 13, Tendance: 13
+2025-06-09 19:55:22,637 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.17269754766628}
+2025-06-09 19:55:22,637 - trading - INFO - RSI pour BTC/USDC: 57.17269754766628
+2025-06-09 19:55:22,717 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:22,757 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -34.826392939069024}
+2025-06-09 19:55:22,757 - trading - INFO - Williams %R pour BTC/USDT: -34.826392939069024
+2025-06-09 19:55:22,757 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:22,795 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1480.4850200000224}
+2025-06-09 19:55:22,796 - trading - INFO - OBV pour BTC/USDT: 1480.4850200000224
+2025-06-09 19:55:22,796 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108390.93500000
+   RSI: 57.17
+   ATR: 136.80331238
+   Williams %R: -34.83
+   OBV: 1480.49 / OBV SMA4: 1479.29
+
+2025-06-09 19:55:22,796 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:22,796 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 57.17
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:27,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.2s)
+2025-06-09 19:55:27,086 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 59.28296761936708}
+2025-06-09 19:55:27,086 - trading - INFO - RSI pour BTC/USDC: 59.28296761936708
+2025-06-09 19:55:27,087 - trading - INFO - RSI actualisé: BTC/USDC = 59.28296761936708
+2025-06-09 19:55:27,501 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 59.285494274586945}
+2025-06-09 19:55:27,502 - trading - INFO - RSI pour BTC/USDC: 59.285494274586945
+2025-06-09 19:55:27,579 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:27,642 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -31.661417628987238}
+2025-06-09 19:55:27,643 - trading - INFO - Williams %R pour BTC/USDT: -31.661417628987238
+2025-06-09 19:55:27,643 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:27,687 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1480.7719700000223}
+2025-06-09 19:55:27,687 - trading - INFO - OBV pour BTC/USDT: 1480.7719700000223
+2025-06-09 19:55:27,687 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108408.76500000
+   RSI: 59.29
+   ATR: 137.46831238
+   Williams %R: -31.66
+   OBV: 1480.77 / OBV SMA4: 1480.23
+
+2025-06-09 19:55:27,687 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:27,687 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 59.29
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:32,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:32,094 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.00872552077985}
+2025-06-09 19:55:32,094 - trading - INFO - RSI pour BTC/USDC: 63.00872552077985
+2025-06-09 19:55:32,094 - trading - INFO - RSI actualisé: BTC/USDC = 63.00872552077985
+2025-06-09 19:55:32,416 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 64.56501267718053}
+2025-06-09 19:55:32,417 - trading - INFO - RSI pour BTC/USDC: 64.56501267718053
+2025-06-09 19:55:32,505 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:32,544 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -20.517905050742094}
+2025-06-09 19:55:32,544 - trading - INFO - Williams %R pour BTC/USDT: -20.517905050742094
+2025-06-09 19:55:32,545 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:32,577 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1481.8787800000225}
+2025-06-09 19:55:32,577 - trading - INFO - OBV pour BTC/USDT: 1481.8787800000225
+2025-06-09 19:55:32,578 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108412.93000000
+   RSI: 64.57
+   ATR: 141.46997905
+   Williams %R: -20.52
+   OBV: 1481.88 / OBV SMA4: 1480.81
+
+2025-06-09 19:55:32,578 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:32,578 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 64.57
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:37,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:55:37,085 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.004039726521874}
+2025-06-09 19:55:37,085 - trading - INFO - RSI pour BTC/USDC: 62.004039726521874
+2025-06-09 19:55:37,086 - trading - INFO - RSI actualisé: BTC/USDC = 62.004039726521874
+2025-06-09 19:55:37,511 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.004039726521874}
+2025-06-09 19:55:37,511 - trading - INFO - RSI pour BTC/USDC: 62.004039726521874
+2025-06-09 19:55:37,591 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:37,634 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -25.941910649714437}
+2025-06-09 19:55:37,635 - trading - INFO - Williams %R pour BTC/USDT: -25.941910649714437
+2025-06-09 19:55:37,635 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:37,682 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1485.141330000023}
+2025-06-09 19:55:37,682 - trading - INFO - OBV pour BTC/USDT: 1485.141330000023
+2025-06-09 19:55:37,682 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108407.46000000
+   RSI: 62.00
+   ATR: 141.47164571
+   Williams %R: -25.94
+   OBV: 1485.14 / OBV SMA4: 1482.07
+
+2025-06-09 19:55:37,682 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:37,682 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 62.00
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:42,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:42,085 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.80372741969529}
+2025-06-09 19:55:42,085 - trading - INFO - RSI pour BTC/USDC: 54.80372741969529
+2025-06-09 19:55:42,085 - trading - INFO - RSI actualisé: BTC/USDC = 54.80372741969529
+2025-06-09 19:55:42,423 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.80372741969529}
+2025-06-09 19:55:42,424 - trading - INFO - RSI pour BTC/USDC: 54.80372741969529
+2025-06-09 19:55:42,539 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:42,579 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -36.474979587074465}
+2025-06-09 19:55:42,580 - trading - INFO - Williams %R pour BTC/USDT: -36.474979587074465
+2025-06-09 19:55:42,580 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:42,620 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1486.3754000000235}
+2025-06-09 19:55:42,620 - trading - INFO - OBV pour BTC/USDT: 1486.3754000000235
+2025-06-09 19:55:42,620 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108391.32000000
+   RSI: 54.80
+   ATR: 141.47164571
+   Williams %R: -36.47
+   OBV: 1486.38 / OBV SMA4: 1483.54
+
+2025-06-09 19:55:42,620 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:42,620 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 54.80
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:47,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:47,079 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.80684054084817}
+2025-06-09 19:55:47,080 - trading - INFO - RSI pour BTC/USDC: 54.80684054084817
+2025-06-09 19:55:47,080 - trading - INFO - RSI actualisé: BTC/USDC = 54.80684054084817
+2025-06-09 19:55:47,478 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.80372741969529}
+2025-06-09 19:55:47,478 - trading - INFO - RSI pour BTC/USDC: 54.80372741969529
+2025-06-09 19:55:47,570 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:47,602 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -36.47886776312904}
+2025-06-09 19:55:47,602 - trading - INFO - Williams %R pour BTC/USDT: -36.47886776312904
+2025-06-09 19:55:47,603 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:47,638 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1486.5298400000236}
+2025-06-09 19:55:47,639 - trading - INFO - OBV pour BTC/USDT: 1486.5298400000236
+2025-06-09 19:55:47,639 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108389.00500000
+   RSI: 54.80
+   ATR: 141.47164571
+   Williams %R: -36.48
+   OBV: 1486.53 / OBV SMA4: 1484.98
+
+2025-06-09 19:55:47,639 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:47,639 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 54.80
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:52,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:55:52,079 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 58.1399599815137}
+2025-06-09 19:55:52,079 - trading - INFO - RSI pour BTC/USDC: 58.1399599815137
+2025-06-09 19:55:52,079 - trading - INFO - RSI actualisé: BTC/USDC = 58.1399599815137
+2025-06-09 19:55:52,419 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 59.285494274586945}
+2025-06-09 19:55:52,420 - trading - INFO - RSI pour BTC/USDC: 59.285494274586945
+2025-06-09 19:55:52,489 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:52,527 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -30.156693495080276}
+2025-06-09 19:55:52,527 - trading - INFO - Williams %R pour BTC/USDT: -30.156693495080276
+2025-06-09 19:55:52,528 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:52,566 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1487.084170000024}
+2025-06-09 19:55:52,566 - trading - INFO - OBV pour BTC/USDT: 1487.084170000024
+2025-06-09 19:55:52,566 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108402.19500000
+   RSI: 59.29
+   ATR: 141.47164571
+   Williams %R: -30.16
+   OBV: 1487.08 / OBV SMA4: 1486.28
+
+2025-06-09 19:55:52,566 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:52,567 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 59.29
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:55:57,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:55:57,080 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.22063450295394}
+2025-06-09 19:55:57,080 - trading - INFO - RSI pour BTC/USDC: 62.22063450295394
+2025-06-09 19:55:57,080 - trading - INFO - RSI actualisé: BTC/USDC = 62.22063450295394
+2025-06-09 19:55:57,428 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.22063450295394}
+2025-06-09 19:55:57,429 - trading - INFO - RSI pour BTC/USDC: 62.22063450295394
+2025-06-09 19:55:57,511 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:55:57,557 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -26.389050896222532}
+2025-06-09 19:55:57,557 - trading - INFO - Williams %R pour BTC/USDT: -26.389050896222532
+2025-06-09 19:55:57,558 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:55:57,595 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1487.6356200000241}
+2025-06-09 19:55:57,596 - trading - INFO - OBV pour BTC/USDT: 1487.6356200000241
+2025-06-09 19:55:57,596 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108413.40000000
+   RSI: 62.22
+   ATR: 141.47164571
+   Williams %R: -26.39
+   OBV: 1487.64 / OBV SMA4: 1486.91
+
+2025-06-09 19:55:57,596 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:55:57,596 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 62.22
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:02,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:02,146 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.11155273431168}
+2025-06-09 19:56:02,147 - trading - INFO - RSI pour BTC/USDC: 62.11155273431168
+2025-06-09 19:56:02,147 - trading - INFO - RSI actualisé: BTC/USDC = 62.11155273431168
+2025-06-09 19:56:02,506 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.11374054246161}
+2025-06-09 19:56:02,507 - trading - INFO - RSI pour BTC/USDC: 62.11374054246161
+2025-06-09 19:56:02,590 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:02,644 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -26.389050896222532}
+2025-06-09 19:56:02,644 - trading - INFO - Williams %R pour BTC/USDT: -26.389050896222532
+2025-06-09 19:56:02,644 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:02,681 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1487.696440000024}
+2025-06-09 19:56:02,682 - trading - INFO - OBV pour BTC/USDT: 1487.696440000024
+2025-06-09 19:56:02,682 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108411.91000000
+   RSI: 62.11
+   ATR: 141.47164571
+   Williams %R: -26.39
+   OBV: 1487.70 / OBV SMA4: 1487.24
+
+2025-06-09 19:56:02,682 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:02,682 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 62.11
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:07,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:07,080 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.167105783633254}
+2025-06-09 19:56:07,080 - trading - INFO - RSI pour BTC/USDC: 57.167105783633254
+2025-06-09 19:56:07,080 - trading - INFO - RSI actualisé: BTC/USDC = 57.167105783633254
+2025-06-09 19:56:07,521 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.68640898157496}
+2025-06-09 19:56:07,522 - trading - INFO - RSI pour BTC/USDC: 56.68640898157496
+2025-06-09 19:56:07,603 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:07,647 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -32.93285119950088}
+2025-06-09 19:56:07,647 - trading - INFO - Williams %R pour BTC/USDT: -32.93285119950088
+2025-06-09 19:56:07,647 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:07,741 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1488.3300700000245}
+2025-06-09 19:56:07,741 - trading - INFO - OBV pour BTC/USDT: 1488.3300700000245
+2025-06-09 19:56:07,742 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108396.88500000
+   RSI: 56.69
+   ATR: 141.47164571
+   Williams %R: -32.93
+   OBV: 1488.33 / OBV SMA4: 1487.69
+
+2025-06-09 19:56:07,742 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:07,742 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 56.69
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:12,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:56:12,078 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.68640898157496}
+2025-06-09 19:56:12,079 - trading - INFO - RSI pour BTC/USDC: 56.68640898157496
+2025-06-09 19:56:12,079 - trading - INFO - RSI actualisé: BTC/USDC = 56.68640898157496
+2025-06-09 19:56:12,437 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.68640898157496}
+2025-06-09 19:56:12,438 - trading - INFO - RSI pour BTC/USDC: 56.68640898157496
+2025-06-09 19:56:12,508 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:12,551 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -32.936739375555455}
+2025-06-09 19:56:12,552 - trading - INFO - Williams %R pour BTC/USDT: -32.936739375555455
+2025-06-09 19:56:12,552 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:12,587 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1488.3876800000246}
+2025-06-09 19:56:12,588 - trading - INFO - OBV pour BTC/USDT: 1488.3876800000246
+2025-06-09 19:56:12,588 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108400.24000000
+   RSI: 56.69
+   ATR: 141.47164571
+   Williams %R: -32.94
+   OBV: 1488.39 / OBV SMA4: 1488.01
+
+2025-06-09 19:56:12,588 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:12,588 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 56.69
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:17,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:56:17,076 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.46070500323611}
+2025-06-09 19:56:17,077 - trading - INFO - RSI pour BTC/USDC: 53.46070500323611
+2025-06-09 19:56:17,077 - trading - INFO - RSI actualisé: BTC/USDC = 53.46070500323611
+2025-06-09 19:56:17,457 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.46070500323611}
+2025-06-09 19:56:17,458 - trading - INFO - RSI pour BTC/USDC: 53.46070500323611
+2025-06-09 19:56:17,541 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:17,579 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.24483844628202}
+2025-06-09 19:56:17,579 - trading - INFO - Williams %R pour BTC/USDT: -37.24483844628202
+2025-06-09 19:56:17,579 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:17,631 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1488.9744800000249}
+2025-06-09 19:56:17,631 - trading - INFO - OBV pour BTC/USDT: 1488.9744800000249
+2025-06-09 19:56:17,631 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108402.14500000
+   RSI: 53.46
+   ATR: 141.69497905
+   Williams %R: -37.24
+   OBV: 1488.97 / OBV SMA4: 1488.35
+
+2025-06-09 19:56:17,631 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:17,631 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.46
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:22,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:22,078 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.814244565582335}
+2025-06-09 19:56:22,078 - trading - INFO - RSI pour BTC/USDC: 55.814244565582335
+2025-06-09 19:56:22,079 - trading - INFO - RSI actualisé: BTC/USDC = 55.814244565582335
+2025-06-09 19:56:22,459 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.81126869173269}
+2025-06-09 19:56:22,460 - trading - INFO - RSI pour BTC/USDC: 55.81126869173269
+2025-06-09 19:56:22,526 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:22,602 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.24483844628202}
+2025-06-09 19:56:22,602 - trading - INFO - Williams %R pour BTC/USDT: -37.24483844628202
+2025-06-09 19:56:22,602 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:22,648 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1489.1225300000249}
+2025-06-09 19:56:22,648 - trading - INFO - OBV pour BTC/USDT: 1489.1225300000249
+2025-06-09 19:56:22,648 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108397.56500000
+   RSI: 55.81
+   ATR: 141.69497905
+   Williams %R: -37.24
+   OBV: 1489.12 / OBV SMA4: 1488.70
+
+2025-06-09 19:56:22,648 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:22,648 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 55.81
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:27,041 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:27,081 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.814244565582335}
+2025-06-09 19:56:27,082 - trading - INFO - RSI pour BTC/USDC: 55.814244565582335
+2025-06-09 19:56:27,082 - trading - INFO - RSI actualisé: BTC/USDC = 55.814244565582335
+2025-06-09 19:56:27,128 - trading - INFO - Statistiques minute: RSI: 13, Tendance: 13
+2025-06-09 19:56:27,494 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 55.814244565582335}
+2025-06-09 19:56:27,495 - trading - INFO - RSI pour BTC/USDC: 55.814244565582335
+2025-06-09 19:56:27,572 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:27,614 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.24483844628202}
+2025-06-09 19:56:27,614 - trading - INFO - Williams %R pour BTC/USDT: -37.24483844628202
+2025-06-09 19:56:27,614 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:27,651 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1489.323510000025}
+2025-06-09 19:56:27,652 - trading - INFO - OBV pour BTC/USDT: 1489.323510000025
+2025-06-09 19:56:27,652 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108405.57500000
+   RSI: 55.81
+   ATR: 141.69497905
+   Williams %R: -37.24
+   OBV: 1489.32 / OBV SMA4: 1488.95
+
+2025-06-09 19:56:27,652 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:27,652 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 55.81
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:32,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:32,079 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.16151255923177}
+2025-06-09 19:56:32,079 - trading - INFO - RSI pour BTC/USDC: 57.16151255923177
+2025-06-09 19:56:32,079 - trading - INFO - RSI actualisé: BTC/USDC = 57.16151255923177
+2025-06-09 19:56:32,462 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 58.249171712616885}
+2025-06-09 19:56:32,462 - trading - INFO - RSI pour BTC/USDC: 58.249171712616885
+2025-06-09 19:56:32,557 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:32,596 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -34.83028111512925}
+2025-06-09 19:56:32,597 - trading - INFO - Williams %R pour BTC/USDT: -34.83028111512925
+2025-06-09 19:56:32,597 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:32,640 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1489.507160000025}
+2025-06-09 19:56:32,640 - trading - INFO - OBV pour BTC/USDT: 1489.507160000025
+2025-06-09 19:56:32,640 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108400.69000000
+   RSI: 58.25
+   ATR: 141.69497905
+   Williams %R: -34.83
+   OBV: 1489.51 / OBV SMA4: 1489.23
+
+2025-06-09 19:56:32,640 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:32,640 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 58.25
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:37,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:37,091 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 58.249171712616885}
+2025-06-09 19:56:37,091 - trading - INFO - RSI pour BTC/USDC: 58.249171712616885
+2025-06-09 19:56:37,092 - trading - INFO - RSI actualisé: BTC/USDC = 58.249171712616885
+2025-06-09 19:56:37,443 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 58.249171712616885}
+2025-06-09 19:56:37,444 - trading - INFO - RSI pour BTC/USDC: 58.249171712616885
+2025-06-09 19:56:37,525 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:37,570 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -32.65679069948461}
+2025-06-09 19:56:37,570 - trading - INFO - Williams %R pour BTC/USDT: -32.65679069948461
+2025-06-09 19:56:37,571 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:37,613 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1489.8571500000253}
+2025-06-09 19:56:37,613 - trading - INFO - OBV pour BTC/USDT: 1489.8571500000253
+2025-06-09 19:56:37,613 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108413.40500000
+   RSI: 58.25
+   ATR: 141.69497905
+   Williams %R: -32.66
+   OBV: 1489.86 / OBV SMA4: 1489.45
+
+2025-06-09 19:56:37,613 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:37,613 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 58.25
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:42,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:42,087 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 61.92024129135748}
+2025-06-09 19:56:42,087 - trading - INFO - RSI pour BTC/USDC: 61.92024129135748
+2025-06-09 19:56:42,087 - trading - INFO - RSI actualisé: BTC/USDC = 61.92024129135748
+2025-06-09 19:56:42,417 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 61.92024129135748}
+2025-06-09 19:56:42,417 - trading - INFO - RSI pour BTC/USDC: 61.92024129135748
+2025-06-09 19:56:42,494 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:42,536 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -28.85415451611306}
+2025-06-09 19:56:42,536 - trading - INFO - Williams %R pour BTC/USDT: -28.85415451611306
+2025-06-09 19:56:42,536 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:42,574 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1490.1083300000255}
+2025-06-09 19:56:42,574 - trading - INFO - OBV pour BTC/USDT: 1490.1083300000255
+2025-06-09 19:56:42,574 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108418.55000000
+   RSI: 61.92
+   ATR: 141.69497905
+   Williams %R: -28.85
+   OBV: 1490.11 / OBV SMA4: 1489.70
+
+2025-06-09 19:56:42,574 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:42,575 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 61.92
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:47,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:56:47,077 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 61.92024129135748}
+2025-06-09 19:56:47,078 - trading - INFO - RSI pour BTC/USDC: 61.92024129135748
+2025-06-09 19:56:47,078 - trading - INFO - RSI actualisé: BTC/USDC = 61.92024129135748
+2025-06-09 19:56:47,490 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 61.91803107757925}
+2025-06-09 19:56:47,490 - trading - INFO - RSI pour BTC/USDC: 61.91803107757925
+2025-06-09 19:56:47,572 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:47,623 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -28.850266340058482}
+2025-06-09 19:56:47,623 - trading - INFO - Williams %R pour BTC/USDT: -28.850266340058482
+2025-06-09 19:56:47,623 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:47,661 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1490.1475900000255}
+2025-06-09 19:56:47,661 - trading - INFO - OBV pour BTC/USDT: 1490.1475900000255
+2025-06-09 19:56:47,661 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108428.14500000
+   RSI: 61.92
+   ATR: 141.69497905
+   Williams %R: -28.85
+   OBV: 1490.15 / OBV SMA4: 1489.91
+
+2025-06-09 19:56:47,661 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:47,661 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 61.92
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:52,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:52,078 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 66.6218542081582}
+2025-06-09 19:56:52,079 - trading - INFO - RSI pour BTC/USDC: 66.6218542081582
+2025-06-09 19:56:52,079 - trading - INFO - RSI actualisé: BTC/USDC = 66.6218542081582
+2025-06-09 19:56:52,489 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 66.6218542081582}
+2025-06-09 19:56:52,490 - trading - INFO - RSI pour BTC/USDC: 66.6218542081582
+2025-06-09 19:56:52,573 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:52,610 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -15.109452155993713}
+2025-06-09 19:56:52,611 - trading - INFO - Williams %R pour BTC/USDT: -15.109452155993713
+2025-06-09 19:56:52,611 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:52,660 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1490.9114800000257}
+2025-06-09 19:56:52,661 - trading - INFO - OBV pour BTC/USDT: 1490.9114800000257
+2025-06-09 19:56:52,661 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108449.51000000
+   RSI: 66.62
+   ATR: 143.59497905
+   Williams %R: -15.11
+   OBV: 1490.91 / OBV SMA4: 1490.26
+
+2025-06-09 19:56:52,661 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:52,661 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 66.62
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:56:57,043 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:56:57,087 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.784609462472005}
+2025-06-09 19:56:57,088 - trading - INFO - RSI pour BTC/USDC: 63.784609462472005
+2025-06-09 19:56:57,088 - trading - INFO - RSI actualisé: BTC/USDC = 63.784609462472005
+2025-06-09 19:56:57,420 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.784609462472005}
+2025-06-09 19:56:57,420 - trading - INFO - RSI pour BTC/USDC: 63.784609462472005
+2025-06-09 19:56:57,495 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:56:57,525 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -15.105563979939138}
+2025-06-09 19:56:57,526 - trading - INFO - Williams %R pour BTC/USDT: -15.105563979939138
+2025-06-09 19:56:57,526 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:56:57,579 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1493.293180000026}
+2025-06-09 19:56:57,579 - trading - INFO - OBV pour BTC/USDT: 1493.293180000026
+2025-06-09 19:56:57,580 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108452.72500000
+   RSI: 63.78
+   ATR: 144.54164571
+   Williams %R: -15.11
+   OBV: 1493.29 / OBV SMA4: 1491.12
+
+2025-06-09 19:56:57,580 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:56:57,580 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 63.78
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:02,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:57:02,076 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.78660832567872}
+2025-06-09 19:57:02,077 - trading - INFO - RSI pour BTC/USDC: 63.78660832567872
+2025-06-09 19:57:02,077 - trading - INFO - RSI actualisé: BTC/USDC = 63.78660832567872
+2025-06-09 19:57:02,425 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.78660832567872}
+2025-06-09 19:57:02,425 - trading - INFO - RSI pour BTC/USDC: 63.78660832567872
+2025-06-09 19:57:02,516 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:02,554 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -22.846922508648948}
+2025-06-09 19:57:02,554 - trading - INFO - Williams %R pour BTC/USDT: -22.846922508648948
+2025-06-09 19:57:02,555 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:02,594 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1493.5503300000262}
+2025-06-09 19:57:02,595 - trading - INFO - OBV pour BTC/USDT: 1493.5503300000262
+2025-06-09 19:57:02,595 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108432.73000000
+   RSI: 63.79
+   ATR: 144.54164571
+   Williams %R: -22.85
+   OBV: 1493.55 / OBV SMA4: 1491.98
+
+2025-06-09 19:57:02,595 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:02,596 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 63.79
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:07,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:07,085 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.78660832567872}
+2025-06-09 19:57:07,085 - trading - INFO - RSI pour BTC/USDC: 63.78660832567872
+2025-06-09 19:57:07,085 - trading - INFO - RSI actualisé: BTC/USDC = 63.78660832567872
+2025-06-09 19:57:07,456 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 63.78660832567872}
+2025-06-09 19:57:07,456 - trading - INFO - RSI pour BTC/USDC: 63.78660832567872
+2025-06-09 19:57:07,551 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:07,604 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -22.846922508648948}
+2025-06-09 19:57:07,604 - trading - INFO - Williams %R pour BTC/USDT: -22.846922508648948
+2025-06-09 19:57:07,604 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:07,644 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1493.6988200000262}
+2025-06-09 19:57:07,645 - trading - INFO - OBV pour BTC/USDT: 1493.6988200000262
+2025-06-09 19:57:07,645 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108441.76500000
+   RSI: 63.79
+   ATR: 144.54164571
+   Williams %R: -22.85
+   OBV: 1493.70 / OBV SMA4: 1492.86
+
+2025-06-09 19:57:07,645 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:07,645 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 63.79
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:12,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:12,078 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.600457910523346}
+2025-06-09 19:57:12,078 - trading - INFO - RSI pour BTC/USDC: 56.600457910523346
+2025-06-09 19:57:12,078 - trading - INFO - RSI actualisé: BTC/USDC = 56.600457910523346
+2025-06-09 19:57:12,462 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.600457910523346}
+2025-06-09 19:57:12,463 - trading - INFO - RSI pour BTC/USDC: 56.600457910523346
+2025-06-09 19:57:12,551 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:12,590 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -33.29056339670849}
+2025-06-09 19:57:12,590 - trading - INFO - Williams %R pour BTC/USDT: -33.29056339670849
+2025-06-09 19:57:12,591 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:12,647 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1494.8799000000272}
+2025-06-09 19:57:12,647 - trading - INFO - OBV pour BTC/USDT: 1494.8799000000272
+2025-06-09 19:57:12,649 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108419.10500000
+   RSI: 56.60
+   ATR: 144.54164571
+   Williams %R: -33.29
+   OBV: 1494.88 / OBV SMA4: 1493.86
+
+2025-06-09 19:57:12,649 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:12,649 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 56.60
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:17,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:17,082 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.600457910523346}
+2025-06-09 19:57:17,083 - trading - INFO - RSI pour BTC/USDC: 56.600457910523346
+2025-06-09 19:57:17,083 - trading - INFO - RSI actualisé: BTC/USDC = 56.600457910523346
+2025-06-09 19:57:17,437 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 56.600457910523346}
+2025-06-09 19:57:17,438 - trading - INFO - RSI pour BTC/USDC: 56.600457910523346
+2025-06-09 19:57:17,519 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:17,558 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -35.26575683346797}
+2025-06-09 19:57:17,558 - trading - INFO - Williams %R pour BTC/USDT: -35.26575683346797
+2025-06-09 19:57:17,558 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:17,611 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1494.9980300000275}
+2025-06-09 19:57:17,612 - trading - INFO - OBV pour BTC/USDT: 1494.9980300000275
+2025-06-09 19:57:17,612 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108407.83000000
+   RSI: 56.60
+   ATR: 144.54164571
+   Williams %R: -35.27
+   OBV: 1495.00 / OBV SMA4: 1494.28
+
+2025-06-09 19:57:17,613 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:17,613 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 56.60
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:22,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:22,084 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.80372741969529}
+2025-06-09 19:57:22,084 - trading - INFO - RSI pour BTC/USDC: 54.80372741969529
+2025-06-09 19:57:22,085 - trading - INFO - RSI actualisé: BTC/USDC = 54.80372741969529
+2025-06-09 19:57:22,480 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.46070500323611}
+2025-06-09 19:57:22,481 - trading - INFO - RSI pour BTC/USDC: 53.46070500323611
+2025-06-09 19:57:22,557 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:22,611 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.24483844628202}
+2025-06-09 19:57:22,611 - trading - INFO - Williams %R pour BTC/USDT: -37.24483844628202
+2025-06-09 19:57:22,612 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:22,646 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1495.6257300000277}
+2025-06-09 19:57:22,647 - trading - INFO - OBV pour BTC/USDT: 1495.6257300000277
+2025-06-09 19:57:22,647 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108398.49500000
+   RSI: 53.46
+   ATR: 144.54164571
+   Williams %R: -37.24
+   OBV: 1495.63 / OBV SMA4: 1494.80
+
+2025-06-09 19:57:22,647 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:22,647 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.46
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:27,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:27,083 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 52.72766333381044}
+2025-06-09 19:57:27,084 - trading - INFO - RSI pour BTC/USDC: 52.72766333381044
+2025-06-09 19:57:27,084 - trading - INFO - RSI actualisé: BTC/USDC = 52.72766333381044
+2025-06-09 19:57:27,241 - trading - INFO - Statistiques minute: RSI: 12, Tendance: 12
+2025-06-09 19:57:27,685 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 52.72766333381044}
+2025-06-09 19:57:27,686 - trading - INFO - RSI pour BTC/USDC: 52.72766333381044
+2025-06-09 19:57:27,774 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:27,882 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.240950270227444}
+2025-06-09 19:57:27,883 - trading - INFO - Williams %R pour BTC/USDT: -37.240950270227444
+2025-06-09 19:57:27,883 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:27,925 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1495.6753200000278}
+2025-06-09 19:57:27,925 - trading - INFO - OBV pour BTC/USDT: 1495.6753200000278
+2025-06-09 19:57:27,925 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108390.00500000
+   RSI: 52.73
+   ATR: 144.87497905
+   Williams %R: -37.24
+   OBV: 1495.68 / OBV SMA4: 1495.29
+
+2025-06-09 19:57:27,926 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:27,926 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 52.73
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:32,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.1s)
+2025-06-09 19:57:32,084 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 52.72766333381044}
+2025-06-09 19:57:32,085 - trading - INFO - RSI pour BTC/USDC: 52.72766333381044
+2025-06-09 19:57:32,085 - trading - INFO - RSI actualisé: BTC/USDC = 52.72766333381044
+2025-06-09 19:57:32,454 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 52.724048629832645}
+2025-06-09 19:57:32,455 - trading - INFO - RSI pour BTC/USDC: 52.724048629832645
+2025-06-09 19:57:32,533 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:32,645 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.240950270227444}
+2025-06-09 19:57:32,646 - trading - INFO - Williams %R pour BTC/USDT: -37.240950270227444
+2025-06-09 19:57:32,646 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:32,695 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1495.7131200000276}
+2025-06-09 19:57:32,696 - trading - INFO - OBV pour BTC/USDT: 1495.7131200000276
+2025-06-09 19:57:32,696 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108392.55500000
+   RSI: 52.72
+   ATR: 144.87664571
+   Williams %R: -37.24
+   OBV: 1495.71 / OBV SMA4: 1495.50
+
+2025-06-09 19:57:32,696 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:32,696 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 52.72
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:37,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:57:37,117 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 48.72256390359356}
+2025-06-09 19:57:37,118 - trading - INFO - RSI pour BTC/USDC: 48.72256390359356
+2025-06-09 19:57:37,118 - trading - INFO - RSI actualisé: BTC/USDC = 48.72256390359356
+2025-06-09 19:57:37,434 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 47.8227624262552}
+2025-06-09 19:57:37,435 - trading - INFO - RSI pour BTC/USDC: 47.8227624262552
+2025-06-09 19:57:37,512 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:37,553 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -43.578677242505826}
+2025-06-09 19:57:37,554 - trading - INFO - Williams %R pour BTC/USDT: -43.578677242505826
+2025-06-09 19:57:37,554 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:37,599 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1495.7529400000278}
+2025-06-09 19:57:37,599 - trading - INFO - OBV pour BTC/USDT: 1495.7529400000278
+2025-06-09 19:57:37,599 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108392.84500000
+   RSI: 47.82
+   ATR: 146.87331238
+   Williams %R: -43.58
+   OBV: 1495.75 / OBV SMA4: 1495.69
+
+2025-06-09 19:57:37,600 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:37,600 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 47.82
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:42,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:42,079 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.36956806005191}
+2025-06-09 19:57:42,079 - trading - INFO - RSI pour BTC/USDC: 46.36956806005191
+2025-06-09 19:57:42,079 - trading - INFO - RSI actualisé: BTC/USDC = 46.36956806005191
+2025-06-09 19:57:42,469 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.36956806005191}
+2025-06-09 19:57:42,470 - trading - INFO - RSI pour BTC/USDC: 46.36956806005191
+2025-06-09 19:57:42,543 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:42,580 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -44.36020062988276}
+2025-06-09 19:57:42,581 - trading - INFO - Williams %R pour BTC/USDT: -44.36020062988276
+2025-06-09 19:57:42,581 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:42,620 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1496.2985300000282}
+2025-06-09 19:57:42,621 - trading - INFO - OBV pour BTC/USDT: 1496.2985300000282
+2025-06-09 19:57:42,621 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108364.60000000
+   RSI: 46.37
+   ATR: 148.20831238
+   Williams %R: -44.36
+   OBV: 1496.30 / OBV SMA4: 1495.86
+
+2025-06-09 19:57:42,621 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:42,621 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.37
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:47,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:47,077 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.344420348281126}
+2025-06-09 19:57:47,077 - trading - INFO - RSI pour BTC/USDC: 46.344420348281126
+2025-06-09 19:57:47,077 - trading - INFO - RSI actualisé: BTC/USDC = 46.344420348281126
+2025-06-09 19:57:47,459 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.344420348281126}
+2025-06-09 19:57:47,460 - trading - INFO - RSI pour BTC/USDC: 46.344420348281126
+2025-06-09 19:57:47,575 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:47,615 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -46.24596601734175}
+2025-06-09 19:57:47,615 - trading - INFO - Williams %R pour BTC/USDT: -46.24596601734175
+2025-06-09 19:57:47,615 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:47,654 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1496.5342400000286}
+2025-06-09 19:57:47,654 - trading - INFO - OBV pour BTC/USDT: 1496.5342400000286
+2025-06-09 19:57:47,655 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108374.23500000
+   RSI: 46.34
+   ATR: 148.22331238
+   Williams %R: -46.25
+   OBV: 1496.53 / OBV SMA4: 1496.07
+
+2025-06-09 19:57:47,655 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:47,655 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.34
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:52,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:52,077 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 50.99023311243241}
+2025-06-09 19:57:52,077 - trading - INFO - RSI pour BTC/USDC: 50.99023311243241
+2025-06-09 19:57:52,078 - trading - INFO - RSI actualisé: BTC/USDC = 50.99023311243241
+2025-06-09 19:57:52,491 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.44955883687076}
+2025-06-09 19:57:52,491 - trading - INFO - RSI pour BTC/USDC: 53.44955883687076
+2025-06-09 19:57:52,570 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:52,603 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -39.58940860841849}
+2025-06-09 19:57:52,604 - trading - INFO - Williams %R pour BTC/USDT: -39.58940860841849
+2025-06-09 19:57:52,604 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:52,641 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1497.851220000029}
+2025-06-09 19:57:52,641 - trading - INFO - OBV pour BTC/USDT: 1497.851220000029
+2025-06-09 19:57:52,642 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108363.89500000
+   RSI: 53.45
+   ATR: 148.53831238
+   Williams %R: -39.59
+   OBV: 1497.85 / OBV SMA4: 1496.61
+
+2025-06-09 19:57:52,642 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:52,642 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:57:57,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:57:57,078 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.44584448085422}
+2025-06-09 19:57:57,079 - trading - INFO - RSI pour BTC/USDC: 53.44584448085422
+2025-06-09 19:57:57,079 - trading - INFO - RSI actualisé: BTC/USDC = 53.44584448085422
+2025-06-09 19:57:57,492 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.44584448085422}
+2025-06-09 19:57:57,492 - trading - INFO - RSI pour BTC/USDC: 53.44584448085422
+2025-06-09 19:57:57,572 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:57:57,617 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -38.07690812239672}
+2025-06-09 19:57:57,618 - trading - INFO - Williams %R pour BTC/USDT: -38.07690812239672
+2025-06-09 19:57:57,618 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:57:57,659 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.253930000029}
+2025-06-09 19:57:57,660 - trading - INFO - OBV pour BTC/USDT: 1498.253930000029
+2025-06-09 19:57:57,660 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108401.71500000
+   RSI: 53.45
+   ATR: 148.53831238
+   Williams %R: -38.08
+   OBV: 1498.25 / OBV SMA4: 1497.23
+
+2025-06-09 19:57:57,660 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:57:57,660 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:02,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:02,081 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.45327370920597}
+2025-06-09 19:58:02,081 - trading - INFO - RSI pour BTC/USDC: 53.45327370920597
+2025-06-09 19:58:02,082 - trading - INFO - RSI actualisé: BTC/USDC = 53.45327370920597
+2025-06-09 19:58:02,441 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.44955883687076}
+2025-06-09 19:58:02,442 - trading - INFO - RSI pour BTC/USDC: 53.44955883687076
+2025-06-09 19:58:02,526 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:02,564 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.96026284070289}
+2025-06-09 19:58:02,565 - trading - INFO - Williams %R pour BTC/USDT: -37.96026284070289
+2025-06-09 19:58:02,565 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:02,604 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.322230000029}
+2025-06-09 19:58:02,605 - trading - INFO - OBV pour BTC/USDT: 1498.322230000029
+2025-06-09 19:58:02,605 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108398.82000000
+   RSI: 53.45
+   ATR: 148.53831238
+   Williams %R: -37.96
+   OBV: 1498.32 / OBV SMA4: 1497.74
+
+2025-06-09 19:58:02,605 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:02,605 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:07,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:07,099 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.44955883687076}
+2025-06-09 19:58:07,100 - trading - INFO - RSI pour BTC/USDC: 53.44955883687076
+2025-06-09 19:58:07,100 - trading - INFO - RSI actualisé: BTC/USDC = 53.44955883687076
+2025-06-09 19:58:07,425 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.45327370920597}
+2025-06-09 19:58:07,426 - trading - INFO - RSI pour BTC/USDC: 53.45327370920597
+2025-06-09 19:58:07,771 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:07,838 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -39.783817411249075}
+2025-06-09 19:58:07,838 - trading - INFO - Williams %R pour BTC/USDT: -39.783817411249075
+2025-06-09 19:58:07,839 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:07,877 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.523800000029}
+2025-06-09 19:58:07,878 - trading - INFO - OBV pour BTC/USDT: 1498.523800000029
+2025-06-09 19:58:07,878 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108394.26500000
+   RSI: 53.45
+   ATR: 148.53831238
+   Williams %R: -39.78
+   OBV: 1498.52 / OBV SMA4: 1498.24
+
+2025-06-09 19:58:07,879 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:07,879 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.45
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:12,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.2s)
+2025-06-09 19:58:12,084 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:12,085 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:12,085 - trading - INFO - RSI actualisé: BTC/USDC = 51.320278139016004
+2025-06-09 19:58:12,442 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:12,443 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:12,523 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:12,559 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -39.783817411249075}
+2025-06-09 19:58:12,559 - trading - INFO - Williams %R pour BTC/USDT: -39.783817411249075
+2025-06-09 19:58:12,559 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:12,607 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.6388300000292}
+2025-06-09 19:58:12,607 - trading - INFO - OBV pour BTC/USDT: 1498.6388300000292
+2025-06-09 19:58:12,608 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108382.20500000
+   RSI: 51.32
+   ATR: 148.53831238
+   Williams %R: -39.78
+   OBV: 1498.64 / OBV SMA4: 1498.43
+
+2025-06-09 19:58:12,608 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:12,608 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.32
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:17,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:17,076 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:17,076 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:17,077 - trading - INFO - RSI actualisé: BTC/USDC = 51.320278139016004
+2025-06-09 19:58:17,418 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:17,418 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:17,512 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:17,560 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -40.254286714101596}
+2025-06-09 19:58:17,561 - trading - INFO - Williams %R pour BTC/USDT: -40.254286714101596
+2025-06-09 19:58:17,561 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:17,593 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.6636300000293}
+2025-06-09 19:58:17,594 - trading - INFO - OBV pour BTC/USDT: 1498.6636300000293
+2025-06-09 19:58:17,594 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108385.54000000
+   RSI: 51.32
+   ATR: 148.53831238
+   Williams %R: -40.25
+   OBV: 1498.66 / OBV SMA4: 1498.54
+
+2025-06-09 19:58:17,594 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:17,594 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.32
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:22,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:22,076 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:22,076 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:22,077 - trading - INFO - RSI actualisé: BTC/USDC = 51.320278139016004
+2025-06-09 19:58:22,451 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:22,452 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:22,539 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:22,590 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -40.254286714101596}
+2025-06-09 19:58:22,591 - trading - INFO - Williams %R pour BTC/USDT: -40.254286714101596
+2025-06-09 19:58:22,591 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:22,638 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.7682500000292}
+2025-06-09 19:58:22,638 - trading - INFO - OBV pour BTC/USDT: 1498.7682500000292
+2025-06-09 19:58:22,639 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108384.33500000
+   RSI: 51.32
+   ATR: 148.53831238
+   Williams %R: -40.25
+   OBV: 1498.77 / OBV SMA4: 1498.65
+
+2025-06-09 19:58:22,639 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:22,639 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.32
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:27,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:27,076 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:27,077 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:27,077 - trading - INFO - RSI actualisé: BTC/USDC = 51.320278139016004
+2025-06-09 19:58:27,349 - trading - INFO - Statistiques minute: RSI: 12, Tendance: 12
+2025-06-09 19:58:27,521 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:27,521 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:27,602 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:27,639 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -40.254286714101596}
+2025-06-09 19:58:27,640 - trading - INFO - Williams %R pour BTC/USDT: -40.254286714101596
+2025-06-09 19:58:27,640 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:27,675 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.7815300000293}
+2025-06-09 19:58:27,676 - trading - INFO - OBV pour BTC/USDT: 1498.7815300000293
+2025-06-09 19:58:27,676 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108385.50000000
+   RSI: 51.32
+   ATR: 148.53831238
+   Williams %R: -40.25
+   OBV: 1498.78 / OBV SMA4: 1498.71
+
+2025-06-09 19:58:27,676 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:27,677 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.32
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:32,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:32,103 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:32,103 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:32,104 - trading - INFO - RSI actualisé: BTC/USDC = 51.320278139016004
+2025-06-09 19:58:32,438 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 51.320278139016004}
+2025-06-09 19:58:32,439 - trading - INFO - RSI pour BTC/USDC: 51.320278139016004
+2025-06-09 19:58:32,519 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:32,552 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -40.25817489015617}
+2025-06-09 19:58:32,552 - trading - INFO - Williams %R pour BTC/USDT: -40.25817489015617
+2025-06-09 19:58:32,552 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:32,591 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1498.8564200000292}
+2025-06-09 19:58:32,592 - trading - INFO - OBV pour BTC/USDT: 1498.8564200000292
+2025-06-09 19:58:32,592 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108385.33500000
+   RSI: 51.32
+   ATR: 148.53831238
+   Williams %R: -40.26
+   OBV: 1498.86 / OBV SMA4: 1498.77
+
+2025-06-09 19:58:32,592 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:32,592 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 51.32
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:37,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:37,104 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.935533964479795}
+2025-06-09 19:58:37,105 - trading - INFO - RSI pour BTC/USDC: 46.935533964479795
+2025-06-09 19:58:37,105 - trading - INFO - RSI actualisé: BTC/USDC = 46.935533964479795
+2025-06-09 19:58:37,563 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.935533964479795}
+2025-06-09 19:58:37,563 - trading - INFO - RSI pour BTC/USDC: 46.935533964479795
+2025-06-09 19:58:37,691 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:37,729 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -44.17356817916698}
+2025-06-09 19:58:37,730 - trading - INFO - Williams %R pour BTC/USDT: -44.17356817916698
+2025-06-09 19:58:37,730 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:37,938 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1499.28885000003}
+2025-06-09 19:58:37,939 - trading - INFO - OBV pour BTC/USDT: 1499.28885000003
+2025-06-09 19:58:37,939 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108374.08000000
+   RSI: 46.94
+   ATR: 148.53831238
+   Williams %R: -44.17
+   OBV: 1499.29 / OBV SMA4: 1498.92
+
+2025-06-09 19:58:37,939 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:37,939 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.94
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:42,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.1s)
+2025-06-09 19:58:42,083 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.935533964479795}
+2025-06-09 19:58:42,084 - trading - INFO - RSI pour BTC/USDC: 46.935533964479795
+2025-06-09 19:58:42,084 - trading - INFO - RSI actualisé: BTC/USDC = 46.935533964479795
+2025-06-09 19:58:42,467 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 46.935533964479795}
+2025-06-09 19:58:42,468 - trading - INFO - RSI pour BTC/USDC: 46.935533964479795
+2025-06-09 19:58:42,550 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:42,586 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -44.17745635522155}
+2025-06-09 19:58:42,587 - trading - INFO - Williams %R pour BTC/USDT: -44.17745635522155
+2025-06-09 19:58:42,587 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:42,621 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1499.3296800000298}
+2025-06-09 19:58:42,621 - trading - INFO - OBV pour BTC/USDT: 1499.3296800000298
+2025-06-09 19:58:42,621 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108377.13000000
+   RSI: 46.94
+   ATR: 148.53831238
+   Williams %R: -44.18
+   OBV: 1499.33 / OBV SMA4: 1499.06
+
+2025-06-09 19:58:42,621 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:42,621 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 46.94
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:47,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:47,078 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.45864570673784}
+2025-06-09 19:58:47,078 - trading - INFO - RSI pour BTC/USDC: 54.45864570673784
+2025-06-09 19:58:47,079 - trading - INFO - RSI actualisé: BTC/USDC = 54.45864570673784
+2025-06-09 19:58:47,486 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 54.45864570673784}
+2025-06-09 19:58:47,486 - trading - INFO - RSI pour BTC/USDC: 54.45864570673784
+2025-06-09 19:58:47,575 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:47,625 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -38.09634900268091}
+2025-06-09 19:58:47,626 - trading - INFO - Williams %R pour BTC/USDT: -38.09634900268091
+2025-06-09 19:58:47,626 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:47,665 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1501.95693000003}
+2025-06-09 19:58:47,666 - trading - INFO - OBV pour BTC/USDT: 1501.95693000003
+2025-06-09 19:58:47,666 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108388.05000000
+   RSI: 54.46
+   ATR: 148.53831238
+   Williams %R: -38.10
+   OBV: 1501.96 / OBV SMA4: 1499.86
+
+2025-06-09 19:58:47,666 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:47,666 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 54.46
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:52,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:52,091 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.70824609574966}
+2025-06-09 19:58:52,091 - trading - INFO - RSI pour BTC/USDC: 57.70824609574966
+2025-06-09 19:58:52,091 - trading - INFO - RSI actualisé: BTC/USDC = 57.70824609574966
+2025-06-09 19:58:52,435 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 57.70824609574966}
+2025-06-09 19:58:52,435 - trading - INFO - RSI pour BTC/USDC: 57.70824609574966
+2025-06-09 19:58:52,523 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:52,559 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -33.08060188965394}
+2025-06-09 19:58:52,560 - trading - INFO - Williams %R pour BTC/USDT: -33.08060188965394
+2025-06-09 19:58:52,560 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:52,598 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1502.5758000000305}
+2025-06-09 19:58:52,599 - trading - INFO - OBV pour BTC/USDT: 1502.5758000000305
+2025-06-09 19:58:52,600 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108389.86000000
+   RSI: 57.71
+   ATR: 148.53831238
+   Williams %R: -33.08
+   OBV: 1502.58 / OBV SMA4: 1500.79
+
+2025-06-09 19:58:52,600 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:52,600 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 57.71
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:58:57,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:58:57,082 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 60.749326980108506}
+2025-06-09 19:58:57,083 - trading - INFO - RSI pour BTC/USDC: 60.749326980108506
+2025-06-09 19:58:57,083 - trading - INFO - RSI actualisé: BTC/USDC = 60.749326980108506
+2025-06-09 19:58:57,462 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 60.749326980108506}
+2025-06-09 19:58:57,463 - trading - INFO - RSI pour BTC/USDC: 60.749326980108506
+2025-06-09 19:58:57,556 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:58:57,601 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -27.621602706167796}
+2025-06-09 19:58:57,601 - trading - INFO - Williams %R pour BTC/USDT: -27.621602706167796
+2025-06-09 19:58:57,601 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:58:57,707 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1502.8328400000312}
+2025-06-09 19:58:57,707 - trading - INFO - OBV pour BTC/USDT: 1502.8328400000312
+2025-06-09 19:58:57,707 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108419.91000000
+   RSI: 60.75
+   ATR: 148.53831238
+   Williams %R: -27.62
+   OBV: 1502.83 / OBV SMA4: 1501.67
+
+2025-06-09 19:58:57,707 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:58:57,707 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 60.75
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:02,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:59:02,086 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.54200511033417}
+2025-06-09 19:59:02,086 - trading - INFO - RSI pour BTC/USDC: 62.54200511033417
+2025-06-09 19:59:02,087 - trading - INFO - RSI actualisé: BTC/USDC = 62.54200511033417
+2025-06-09 19:59:02,493 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.54200511033417}
+2025-06-09 19:59:02,494 - trading - INFO - RSI pour BTC/USDC: 62.54200511033417
+2025-06-09 19:59:02,595 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:02,630 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -26.63789416384546}
+2025-06-09 19:59:02,630 - trading - INFO - Williams %R pour BTC/USDT: -26.63789416384546
+2025-06-09 19:59:02,631 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:02,676 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1503.0410300000315}
+2025-06-09 19:59:02,676 - trading - INFO - OBV pour BTC/USDT: 1503.0410300000315
+2025-06-09 19:59:02,676 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108418.27000000
+   RSI: 62.54
+   ATR: 148.53831238
+   Williams %R: -26.64
+   OBV: 1503.04 / OBV SMA4: 1502.60
+
+2025-06-09 19:59:02,676 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:02,677 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 62.54
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:07,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:59:07,086 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.5441434906985}
+2025-06-09 19:59:07,086 - trading - INFO - RSI pour BTC/USDC: 62.5441434906985
+2025-06-09 19:59:07,086 - trading - INFO - RSI actualisé: BTC/USDC = 62.5441434906985
+2025-06-09 19:59:07,552 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.5441434906985}
+2025-06-09 19:59:07,553 - trading - INFO - RSI pour BTC/USDC: 62.5441434906985
+2025-06-09 19:59:07,630 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:07,667 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -26.63789416384546}
+2025-06-09 19:59:07,668 - trading - INFO - Williams %R pour BTC/USDT: -26.63789416384546
+2025-06-09 19:59:07,668 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:07,708 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1503.1070800000314}
+2025-06-09 19:59:07,708 - trading - INFO - OBV pour BTC/USDT: 1503.1070800000314
+2025-06-09 19:59:07,709 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108424.21500000
+   RSI: 62.54
+   ATR: 148.53831238
+   Williams %R: -26.64
+   OBV: 1503.11 / OBV SMA4: 1502.89
+
+2025-06-09 19:59:07,709 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:07,709 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 62.54
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:12,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:59:12,084 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 62.5441434906985}
+2025-06-09 19:59:12,085 - trading - INFO - RSI pour BTC/USDC: 62.5441434906985
+2025-06-09 19:59:12,085 - trading - INFO - RSI actualisé: BTC/USDC = 62.5441434906985
+2025-06-09 19:59:12,523 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 61.22027028054673}
+2025-06-09 19:59:12,523 - trading - INFO - RSI pour BTC/USDC: 61.22027028054673
+2025-06-09 19:59:12,606 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:12,650 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -26.641782339905692}
+2025-06-09 19:59:12,650 - trading - INFO - Williams %R pour BTC/USDT: -26.641782339905692
+2025-06-09 19:59:12,650 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:12,723 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1503.1433000000316}
+2025-06-09 19:59:12,724 - trading - INFO - OBV pour BTC/USDT: 1503.1433000000316
+2025-06-09 19:59:12,725 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108423.91000000
+   RSI: 61.22
+   ATR: 148.53831238
+   Williams %R: -26.64
+   OBV: 1503.14 / OBV SMA4: 1503.03
+
+2025-06-09 19:59:12,726 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:12,727 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 61.22
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:17,040 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.3s)
+2025-06-09 19:59:17,084 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 60.75636998896511}
+2025-06-09 19:59:17,084 - trading - INFO - RSI pour BTC/USDC: 60.75636998896511
+2025-06-09 19:59:17,084 - trading - INFO - RSI actualisé: BTC/USDC = 60.75636998896511
+2025-06-09 19:59:17,443 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 59.78952892861926}
+2025-06-09 19:59:17,444 - trading - INFO - RSI pour BTC/USDC: 59.78952892861926
+2025-06-09 19:59:17,514 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:17,554 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -26.63789416384546}
+2025-06-09 19:59:17,555 - trading - INFO - Williams %R pour BTC/USDT: -26.63789416384546
+2025-06-09 19:59:17,555 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:17,593 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1503.2190800000315}
+2025-06-09 19:59:17,594 - trading - INFO - OBV pour BTC/USDT: 1503.2190800000315
+2025-06-09 19:59:17,594 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108418.00000000
+   RSI: 59.79
+   ATR: 148.53831238
+   Williams %R: -26.64
+   OBV: 1503.22 / OBV SMA4: 1503.13
+
+2025-06-09 19:59:17,594 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:17,594 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 59.79
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:22,038 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:59:22,077 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 59.79199310849125}
+2025-06-09 19:59:22,077 - trading - INFO - RSI pour BTC/USDC: 59.79199310849125
+2025-06-09 19:59:22,077 - trading - INFO - RSI actualisé: BTC/USDC = 59.79199310849125
+2025-06-09 19:59:22,425 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 59.79199310849125}
+2025-06-09 19:59:22,425 - trading - INFO - RSI pour BTC/USDC: 59.79199310849125
+2025-06-09 19:59:22,499 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:22,541 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -28.931918037249822}
+2025-06-09 19:59:22,541 - trading - INFO - Williams %R pour BTC/USDT: -28.931918037249822
+2025-06-09 19:59:22,541 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:22,573 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1503.5772000000316}
+2025-06-09 19:59:22,574 - trading - INFO - OBV pour BTC/USDT: 1503.5772000000316
+2025-06-09 19:59:22,574 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108412.14500000
+   RSI: 59.79
+   ATR: 148.53831238
+   Williams %R: -28.93
+   OBV: 1503.58 / OBV SMA4: 1503.26
+
+2025-06-09 19:59:22,574 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:22,575 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 59.79
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:27,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.5s)
+2025-06-09 19:59:27,080 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.45698909795673}
+2025-06-09 19:59:27,080 - trading - INFO - RSI pour BTC/USDC: 53.45698909795673
+2025-06-09 19:59:27,080 - trading - INFO - RSI actualisé: BTC/USDC = 53.45698909795673
+2025-06-09 19:59:27,518 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.45698909795673}
+2025-06-09 19:59:27,519 - trading - INFO - RSI pour BTC/USDC: 53.45698909795673
+2025-06-09 19:59:27,599 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:27,638 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.82417667871922}
+2025-06-09 19:59:27,638 - trading - INFO - Williams %R pour BTC/USDT: -37.82417667871922
+2025-06-09 19:59:27,638 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:27,679 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1504.293750000032}
+2025-06-09 19:59:27,680 - trading - INFO - OBV pour BTC/USDT: 1504.293750000032
+2025-06-09 19:59:27,680 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108410.95000000
+   RSI: 53.46
+   ATR: 148.53831238
+   Williams %R: -37.82
+   OBV: 1504.29 / OBV SMA4: 1503.56
+
+2025-06-09 19:59:27,680 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:27,681 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 53.46
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
+2025-06-09 19:59:32,039 - trading - INFO - Exécution de market_analysis (dernier: il y a 4.4s)
+2025-06-09 19:59:32,091 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 53.45698909795673}
+2025-06-09 19:59:32,092 - trading - INFO - RSI pour BTC/USDC: 53.45698909795673
+2025-06-09 19:59:32,092 - trading - INFO - RSI actualisé: BTC/USDC = 53.45698909795673
+2025-06-09 19:59:32,126 - trading - INFO - Statistiques minute: RSI: 13, Tendance: 13
+2025-06-09 19:59:32,537 - trading - INFO - Réponse brute taapi.io pour BTC/USDC: {'value': 52.72766333381044}
+2025-06-09 19:59:32,537 - trading - INFO - RSI pour BTC/USDC: 52.72766333381044
+2025-06-09 19:59:32,608 - trading - INFO - Récupération Williams %R pour BTC/USDT (période 5, intervalle 5m)
+2025-06-09 19:59:32,646 - trading - INFO - Réponse brute Williams %R pour BTC/USDT: {'value': -37.82417667871922}
+2025-06-09 19:59:32,646 - trading - INFO - Williams %R pour BTC/USDT: -37.82417667871922
+2025-06-09 19:59:32,646 - trading - INFO - Récupération OBV pour BTC/USDT (intervalle 15m)
+2025-06-09 19:59:32,678 - trading - INFO - Réponse brute OBV pour BTC/USDT: {'value': 1504.3008100000322}
+2025-06-09 19:59:32,679 - trading - INFO - OBV pour BTC/USDT: 1504.3008100000322
+2025-06-09 19:59:32,679 - trading - INFO - 
+=== INDICATEURS BTC/USDC ===
+   Prix actuel: 108392.37000000
+   RSI: 52.73
+   ATR: 148.53831238
+   Williams %R: -37.82
+   OBV: 1504.30 / OBV SMA4: 1503.85
+
+2025-06-09 19:59:32,679 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI minimum: 35.29
+   Seuil maximum: 25
+   Raison: Le RSI n'est jamais descendu en zone de survente (<= 25)
+
+2025-06-09 19:59:32,679 - trading - INFO - 
+=== AUCUN NIVEAU RSI APPLICABLE ===
+   RSI actuel: 52.73
+   RSI le plus bas: 35.29
+   Raison: Le RSI minimum n'a pas atteint les seuils de déclenchement
+
