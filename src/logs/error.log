@@ -305,3 +305,4 @@
 2025-06-09 19:42:48,324 - error - ERROR - Timeout de la requête API pour BTC/USDC
 2025-06-09 19:42:48,325 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108344.09, RSI=None
 2025-06-09 19:45:03,450 - error - ERROR - Timeout de la requête Williams %R pour BTC/USDT
+2025-06-09 20:52:05,826 - error - ERROR - Erreur lors du traitement de l'ordre rempli C02__560832507306725376063: TrailingStopLoss.__init__() got an unexpected keyword argument 'levels'

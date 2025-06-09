@@ -12,8 +12,11 @@ load_dotenv()
 class TradingConfig:
     """Configuration des paramètres de trading"""
     TRANSACTION_QUANTITY = 0.001
+
     MAX_POSITIONS = 1
+
     ATR_HIGH_VOLATILITY_THRESHOLD = 350
+    
     ADAPTIVE_TRAILING_STOP_LEVELS = [
         {'trigger': 0.08, 'stop': 0.04, 'immediate': True},
         {'trigger': 0.12, 'stop': 0.08, 'immediate': True},
@@ -58,9 +61,9 @@ class MarketConfig:
     CRYPTO_LIST = ['BTC/USDC']
 
 class TimeConfig:
-    ANALYSIS_INTERVAL = 5
+    ANALYSIS_INTERVAL = 60
 
-    CHECK_INTERVAL = 15
+    CHECK_INTERVAL = 10
 
 class LogConfig:
     LOG_FILE = 'logs/trading.log'
@@ -76,12 +79,13 @@ class TaapiConfig:
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
     RSI_PERIOD = 3
+
     FISHER_PERIOD = 9
     FISHER_INTERVAL = "1m"
     FISHER_THRESHOLD = 1.5
     
-    WILLIAMS_R_PERIOD = 5
-    WILLIAMS_R_INTERVAL = "5m"
+    WILLIAMS_R_PERIOD = 3
+    WILLIAMS_R_INTERVAL = "15m"
     WILLIAMS_R_OVERSOLD_THRESHOLD = -80
     WILLIAMS_R_OVERBOUGHT_THRESHOLD = -30
 
