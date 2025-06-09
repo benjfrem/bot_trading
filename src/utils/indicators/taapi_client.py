@@ -269,7 +269,7 @@ class TaapiClient:
         Returns:
             La valeur du OBV (float) ou None en cas d'erreur.
         """
-        interval = interval if interval is not None else "5m"
+        interval = interval if interval is not None else "15m"
         exch = self.exchange.lower()
         if exch == "coinbase":
             formatted_symbol = symbol.replace("/USDT", "/USD")

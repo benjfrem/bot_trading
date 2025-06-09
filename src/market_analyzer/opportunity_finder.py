@@ -1,6 +1,6 @@
 """Module pour la détection des opportunités de trading (simplifié)"""
 import time
-from typing import Dict, Optional, List, Tuple, Any
+from typing import Dict, List, Tuple, Any
 from datetime import datetime
 from collections import deque
 
@@ -12,22 +12,22 @@ from logger import trading_logger, error_logger
 from utils.indicators.taapi_client import taapi_client
 
 class OpportunityFinder:
-    """Classe pour la détection des opportunités de trading (basée uniquement sur RSI)"""
-    
+    """Classe pour la détection des opportunités de trading"""
     def __init__(self, log_callback=None):
-        """Initialise le détecteur d'opportunités"""
         self._log_callback = log_callback
-        
+
     def _log(self, message: str, level: str = "info") -> None:
-        """Centralise la gestion des logs"""
         if self._log_callback:
             self._log_callback(message, level)
         else:
             if level == "info":
                 trading_logger.info(message)
-            elif level == "error":
+            else:
                 error_logger.error(message)
             print(message)
+
+    def _format_rsi(self, v): return f"{v:.2f}" if v is not None else "N/A"
+
     
     def init_scoring_system(self, rsi_analyzer):
         """Méthode maintenue pour compatibilité mais qui n'initialise plus de scoring system"""
@@ -140,6 +140,7 @@ class OpportunityFinder:
                     md.trailing_buy_rsi = TrailingBuyRsi()
                     md.rsi_confirm_counter = 0
                     md.rsi_last_value = None
+                    md.rsi_wait_for_down = False
                     self._log(f"Trailing Buy RSI initialisé pour {symbol}", "info")
                 
                 md.trailing_buy_rsi.update(rsi, current_price)
@@ -149,6 +150,14 @@ class OpportunityFinder:
                 threshold = level.buy_level
                 self._log(f"Confirmation RSI: seuil d'achat = {threshold:.2f} pour {symbol}", "info")
                 
+                # Gestion attente après échec : bloquer ticks tant que RSI ne redescend pas
+                if hasattr(md, 'rsi_wait_for_down') and md.rsi_wait_for_down:
+                    if rsi < threshold:
+                        self._log(f"RSI redescendu sous {threshold:.2f}, reprise ticks", "info")
+                        md.rsi_wait_for_down = False
+                        md.rsi_confirm_counter = 0
+                    continue
+
                 # Double tick confirmation
                 if rsi >= threshold:
                     md.rsi_confirm_counter += 1
@@ -164,11 +173,16 @@ class OpportunityFinder:
                 md.rsi_confirm_counter = 0
                 md.trailing_buy_rsi._lock_state_for_buy = True
                 md.trailing_buy_rsi._signal_emitted = True
+                md.rsi_wait_for_down = True
                 
                 # Conditions supplémentaires
                 # Williams %R strict entre -80 et -40
                 if willr_val is None or not(-80 < willr_val < -40):
                     self._log(f"Williams %R hors plage: {williams_str}", "info")
+                    md.trailing_buy_rsi.lowest_rsi = rsi
+                    md.rsi_confirm_counter = 0
+                    md.trailing_buy_rsi.reset()
+                    md.rsi_wait_for_down = True
                     continue
                 
                 # DMI négatif
@@ -177,12 +191,31 @@ class OpportunityFinder:
                 mdi_str = f"{mdi:.2f}" if mdi is not None else "N/A"
                 if mdi is not None and mdi > Config.DMI_NEGATIVE_THRESHOLD:
                     self._log(f"DMI- trop élevé: {mdi_str}", "info")
-                    continue
+                    md.trailing_buy_rsi.lowest_rsi = rsi
+                    md.rsi_confirm_counter = 0
+                    md.trailing_buy_rsi.reset()
+                    md.rsi_wait_for_down = True
                 
                 # OBV vs SMA : choix des trailing stop levels
                 obv_ok = obv_val is not None and obv_val > obv_sma
                 trailing_levels = Config.TRAILING_STOP_LEVELS if obv_ok else Config.ADAPTIVE_TRAILING_STOP_LEVELS
                 self._log(f"OBV {'>' if obv_ok else '<='} SMA4 -> stop_levels = {'standard' if obv_ok else 'adaptive'}", "info")
+
+                # Calcul du score (Williams %R validée + OBV)
+                score = 1
+                if obv_ok:
+                    score += 1
+                self._log(f"Score calculé: {score}", "info")
+
+                self._log("─────────────────────────────", "info")
+                self._log(f"=== VERIFICATION DES INDICATEURS POUR {symbol} ===", "info")
+                self._log("─────────────────────────────", "info")
+                self._log(f"RSI actuel: {self._format_rsi(rsi)} | Seuil: {threshold:.2f}", "info")
+                self._log(f"Williams %R: {self._format_rsi(willr_val)} | Condition requise [-80;-40] → {'OK' if willr_val is not None and -80 < willr_val < -40 else 'HORS PLAGE'}", "info")
+                self._log(f"DMI (mdi): {self._format_rsi(mdi)} | Seuil: {Config.DMI_NEGATIVE_THRESHOLD} → {'OK' if mdi is not None and mdi <= Config.DMI_NEGATIVE_THRESHOLD else 'TROP ÉLEVÉ'}", "info")
+                self._log(f"OBV: {self._format_rsi(obv_val)} / SMA: {self._format_rsi(obv_sma)} → {'standard' if obv_ok else 'adaptive'} stop_levels", "info")
+                self._log(f"=== FIN DE LA VERIFICATION POUR {symbol} ===", "info")
+                self._log("─────────────────────────────", "info")
                 
                 # Création de l'opportunité
                 opp = {
@@ -195,7 +228,9 @@ class OpportunityFinder:
                     'market_info': market_infos.get(symbol, {}),
                     'timestamp': datetime.now(),
                     'trailing_buy_triggered': True,
-                    'trailing_stop_levels': trailing_levels
+                    'trailing_stop_levels': trailing_levels,
+                    'score': score,
+                    'position_size': 1.0
                 }
                 results.append(opp)
                 

@@ -165,8 +165,6 @@ class PositionManager:
                 return False
 
             log_event(f"⏳ Ordre créé: {order.get('id')} en attente")
-            # Instancier le StopLossManager dès l'ouverture de la position
-            self.portfolio_manager.trailing_stops[symbol] = StopLossManager(entry_price=price, symbol=symbol)
             return True
 
     async def can_open_position(self, symbol: str = None) -> bool:

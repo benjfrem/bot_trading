@@ -99,6 +99,8 @@ class ExchangeOperations:
     async def create_limit_buy_order(self, symbol: str, quantity: Optional[float] = None, 
                                     cost: Optional[float] = None, price: float = None) -> Optional[dict]:
         """Crée un ordre limite d'achat avec possibilité de spécifier le montant en USDC
+        # Normaliser le symbole pour MEXC
+        symbol = symbol.replace('/USDC','/USDT')
         
         Args:
             symbol: Symbole à acheter (ex: 'BTC/USDC')
@@ -178,6 +180,8 @@ class ExchangeOperations:
     
     @retry_operation(max_retries=2, delay=1)
     async def create_limit_sell_order(self, symbol: str, quantity: float, price: float) -> Optional[dict]:
+        # Normaliser le symbole pour MEXC
+        symbol = symbol.replace('/USDC','/USDT')
         """Crée un ordre limite de vente
         
         Args:

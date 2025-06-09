@@ -87,7 +87,7 @@ class TrailingBuyRsi:
         applicable_level = None
         
         # VÉRIFICATION CRITIQUE: Ne pas sélectionner de niveau si le RSI n'est jamais descendu en zone de survente
-        if self.lowest_rsi > 30:
+        if self.lowest_rsi > 100:
             trading_logger.info(f"""
 === AUCUN NIVEAU RSI APPLICABLE ===
    RSI minimum: {self.lowest_rsi:.2f}
@@ -101,7 +101,7 @@ class TrailingBuyRsi:
         
         # Cas spécial pour la zone RSI 27-29
         # Vérifier si le RSI minimum est entre 27 et 29
-        if self.lowest_rsi <= 30 and self.lowest_rsi >= 1:
+        if self.lowest_rsi <= 100 and self.lowest_rsi >= 95:
             # Créer un niveau spécial pour la zone 27-29
             applicable_level = TrailingBuyRsiLevel(
                 trigger_level=1,  # Explicitement 27
@@ -161,7 +161,7 @@ class TrailingBuyRsi:
         # Log supplémentaire pour débogage
         if applicable_level:
             # Cas du niveau spécial 27-29 qui n'est pas dans sorted_levels
-            if applicable_level.trigger_level == 1 and applicable_level.buy_level == 30:
+            if applicable_level.trigger_level == 95 and applicable_level.buy_level == 100:
                 trading_logger.info(f"""
 === NIVEAU RSI APPLICABLE ===
    RSI le plus bas: {self.lowest_rsi:.2f}
@@ -260,6 +260,7 @@ class TrailingBuyRsi:
         applicable_level = self._get_applicable_level(current_rsi)
         
         if not applicable_level:
+            self.current_level = None
             if log_enabled:
                 trading_logger.info(f"""
 === AUCUN NIVEAU RSI APPLICABLE ===
