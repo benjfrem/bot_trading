@@ -15,15 +15,15 @@ class TrailingStopLevel:
 class TrailingStopLoss:
     """Gestion du Trailing Stop Loss avec plusieurs niveaux"""
     
-    def __init__(self, entry_price: float):
+    def __init__(self, entry_price: float, levels_config=None):
         self.entry_price = entry_price
         self.highest_price = entry_price
         self.current_level = None
         self.last_update = datetime.now()
         self.highest_profit_percentage = 0.0
         
-        # Charger les niveaux depuis la configuration
-        self.levels = self._load_levels_from_config()
+        # Charger les niveaux depuis la configuration ou utiliser ceux fournis
+        self.levels = self._load_levels_from_config(levels_config)
         
         trading_logger.info(f"""
 === INITIALISATION TRAILING STOP ===
@@ -47,10 +47,13 @@ Niveaux configurés:
             'immediate': self.current_level.is_immediate
         }
     
-    def _load_levels_from_config(self) -> List[TrailingStopLevel]:
-        """Charge les niveaux de trailing stop depuis la configuration"""
+    def _load_levels_from_config(self, levels_config=None) -> List[TrailingStopLevel]:
+        """Charge les niveaux de trailing stop depuis la configuration ou depuis les niveaux fournis"""
         levels = []
-        for level_config in Config.TRAILING_STOP_LEVELS:
+        # Utiliser les niveaux fournis ou ceux de la configuration par défaut
+        config_to_use = levels_config if levels_config is not None else Config.TRAILING_STOP_LEVELS
+        
+        for level_config in config_to_use:
             levels.append(TrailingStopLevel(
                 trigger_level=level_config['trigger'],
                 stop_level=level_config['stop'],

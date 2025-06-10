@@ -255,6 +255,9 @@ class TradingBot:
         
         opportunities = await self.market_analyzer.analyze_market()
         
+        # Stocker les opportunités pour que position_manager puisse y accéder
+        self.market_analyzer.latest_opportunities = opportunities
+        
         if opportunities:
             trading_logger.info(f"✓ {len(opportunities)} opportunité(s) trouvée(s)")
             

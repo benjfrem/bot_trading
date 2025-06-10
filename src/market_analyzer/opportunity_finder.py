@@ -112,19 +112,10 @@ class OpportunityFinder:
                 # Logs indicateurs de base
                 atr_price = get_atr(symbol)
                 atr_str = f"{atr_price:.8f}"
-                # Désactivation Fisher Transform (non utilisé)
-                #willr = await taapi_client.get_williams_r(symbol.replace('/USDC','/USDT'))
-                #williams_str = f"{willr:.2f}" if willr is not None else "N/A"
                 willr_val = await taapi_client.get_williams_r(symbol.replace('/USDC','/USDT'))
                 williams_str = f"{willr_val:.2f}" if willr_val is not None else "N/A"
                 
-                if not hasattr(md, 'obv_history'):
-                    md.obv_history = deque(maxlen=4)
-                obv_val = await taapi_client.get_obv(symbol.replace('/USDC','/USDT'))
-                obv_str = f"{obv_val:.2f}" if obv_val is not None else "N/A"
-                md.obv_history.append(obv_val or 0.0)
-                obv_sma = sum(md.obv_history) / len(md.obv_history)
-                obv_sma_str = f"{obv_sma:.2f}"
+                # OBV supprimé
                 
                 self._log(f"""
 === INDICATEURS {symbol} ===
@@ -132,7 +123,6 @@ class OpportunityFinder:
    RSI: {rsi:.2f}
    ATR: {atr_str}
    Williams %R: {williams_str}
-   OBV: {obv_str} / OBV SMA4: {obv_sma_str}
 """, "info")
                 
                 # Trailing Buy RSI -> detection initiale RSI survente puis double tick
@@ -176,8 +166,8 @@ class OpportunityFinder:
                 md.rsi_wait_for_down = True
                 
                 # Conditions supplémentaires
-                # Williams %R strict entre -80 et -40
-                if willr_val is None or not(-80 < willr_val < -30):
+                # Williams %R strict entre -80 et -30
+                if willr_val is None or not(-80 < willr_val < -30): #########
                     self._log(f"Williams %R hors plage: {williams_str}", "info")
                     md.trailing_buy_rsi.lowest_rsi = rsi
                     md.rsi_confirm_counter = 0
@@ -185,35 +175,49 @@ class OpportunityFinder:
                     md.rsi_wait_for_down = True
                     continue
                 
-                # DMI négatif
+                # DMI négatif avec la nouvelle logique à 3 niveaux
                 dmi = await taapi_client.get_dmi(symbol.replace('/USDC','/USDT'), period=Config.ADX_LENGTH_VALID, interval=Config.ADX_INTERVAL_VALID)
                 mdi = dmi['mdi'] if dmi else None
                 mdi_str = f"{mdi:.2f}" if mdi is not None else "N/A"
+                
+                # Logique DMI améliorée avec trois niveaux
+                # 1. Si DMI- > 30: Position annulée
                 if mdi is not None and mdi > Config.DMI_NEGATIVE_THRESHOLD:
-                    self._log(f"DMI- trop élevé: {mdi_str}", "info")
+                    self._log(f"DMI- trop élevé: {mdi_str} > {Config.DMI_NEGATIVE_THRESHOLD}", "info")
                     md.trailing_buy_rsi.lowest_rsi = rsi
                     md.rsi_confirm_counter = 0
                     md.trailing_buy_rsi.reset()
                     md.rsi_wait_for_down = True
+                    continue
                 
-                # OBV vs SMA : choix des trailing stop levels
-                obv_ok = obv_val is not None and obv_val > obv_sma
-                trailing_levels = Config.TRAILING_STOP_LEVELS if obv_ok else Config.ADAPTIVE_TRAILING_STOP_LEVELS
-                self._log(f"OBV {'>' if obv_ok else '<='} SMA4 -> stop_levels = {'standard' if obv_ok else 'adaptive'}", "info")
-
-                # Calcul du score (Williams %R validée + OBV)
+                # Par défaut, utiliser les niveaux standard de trailing stop
+                trailing_levels = Config.TRAILING_STOP_LEVELS
+                
+                # 2. Si 25 < DMI- <= 30: Utiliser les niveaux adaptatifs de trailing stop
+                if mdi is not None and Config.DMI_MODERATE_THRESHOLD < mdi <= Config.DMI_NEGATIVE_THRESHOLD:
+                    self._log(f"DMI- modéré: {mdi_str} (entre {Config.DMI_MODERATE_THRESHOLD} et {Config.DMI_NEGATIVE_THRESHOLD})", "info")
+                    self._log(f"Utilisation du trailing stop adaptatif", "info")
+                    trailing_levels = Config.ADAPTIVE_TRAILING_STOP_LEVELS
+                
+                # Calcul du score (Williams %R validée uniquement)
                 score = 1
-                if obv_ok:
-                    score += 1
                 self._log(f"Score calculé: {score}", "info")
 
                 self._log("─────────────────────────────", "info")
                 self._log(f"=== VERIFICATION DES INDICATEURS POUR {symbol} ===", "info")
                 self._log("─────────────────────────────", "info")
                 self._log(f"RSI actuel: {self._format_rsi(rsi)} | Seuil: {threshold:.2f}", "info")
-                self._log(f"Williams %R: {self._format_rsi(willr_val)} | Condition requise [-80;-40] → {'OK' if willr_val is not None and -80 < willr_val < -40 else 'HORS PLAGE'}", "info")
-                self._log(f"DMI (mdi): {self._format_rsi(mdi)} | Seuil: {Config.DMI_NEGATIVE_THRESHOLD} → {'OK' if mdi is not None and mdi <= Config.DMI_NEGATIVE_THRESHOLD else 'TROP ÉLEVÉ'}", "info")
-                self._log(f"OBV: {self._format_rsi(obv_val)} / SMA: {self._format_rsi(obv_sma)} → {'standard' if obv_ok else 'adaptive'} stop_levels", "info")
+                self._log(f"Williams %R: {self._format_rsi(willr_val)} | Condition requise [-80;-30] → {'OK' if willr_val is not None and -80 < willr_val < -30 else 'HORS PLAGE'}", "info")##############
+                # Message DMI avec trois niveaux
+                dmi_status = "N/A"
+                if mdi is not None:
+                    if mdi > Config.DMI_NEGATIVE_THRESHOLD:
+                        dmi_status = "TROP ÉLEVÉ (position annulée)"
+                    elif mdi > Config.DMI_MODERATE_THRESHOLD:
+                        dmi_status = f"MODÉRÉ (trailing stop adaptatif)"
+                    else:
+                        dmi_status = "OK (trailing stop standard)"
+                self._log(f"DMI (mdi): {self._format_rsi(mdi)} | Seuils: [{Config.DMI_MODERATE_THRESHOLD};{Config.DMI_NEGATIVE_THRESHOLD}] → {dmi_status}", "info")
                 self._log(f"=== FIN DE LA VERIFICATION POUR {symbol} ===", "info")
                 self._log("─────────────────────────────", "info")
                 

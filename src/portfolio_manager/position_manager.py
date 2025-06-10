@@ -193,10 +193,12 @@ class PositionManager:
         log_event(f"SL adaptatif choisi : ATR×{multiplier:.2f} (ADX={adx:.2f}, +DI={plus_di:.2f}, -DI={minus_di:.2f})", "info")
         self.portfolio_manager.trailing_stops[symbol] = StopLossManager(entry_price=price_avg, symbol=symbol, multiplier=multiplier)
         
-        # CORRECTION: Suppression du paramètre "levels" qui n'est pas attendu par TrailingStopLoss
-        self.portfolio_manager.trailing_stop_paliers[symbol] = TrailingStopLoss(entry_price=price_avg)
-        # Modification du log pour indiquer quel type de trailing stop est utilisé
-        log_event(f"✅ Position ouverte: {symbol} à {price_avg:.8f}, qt={qty_filled:.8f}, trailing stop configurable activé")
+        # Passer les niveaux de trailing stop définis dans l'opportunité
+        self.portfolio_manager.trailing_stop_paliers[symbol] = TrailingStopLoss(entry_price=price_avg, levels_config=trailing_levels)
+        
+        # Déterminer quel type de trailing stop est utilisé
+        trailing_type = "adaptatif" if trailing_levels == Config.ADAPTIVE_TRAILING_STOP_LEVELS else "standard"
+        log_event(f"✅ Position ouverte: {symbol} à {price_avg:.8f}, qt={qty_filled:.8f}, trailing stop {trailing_type} activé")
         log_event(f"DEBUG [PositionManager] trailing_stops keys: {list(self.portfolio_manager.trailing_stops.keys())}", "info")
         log_event(f"DEBUG [PositionManager] trailing_stop_paliers keys: {list(self.portfolio_manager.trailing_stop_paliers.keys())}", "info")
         

@@ -33,8 +33,7 @@ class TradingConfig:
     ]
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
     {'trigger': 1, 'stop': 30, 'immediate': True}
-    ]
-
+]
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
     TRAILING_STOP_LEVELS = [
         {'trigger': 0.15, 'stop': 0.1, 'immediate': True},
@@ -61,9 +60,9 @@ class MarketConfig:
     CRYPTO_LIST = ['BTC/USDC']
 
 class TimeConfig:
-    ANALYSIS_INTERVAL = 60
+    ANALYSIS_INTERVAL = 5
 
-    CHECK_INTERVAL = 10
+    CHECK_INTERVAL = 7
 
 class LogConfig:
     LOG_FILE = 'logs/trading.log'
@@ -84,7 +83,7 @@ class TechnicalConfig:
     FISHER_INTERVAL = "1m"
     FISHER_THRESHOLD = 1.5
     
-    WILLIAMS_R_PERIOD = 3
+    WILLIAMS_R_PERIOD = 6
     WILLIAMS_R_INTERVAL = "15m"
     WILLIAMS_R_OVERSOLD_THRESHOLD = -80
     WILLIAMS_R_OVERBOUGHT_THRESHOLD = -30
@@ -94,8 +93,9 @@ class TechnicalConfig:
     ADX_INTERVAL = "1D"
     ADX_LENGTH_VALID = 10
     DI_LENGTH_VALID = 10
-    ADX_INTERVAL_VALID = "1m"
-    DMI_NEGATIVE_THRESHOLD = 45
+    ADX_INTERVAL_VALID = "5m"
+    DMI_NEGATIVE_THRESHOLD = 30
+    DMI_MODERATE_THRESHOLD = 15
 
 class Config(TradingConfig, MarketConfig, TechnicalConfig, TimeConfig, LogConfig, TaapiConfig):
     """Configuration globale du bot"""
@@ -152,3 +152,4 @@ class Config:
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
     DMI_NEGATIVE_THRESHOLD = TechnicalConfig.DMI_NEGATIVE_THRESHOLD
+    DMI_MODERATE_THRESHOLD = TechnicalConfig.DMI_MODERATE_THRESHOLD
