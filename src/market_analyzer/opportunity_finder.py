@@ -117,10 +117,14 @@ class OpportunityFinder:
                 
                 # OBV supprimé
                 
+                # Récupérer la valeur SMA du RSI depuis MarketData
+                rsi_sma_value = md.rsi_sma_value if hasattr(md, 'rsi_sma_value') else None
+                rsi_sma_str = "N/A" if rsi_sma_value is None else f"{rsi_sma_value:.2f}"
+                
                 self._log(f"""
 === INDICATEURS {symbol} ===
    Prix actuel: {current_price:.8f}
-   RSI: {rsi:.2f}
+   RSI: {rsi:.2f} / rsi sma: {rsi_sma_str}
    ATR: {atr_str}
    Williams %R: {williams_str}
 """, "info")
@@ -165,6 +169,30 @@ class OpportunityFinder:
                 md.trailing_buy_rsi._signal_emitted = True
                 md.rsi_wait_for_down = True
                 
+                # Vérification SMA du RSI sur 7 périodes
+                # Utiliser le même symbole que pour les autres indicateurs
+                try:
+                    self._log(f"Vérification SMA RSI pour {symbol} avec paramètres: length={Config.RSI_SMA_LENGTH}, period={Config.RSI_PERIOD}", "info")
+                    rsi_sma = await taapi_client.get_rsi_sma(symbol, Config.RSI_SMA_LENGTH, Config.RSI_PERIOD)
+                    # Sauvegarder la valeur SMA pour référence future
+                    md.rsi_sma_value = rsi_sma
+                    if rsi_sma is not None:
+                        self._log(f"Valeur SMA RSI calculée: {rsi_sma:.2f}", "info")
+                    else:
+                        self._log(f"SMA RSI non disponible (NULL)", "error")
+                except Exception as e:
+                    self._log(f"Erreur lors du calcul de la SMA RSI dans la vérification d'opportunité: {str(e)}", "error")
+                    rsi_sma = None
+                
+                if rsi_sma is None or rsi_sma >= Config.RSI_SMA_THRESHOLD:
+                    rsi_sma_str = "N/A" if rsi_sma is None else f"{rsi_sma:.2f}"
+                    self._log(f"SMA RSI hors plage: {rsi_sma_str} >= {Config.RSI_SMA_THRESHOLD}", "info")
+                    md.trailing_buy_rsi.lowest_rsi = rsi
+                    md.rsi_confirm_counter = 0
+                    md.trailing_buy_rsi.reset()
+                    md.rsi_wait_for_down = True
+                    continue
+                
                 # Conditions supplémentaires
                 # Williams %R strict entre -80 et -30
                 if willr_val is None or not(-80 < willr_val < -30): #########
@@ -207,6 +235,7 @@ class OpportunityFinder:
                 self._log(f"=== VERIFICATION DES INDICATEURS POUR {symbol} ===", "info")
                 self._log("─────────────────────────────", "info")
                 self._log(f"RSI actuel: {self._format_rsi(rsi)} | Seuil: {threshold:.2f}", "info")
+                self._log(f"SMA RSI (7): {self._format_rsi(rsi_sma)} | Condition requise < {Config.RSI_SMA_THRESHOLD} → {'OK' if rsi_sma is not None and rsi_sma < Config.RSI_SMA_THRESHOLD else 'HORS PLAGE'}", "info")
                 self._log(f"Williams %R: {self._format_rsi(willr_val)} | Condition requise [-80;-30] → {'OK' if willr_val is not None and -80 < willr_val < -30 else 'HORS PLAGE'}", "info")##############
                 # Message DMI avec trois niveaux
                 dmi_status = "N/A"

@@ -7,7 +7,7 @@ depuis l'API taapi.io. Il gère notamment le caching et la transformation des do
 import aiohttp
 import asyncio
 import time
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 from config import Config
 from logger import trading_logger, error_logger
 
@@ -426,6 +426,130 @@ class TaapiClient:
             return None
 
 
+    async def get_rsi_history(self, symbol: str, count: int = 7, period: int = None) -> Optional[List[float]]:
+        """
+        Récupère l'historique des valeurs RSI pour un symbole depuis l'API taapi.io
+        
+        Args:
+            symbol: Paire de trading (ex: "BTC/USDT")
+            count: Nombre de valeurs RSI historiques à récupérer (défaut: 7)
+            period: Période du RSI (défaut: Config.RSI_PERIOD)
+            
+        Returns:
+            Une liste des X dernières valeurs RSI (du plus récent au plus ancien) ou None en cas d'erreur
+        """
+        period = period if period is not None else Config.RSI_PERIOD
+        exch = self.exchange.lower()
+        
+        # Mapping symbole selon l'exchange (même logique que pour get_rsi)
+        if exch == "coinbase":
+            formatted_symbol = symbol.replace("/USDC", "/USD").replace("/USDT", "/USD")
+        elif exch == "kraken":
+            formatted_symbol = symbol.replace("BTC/", "XBT/").replace("/USDC", "/USD").replace("/USDT", "/USD")
+        else:
+            # Pour les autres exchanges comme binance, on convertit USDC en USDT si nécessaire
+            formatted_symbol = symbol.replace("/USDC", "/USDT")
+
+        self._log(f"RSI history - Symbole original: {symbol}, symbole formaté: {formatted_symbol}", "info")
+            
+        try:
+            session = await self._ensure_session()
+            url = f"{self.endpoint}/rsi"
+            params = {
+                "secret": self.api_key,
+                "exchange": exch,
+                "symbol": formatted_symbol,
+                "interval": self.interval,
+                "period": period,
+                "results": count  # Paramètre pour récupérer plusieurs valeurs historiques
+            }
+            
+            self._log(f"Récupération historique RSI ({count} valeurs) pour {symbol}", "info")
+            async with session.get(url, params=params, timeout=0.8) as response:
+                if response.status != 200:
+                    error_text = await response.text()
+                    self._log(f"Erreur API taapi.io RSI historique ({response.status}): {error_text}", "error")
+                    return None
+                    
+                data = await response.json()
+                self._log(f"Réponse brute taapi.io RSI historique pour {symbol}: {data}", "info")
+                
+                # Traiter différents formats de réponse possible de l'API
+                if isinstance(data, list) and len(data) > 0:
+                    # Format 1: tableau d'objets
+                    rsi_values = [float(candle.get("value", 0)) for candle in data]
+                    self._log(f"Historique RSI (format liste d'objets) pour {symbol} ({len(rsi_values)} valeurs): {rsi_values}", "info")
+                    return rsi_values
+                elif "value" in data:
+                    # Format 2: objet avec clé "value"
+                    value = data["value"]
+                    if isinstance(value, list):
+                        # Si value est une liste de valeurs
+                        rsi_values = [float(v) for v in value]
+                        self._log(f"Historique RSI (format objet.value=liste) pour {symbol} ({len(rsi_values)} valeurs): {rsi_values}", "info")
+                        return rsi_values
+                    else:
+                        # Si une seule valeur est retournée
+                        self._log(f"Historique RSI (format valeur unique) pour {symbol}: [{value}]", "info")
+                        return [float(value)]
+                else:
+                    self._log(f"Format de réponse inattendu pour l'historique RSI: {data}", "error")
+                    return None
+                    
+        except asyncio.TimeoutError:
+            self._log(f"Timeout de la requête API historique RSI pour {symbol}", "error")
+            return None
+        except aiohttp.ClientError as e:
+            self._log(f"Erreur réseau historique RSI: {e}", "error")
+            return None
+        except Exception as e:
+            self._log(f"Erreur récupération historique RSI pour {symbol}: {e}", "error")
+            return None
+    
+    def calculate_sma(self, values: List[float]) -> Optional[float]:
+        """
+        Calcule la moyenne mobile simple (SMA) d'une liste de valeurs
+        
+        Args:
+            values: Liste des valeurs sur lesquelles calculer la SMA
+            
+        Returns:
+            La valeur SMA calculée ou None si la liste est vide
+        """
+        if not values or len(values) == 0:
+            return None
+            
+        return sum(values) / len(values)
+    
+    async def get_rsi_sma(self, symbol: str, sma_length: int = 7, period: int = None) -> Optional[float]:
+        """
+        Récupère l'historique des valeurs RSI et calcule leur SMA
+        
+        Args:
+            symbol: Paire de trading (ex: "BTC/USDT") 
+            sma_length: Nombre de valeurs RSI pour calculer la SMA (défaut: 7)
+            period: Période du RSI (défaut: Config.RSI_PERIOD)
+            
+        Returns:
+            La valeur SMA calculée sur les X dernières valeurs RSI ou None en cas d'erreur
+        """
+        self._log(f"Calcul SMA RSI demandé pour {symbol} (length: {sma_length}, period: {period})", "info")
+        
+        # Récupérer l'historique des valeurs RSI
+        rsi_history = await self.get_rsi_history(symbol, sma_length, period)
+        
+        if not rsi_history or len(rsi_history) == 0:
+            self._log(f"Impossible de calculer la SMA RSI pour {symbol}: historique vide", "error")
+            return None
+            
+        # Calculer la SMA
+        sma = self.calculate_sma(rsi_history)
+        
+        if sma is not None:
+            self._log(f"SMA RSI pour {symbol} (longueur {sma_length}): {sma:.2f}", "info")
+            
+        return sma
+    
     async def get_indicators_batch(self, symbols: list, indicators: list, period_map: dict = None, interval_map: dict = None) -> dict:
         """
         Récupère en une seule requête plusieurs indicateurs pour une liste de symboles.

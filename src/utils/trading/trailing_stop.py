@@ -248,31 +248,20 @@ Calcul du prix de stop:
    Prix de stop final: {stop_price:.8f}
 """)
         
-        # Confirmation à deux ticks avant liquidation
+        # Vente immédiate dès le premier tick en dessous du stop loss
         if current_price <= stop_price:
-            # premier tick : prix sous seuil
-            if self.exit_confirm_counter == 0:
-                self.exit_confirm_counter = 1
-                self.exit_first_tick_price = current_price
-                trading_logger.info(
-                    f"Tick 1/2 sortie pour {current_price:.8f} (seuil stop = {stop_price:.8f})"
-                )
-                return None
-            # deuxième tick : vérifier variation de prix
-            if current_price != self.exit_first_tick_price:
-                self.exit_confirm_counter = 2
-                trading_logger.info(
-                    f"Tick 2/2 sortie validée pour {current_price:.8f} (différent de {self.exit_first_tick_price:.8f})"
-                )
-                # Réinitialisation des ticks
-                self.exit_confirm_counter = 0
-                self.exit_first_tick_price = None
-                # Exécution de la vente
-                return stop_price if applicable_level.is_immediate else current_price
+            # Premier et unique tick pour la sortie
             trading_logger.info(
-                f"Tick non comptabilisé: prix identique {current_price:.8f}; attente confirmation"
+                f"SORTIE IMMÉDIATE pour {current_price:.8f} (seuil stop = {stop_price:.8f})"
             )
-            return None
+            
+            # Pour des raisons de compatibilité et pour les logs, on garde ces variables
+            # mais elles ne sont plus utilisées pour la décision de sortie
+            self.exit_confirm_counter = 0
+            self.exit_first_tick_price = None
+            
+            # Exécution de la vente immédiatement
+            return stop_price if applicable_level.is_immediate else current_price
         # reset si le prix repasse au-dessus du stop
         if self.exit_confirm_counter > 0 and current_price > stop_price:
             trading_logger.info(

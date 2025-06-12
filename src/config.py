@@ -18,10 +18,10 @@ class TradingConfig:
     ATR_HIGH_VOLATILITY_THRESHOLD = 350
     
     ADAPTIVE_TRAILING_STOP_LEVELS = [
-        {'trigger': 0.08, 'stop': 0.04, 'immediate': True},
-        {'trigger': 0.12, 'stop': 0.08, 'immediate': True},
-        {'trigger': 0.17, 'stop': 0.12, 'immediate': True},
-        {'trigger': 0.25, 'stop': 0.17, 'immediate': True},
+        {'trigger': 0.07, 'stop': 0.05, 'immediate': True},
+        {'trigger': 0.1, 'stop': 0.07, 'immediate': True},
+        {'trigger': 0.15, 'stop': 0.1, 'immediate': True},
+        {'trigger': 0.25, 'stop': 0.15, 'immediate': True},
         {'trigger': 0.35, 'stop': 0.25, 'immediate': True},
         {'trigger': 0.50, 'stop': 0.35, 'immediate': True},
         {'trigger': 0.60, 'stop': 0.50, 'immediate': True},
@@ -31,12 +31,13 @@ class TradingConfig:
         {'trigger': 1.40, 'stop': 1.20, 'immediate': True},
         {'trigger': 1.60, 'stop': 1.40, 'immediate': True}
     ]
+
     TRAILING_BUY_RSI_LEVELS_NEUTRAL = [
     {'trigger': 1, 'stop': 30, 'immediate': True}
-]
+    ]
     TRAILING_BUY_RSI_LEVELS = TRAILING_BUY_RSI_LEVELS_NEUTRAL
     TRAILING_STOP_LEVELS = [
-        {'trigger': 0.15, 'stop': 0.1, 'immediate': True},
+        {'trigger': 0.17, 'stop': 0.12, 'immediate': True},
         {'trigger': 0.20, 'stop': 0.15, 'immediate': True},
         {'trigger': 0.25, 'stop': 0.20, 'immediate': True},
         {'trigger': 0.40, 'stop': 0.25, 'immediate': True},
@@ -49,9 +50,9 @@ class TradingConfig:
     ]
     INITIAL_STOP_LOSS = 0.1
     MIN_TRANSACTION_QUOTE_AMOUNT = 1.0
-    ATR_LENGTH = 6
+    ATR_LENGTH = 14
     ATR_INTERVAL = "5m"
-    ATR_MULTIPLIER = 1.5
+    ATR_MULTIPLIER = 1.9
     STOP_TIMEOUT_SEC = 5
     DOUBLE_CONFIRMATION_TICKS = 2
 
@@ -60,9 +61,9 @@ class MarketConfig:
     CRYPTO_LIST = ['BTC/USDC']
 
 class TimeConfig:
-    ANALYSIS_INTERVAL = 5
+    ANALYSIS_INTERVAL = 60
 
-    CHECK_INTERVAL = 7
+    CHECK_INTERVAL = 10
 
 class LogConfig:
     LOG_FILE = 'logs/trading.log'
@@ -78,12 +79,14 @@ class TaapiConfig:
 class TechnicalConfig:
     """Configuration des indicateurs techniques"""
     RSI_PERIOD = 3
+    RSI_SMA_LENGTH = 7
+    RSI_SMA_THRESHOLD = 66
 
     FISHER_PERIOD = 9
     FISHER_INTERVAL = "1m"
     FISHER_THRESHOLD = 1.5
     
-    WILLIAMS_R_PERIOD = 6
+    WILLIAMS_R_PERIOD = 3
     WILLIAMS_R_INTERVAL = "15m"
     WILLIAMS_R_OVERSOLD_THRESHOLD = -80
     WILLIAMS_R_OVERBOUGHT_THRESHOLD = -30
@@ -95,7 +98,7 @@ class TechnicalConfig:
     DI_LENGTH_VALID = 10
     ADX_INTERVAL_VALID = "5m"
     DMI_NEGATIVE_THRESHOLD = 30
-    DMI_MODERATE_THRESHOLD = 15
+    DMI_MODERATE_THRESHOLD = 25
 
 class Config(TradingConfig, MarketConfig, TechnicalConfig, TimeConfig, LogConfig, TaapiConfig):
     """Configuration globale du bot"""
@@ -136,6 +139,8 @@ class Config:
     WILLIAMS_R_INTERVAL = TechnicalConfig.WILLIAMS_R_INTERVAL
     WILLIAMS_R_OVERSOLD_THRESHOLD = TechnicalConfig.WILLIAMS_R_OVERSOLD_THRESHOLD
     WILLIAMS_R_OVERBOUGHT_THRESHOLD = TechnicalConfig.WILLIAMS_R_OVERBOUGHT_THRESHOLD
+    RSI_SMA_LENGTH = TechnicalConfig.RSI_SMA_LENGTH
+    RSI_SMA_THRESHOLD = TechnicalConfig.RSI_SMA_THRESHOLD
     ADX_LENGTH = TechnicalConfig.ADX_LENGTH
     DI_LENGTH = TechnicalConfig.DI_LENGTH
     ADX_INTERVAL = TechnicalConfig.ADX_INTERVAL

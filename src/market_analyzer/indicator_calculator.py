@@ -89,6 +89,27 @@ class IndicatorCalculator:
             market_d = market_data.get(symbol)
             if price is None and market_d:
                 price = market_d.last_price
+                
+            # Récupérer le RSI
             rsi = await taapi_client.get_rsi(symbol, Config.RSI_PERIOD)
-        results[symbol] = (price, rsi, 0.0)
+            
+            try:
+                # Calculer et stocker la SMA du RSI à chaque intervalle d'analyse
+                # Utiliser le même format de symbole que pour le RSI normal
+                if self.log_callback:
+                    self.log_callback(f"Calcul SMA RSI pour {symbol} avec paramètres: length={Config.RSI_SMA_LENGTH}, period={Config.RSI_PERIOD}", "info")
+                
+                # Ne pas modifier le symbole - laisser taapi_client gérer le format
+                rsi_sma = await taapi_client.get_rsi_sma(symbol, Config.RSI_SMA_LENGTH, Config.RSI_PERIOD)
+                
+                if market_d:
+                    market_d.rsi_sma_value = rsi_sma
+                    rsi_sma_str = "N/A" if rsi_sma is None else f"{rsi_sma:.2f}"
+                    if self.log_callback:
+                        self.log_callback(f"SMA du RSI pour {symbol} (longueur {Config.RSI_SMA_LENGTH}): {rsi_sma_str}", "info")
+            except Exception as e:
+                if self.log_callback:
+                    self.log_callback(f"Erreur lors du calcul de la SMA RSI pour {symbol}: {str(e)}", "error")
+            
+            results[symbol] = (price, rsi, 0.0)
         return results

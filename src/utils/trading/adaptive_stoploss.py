@@ -42,6 +42,19 @@ class AdaptiveStopLoss:
         # Calcul du ratio ATR et de la distance de stop
         atr_ratio = atr_price / last_price
         stop_distance = atr_ratio * self.multiplier
+        
+        # Appliquer un minimum de 0.2% pour la distance de stop
+        MIN_STOP_DISTANCE = 0.002  # 0.2%
+        original_stop_distance = stop_distance
+        
+        if stop_distance < MIN_STOP_DISTANCE:
+            stop_distance = MIN_STOP_DISTANCE
+            log_event(
+                f"STOP LOSS MINIMUM APPLIQUÉ pour {self.symbol}: "
+                f"Distance originale={original_stop_distance:.6f} (trop faible), "
+                f"Distance ajustée={MIN_STOP_DISTANCE:.6f} (0.2% minimum)",
+                "info"
+            )
 
         # Calcul du nouveau niveau de stop loss
         new_stop_level = self.entry_price * (1 - stop_distance)

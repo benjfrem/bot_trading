@@ -356,3 +356,104 @@
 2025-06-10 15:48:41,700 - error - ERROR - Timeout de la requête API pour BTC/USDC
 2025-06-10 16:21:01,870 - error - ERROR - Timeout de la requête API pour BTC/USDC
 2025-06-10 16:21:01,873 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108970.065, RSI=None
+2025-06-10 16:29:31,543 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 16:30:01,466 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 16:30:02,405 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 16:30:02,412 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108824.505, RSI=None
+2025-06-10 17:32:26,254 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:40:41,234 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:41:26,235 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:41:26,652 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:41:26,653 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108690.215, RSI=None
+2025-06-10 17:42:11,233 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:42:56,237 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:43:41,238 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:43:41,671 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 17:43:41,672 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108739.12, RSI=None
+2025-06-10 17:44:26,234 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:27:02,684 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:27:03,071 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:27:03,072 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108942.85, RSI=None
+2025-06-10 18:30:02,689 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:30:03,147 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:30:03,148 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109034.445, RSI=None
+2025-06-10 18:33:02,690 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:33:03,111 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:33:03,112 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109059.84, RSI=None
+2025-06-10 18:36:03,111 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 18:36:03,113 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108967.12, RSI=None
+2025-06-10 18:45:03,593 - error - ERROR - Timeout de la requête Williams %R pour BTC/USDT
+2025-06-10 20:30:02,684 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 20:30:03,115 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 20:30:03,116 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108935.41500000001, RSI=None
+2025-06-10 21:00:03,088 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 21:00:03,089 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109317.32, RSI=None
+2025-06-10 22:15:03,516 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 22:15:03,518 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109398.33, RSI=None
+2025-06-10 22:18:02,684 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 22:18:03,538 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-10 22:18:03,538 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109309.98999999999, RSI=None
+2025-06-10 22:21:02,688 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 00:21:47,753 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 01:16:33,234 - error - ERROR - Timeout de la requête Williams %R pour BTC/USDT
+2025-06-11 02:00:02,687 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 02:15:02,686 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 05:35:56,204 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 05:35:56,205 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 05:35:56,205 - error - ERROR - ❌ Prix actuel invalide ou non disponible pour BTC/USDC
+2025-06-11 06:37:01,394 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 06:37:01,397 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 06:37:01,397 - error - ERROR - ❌ Prix actuel invalide ou non disponible pour BTC/USDC
+2025-06-11 10:41:00,153 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 10:41:00,154 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 11:41:55,388 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 11:41:55,389 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-11 12:43:34,125 - error - ERROR - Erreur récupération historique RSI pour BTC/USDT: float() argument must be a string or a real number, not 'list'
+2025-06-11 12:43:34,127 - error - ERROR - Impossible de calculer la SMA RSI pour BTC/USDT: historique vide
+2025-06-11 12:44:34,140 - error - ERROR - Erreur récupération historique RSI pour BTC/USDT: float() argument must be a string or a real number, not 'list'
+2025-06-11 12:44:34,141 - error - ERROR - Impossible de calculer la SMA RSI pour BTC/USDT: historique vide
+2025-06-11 12:48:10,956 - error - ERROR - Erreur récupération historique RSI pour BTC/USDC: float() argument must be a string or a real number, not 'list'
+2025-06-11 12:48:10,958 - error - ERROR - Impossible de calculer la SMA RSI pour BTC/USDC: historique vide
+2025-06-11 12:49:10,896 - error - ERROR - Erreur récupération historique RSI pour BTC/USDC: float() argument must be a string or a real number, not 'list'
+2025-06-11 12:49:10,897 - error - ERROR - Impossible de calculer la SMA RSI pour BTC/USDC: historique vide
+2025-06-11 16:10:02,828 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 16:10:47,831 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 16:13:02,826 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 16:13:03,245 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 16:13:03,508 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109858.695, RSI=None
+2025-06-11 16:16:03,252 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 16:16:03,533 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=110025.06, RSI=None
+2025-06-11 16:19:48,310 - error - ERROR - Timeout de la requête API historique RSI pour BTC/USDC
+2025-06-11 16:19:48,312 - error - ERROR - Impossible de calculer la SMA RSI pour BTC/USDC: historique vide
+2025-06-11 18:13:02,825 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:13:03,271 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:13:03,582 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109468.39, RSI=None
+2025-06-11 18:16:03,228 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:16:03,463 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109544.625, RSI=None
+2025-06-11 18:54:08,624 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:54:09,010 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:54:09,470 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109553.96, RSI=None
+2025-06-11 18:56:23,642 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:57:53,626 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:57:54,046 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:57:54,298 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109430.18, RSI=None
+2025-06-11 18:58:38,624 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:58:39,050 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 18:58:39,318 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=109447.595, RSI=None
+2025-06-11 22:17:52,321 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-11 22:18:37,325 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-12 00:38:02,396 - error - ERROR - Erreur réseau: Cannot connect to host api.taapi.io:443 ssl:default [Could not contact DNS servers]
+2025-06-12 00:38:02,443 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-12 00:38:02,447 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-12 00:38:02,482 - error - ERROR - Erreur lors de la récupération des données OHLCV via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/klines?symbol=BTCUSDC&interval=1m&limit=30
+2025-06-12 00:38:02,483 - error - ERROR - ❌ Erreur lors de la récupération des données OHLCV pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/klines?symbol=BTCUSDC&interval=1m&limit=30
+2025-06-12 00:38:02,551 - error - ERROR - Erreur lors de la récupération du ticker via CCXT pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-12 00:38:02,551 - error - ERROR - Erreur pour BTC/USDC: mexc GET https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDC
+2025-06-12 00:38:02,563 - error - ERROR - Erreur réseau: Cannot connect to host api.taapi.io:443 ssl:default [Could not contact DNS servers]
+2025-06-12 00:38:02,578 - error - ERROR - Erreur réseau historique RSI: Cannot connect to host api.taapi.io:443 ssl:default [Could not contact DNS servers]
+2025-06-12 00:38:02,579 - error - ERROR - Impossible de calculer la SMA RSI pour BTC/USDC: historique vide
+2025-06-12 00:38:02,580 - error - ERROR - Données insuffisantes pour BTC/USDC: prix=108340.61499999999, RSI=None
+2025-06-12 03:38:07,322 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-12 05:38:52,480 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-12 07:45:37,320 - error - ERROR - Timeout de la requête API pour BTC/USDC
+2025-06-12 12:40:31,285 - error - ERROR - Timeout de la requête API pour BTC/USDC

@@ -58,3 +58,6 @@ class MarketData:
     
     # Williams %R
     williams_value: Optional[float] = None
+    
+    # SMA du RSI
+    rsi_sma_value: Optional[float] = None
